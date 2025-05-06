@@ -2,6 +2,11 @@ import csv
 import json
 import logging
 import os
+import sqlite3
+
+from data_import.csv.book_importer import CSVBookReader
+from databases.book_db import BookRepository
+
 #
 # # Настройка логирования
 # logging.basicConfig(
@@ -222,3 +227,14 @@ import os
 # if __name__ == "__main__":
 #     logging.info("Запуск программы")
 #     main()
+
+
+
+repo = BookRepository()
+
+importer = CSVBookReader("data/csv/test_books.csv", repo)
+
+# Импорт
+importer.load_from_csv()
+repo.show_all()
+

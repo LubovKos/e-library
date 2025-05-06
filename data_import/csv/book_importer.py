@@ -1,5 +1,7 @@
 import csv
 import logging
+from databases.book_db import BookRepository
+from models.book import Book
 
 # Настройка логирования
 logging.basicConfig(
@@ -11,7 +13,8 @@ logging.basicConfig(
 
 class CSVBookReader:
 
-    def __init__(self, file):
+    def __init__(self, file, repo: BookRepository):
+        self.repo = repo
         self.csv_file = file
         logging.info("Инициализация csvreader")
 
@@ -29,7 +32,6 @@ class CSVBookReader:
                     raise ValueError("CSV не содержит необходимые заголовки")
 
                 logging.debug(f"Заголовки CSV: {reader.fieldnames}")
-
                 for row in reader:
                     logging.debug(f"Обрабатываем строку: {row}")
                     try:
@@ -39,19 +41,22 @@ class CSVBookReader:
                             'author': row['Автор книги'].strip(),
                             'genre': row['Жанр книги'].strip(),
                             'year': year,
-                            'pages': row['Страниц'].strip(),
+                            'pages': int(row['Страниц'].strip()),
                             'description': row['Описание'].strip(),
-                            'publisher_id': row['Издательство'].strip()
+                            'publisher': row['Издательство'].strip()
                         }
-                        # id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        #     title TEXT NOT NULL,
-                        #     author_id INTEGER NOT NULL,
-                        #     year INTEGER,
-                        #     genre TEXT,
-                        #     pages INTEGER,
-                        #     description TEXT,
-                        #     publisher_id
                         books.append(book)
+
+                        book2 = Book(
+                            title=book['title'],
+                            author=book['author'],
+                            year=book['year'],
+                            genre=book['genre'],
+                            pages=book['pages'],
+                            description=book['description'],
+                            publisher=book['publisher']
+                        )
+                        self.repo.save(book2)
                     except (KeyError, ValueError) as e:
                         logging.warning(f"Ошибка парсинга строки: {row}. Ошибка: {str(e)}")
                 logging.info(f"Загружено книг из CSV: {len(books)}")
@@ -61,6 +66,11 @@ class CSVBookReader:
             return []
 
 
-b = CSVBookReader("test.csv")
-books = b.load_from_csv()
-print(*books)
+
+
+
+
+
+# b = CSVBookReader("test_books.csv")
+# books = b.load_from_csv()
+# print(*books)

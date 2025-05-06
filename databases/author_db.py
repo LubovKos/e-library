@@ -17,8 +17,7 @@ class AuthorRepository:
         with self._get_connection() as conn:
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS authors (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    full_name TEXT NOT NULL,
+                    full_name TEXT PRIMARY KEY,
                     date_of_birth TEXT,
                     date_of_death TEXT,
                     biography TEXT
@@ -35,24 +34,21 @@ class AuthorRepository:
             """, (
                 author.full_name, author.date_of_birth, author.date_of_death, author.biography
             ))
-            author.id = cursor.lastrowid
-            return author.id
+            return cursor.lastrowid
 
-    def find_by_id(self, author_id: int) -> Optional[Author]:
-        """Находит книгу по ID"""
+    def find_by_id(self, author: str) -> Optional[Author]:
         with self._get_connection() as conn:
             row = conn.execute("""
                 SELECT 
-                    id, full_name, date_of_birth, date_of_death, biography
-                FROM author WHERE id = ?
-            """, (author_id,)).fetchone()
+                    full_name, date_of_birth, date_of_death, biography
+                FROM author WHERE full_name = ?
+            """, (author,)).fetchone()
 
             if not row:
                 return None
 
             return Author(
-                id=row[0],
-                full_name=row[1],
-                date_of_birth=row[2],
-                date_of_death=row[3],
-                biography=row[4])
+                full_name=row[0],
+                date_of_birth=row[1],
+                date_of_death=row[2],
+                biography=row[3])

@@ -4,37 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/booksdb.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_import/csv/author_importer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_import/csv/book_importer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_import/csv/genre_importer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_import/csv/publishing_importer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_import/csv/reader_importer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_import/csv/test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_import/json/author_importer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_import/json/book_importer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_import/json/genre_importer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_import/json/publishing_importer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_import/json/reader_importer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/databases/author_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/databases/book_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/databases/genre_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/databases/publishing_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/databases/reader_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/author.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/book.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/genre.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/publishing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/reader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/query_processor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/report_generator.py" afterDir="false" />
+    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="the approximate logic of the application is outlined, the necessary files for each part are created, databases are made, reading from csv files (for most structures), interaction with databases is mostly written, and the initial initialization of structures (via csv)">
+      <change afterPath="$PROJECT_DIR$/data_import/json/books.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/csv/author_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/author_importer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/csv/book_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/book_importer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/csv/library.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/csv/reader_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/reader_importer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/csv/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/test_books.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/csv/test_authors.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/test_authors.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/json/book_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/book_importer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/author_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/databases/author_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/book_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/databases/book_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/book.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +35,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2wfp9lRI38D9lwHvFupLOpVIzUS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -66,9 +49,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Python.author_importer.executor": "Run",
+    "Python.book_db.executor": "Run",
+    "Python.book_importer.executor": "Run",
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/student/PycharmProjects/booksdb/data_import/json"
+    "last_opened_file_path": "C:/Users/student/PycharmProjects/booksdb/data_import/json",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -76,9 +64,11 @@
       <recent name="C:\Users\student\PycharmProjects\booksdb\data_import\json" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\student\PycharmProjects\booksdb\data_import\json" />
+      <recent name="C:\Users\student\PycharmProjects\booksdb\data\csv" />
+      <recent name="C:\Users\student\PycharmProjects\booksdb\data" />
       <recent name="C:\Users\student\PycharmProjects\booksdb\data_import\csv" />
       <recent name="C:\Users\student\PycharmProjects\booksdb\databases" />
-      <recent name="C:\Users\student\PycharmProjects\booksdb\data_import" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -97,6 +87,30 @@
       <option name="presentableId" value="Default" />
       <updated>1746442332753</updated>
     </task>
+    <task id="LOCAL-00001" summary="the approximate logic of the application is outlined, the necessary files for each part are created, databases are made, reading from csv files (for most structures), interaction with databases is mostly written, and the initial initialization of structures (via csv)">
+      <option name="closed" value="true" />
+      <created>1746454007743</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746454007743</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="the approximate logic of the application is outlined, the necessary files for each part are created, databases are made, reading from csv files (for most structures), interaction with databases is mostly written, and the initial initialization of structures (via csv)" />
+    <option name="LAST_COMMIT_MESSAGE" value="the approximate logic of the application is outlined, the necessary files for each part are created, databases are made, reading from csv files (for most structures), interaction with databases is mostly written, and the initial initialization of structures (via csv)" />
   </component>
 </project>

@@ -49,6 +49,6 @@ class CSVAuthorReader:
             return []
 
 
-b = CSVAuthorReader("test_authors.csv")
+b = CSVAuthorReader("../../data/csv/test_authors.csv")
 authors = b.load_from_csv()
 print(*authors)
