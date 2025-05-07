@@ -75,7 +75,7 @@ class JSONBookReader:
 
 # test
 repo = BookRepository()
-importer = JSONBookReader("books.json", repo)
+importer = JSONBookReader("../../data/json/books.json", repo)
 # Импорт
 importer.load_from_json()
 repo.show_all()

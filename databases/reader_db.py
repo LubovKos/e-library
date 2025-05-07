@@ -1,11 +1,14 @@
 import sqlite3
 from typing import Optional
 from pathlib import Path
+
+from tabulate import tabulate
+
 from models.reader import (Reader)
 
 
-class GenreRepository:
-    def __init__(self, db_path: str = "readers.db"):
+class ReaderRepository:
+    def __init__(self, db_path: str = "reader.db"):
         self.db_path = Path(db_path)
         self._init_db()
 
@@ -16,7 +19,7 @@ class GenreRepository:
         """Создаёт таблицу, если её нет"""
         with self._get_connection() as conn:
             conn.execute("""
-                CREATE TABLE IF NOT EXISTS readers (
+                CREATE TABLE IF NOT EXISTS reader (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     full_name TEXT NOT NULL,
                     phone TEXT,
@@ -24,11 +27,25 @@ class GenreRepository:
                 )
             """)
 
+    def reader_exists(self, reader: Reader) -> bool:
+        """Проверяет, существует ли читатель в БД"""
+        with self._get_connection() as conn:
+            cursor = conn.execute(
+                """
+                SELECT 1 FROM reader
+                WHERE full_name = ? 
+                """,
+                (reader.full_name,)
+            )
+            return cursor.fetchone() is not None
+
     def save(self, reader: Reader) -> int:
+        if self.reader_exists(reader):
+            return 0
         """Сохраняет издательство и возвращает ID"""
         with self._get_connection() as conn:
             cursor = conn.execute("""
-                INSERT INTO readers (
+                INSERT INTO reader (
                     full_name, phone, mail
                 ) VALUES (?, ?, ?)
             """, (
@@ -37,20 +54,77 @@ class GenreRepository:
             reader.id = cursor.lastrowid
             return reader.id
 
-    def find_by_id(self, reader_id: int) -> Optional[Reader]:
-        """Находит издательство по ID"""
+    def show_all(self):
+        """Красивый вывод с использованием tabulate"""
+        headers = ["ID", "ФИО", "Телефон", "Почта"]
         with self._get_connection() as conn:
-            row = conn.execute("""
-                SELECT 
-                    id, full_name, address, phone, mail
-                FROM readers WHERE id = ?
-            """, (reader_id,)).fetchone()
+            cursor = conn.execute('SELECT * FROM reader')
+            readers = cursor.fetchall()
+            # Выводим результаты
+            table_data = []
+            for reader in readers:
+                table_data.append([
+                    reader[0],
+                    reader[1],
+                    reader[2],
+                    reader[3]
+                ])
 
-            if not row:
-                return None
+            print("\n" + "=" * 100)
+            print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
+            print("=" * 100 + "\n")
 
-            return Reader(
-                id=row[0],
-                full_name=row[1],
-                phone=row[2],
-                mail=row[3])
+    def update(self, field: str, title: str, new_val):
+        with self._get_connection() as conn:
+            query = 'UPDATE reader SET ' + field + ' = ? WHERE full_name = ?'
+            print(query)
+            conn.execute(query, (new_val, title))
+
+    def delete(self, field: str, value):
+        with self._get_connection() as conn:
+            conn.execute("DELETE FROM reader WHERE " + field + " = ?", (value,))
+
+    def filter(self, field: str, direction):
+        if direction == "up":
+            query = "SELECT * FROM reader ORDER BY " + field + " ASC"
+        elif direction == "down":
+            query = "SELECT * FROM reader ORDER BY " + field + " DESC"
+        else:
+            # записать в лог
+            raise ValueError("Некорректное значение направления сортировки")
+        with self._get_connection() as conn:
+            cursor = conn.execute(query)
+            readers = cursor.fetchall()
+            # Выводим результаты
+            table_data = []
+            for reader in readers:
+                table_data.append([
+                    reader[0],
+                    reader[1],
+                    reader[2],
+                    reader[3]
+                ])
+
+            headers = ["ID", "ФИО", "Телефон", "Почта"]
+            print("\n" + "=" * 100)
+            print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
+            print("=" * 100 + "\n")
+
+    def find(self, field: str, value):
+        headers = ["ID", "ФИО", "Телефон", "Почта"]
+        with self._get_connection() as conn:
+            cursor = conn.execute('SELECT * FROM reader WHERE ' + field + " = ?", (value,))
+            readers = cursor.fetchall()
+            # Выводим результаты
+            table_data = []
+            for reader in readers:
+                table_data.append([
+                    reader[0],
+                    reader[1],
+                    reader[2],
+                    reader[3]
+                ])
+
+            print("\n" + "=" * 100)
+            print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
+            print("=" * 100 + "\n")

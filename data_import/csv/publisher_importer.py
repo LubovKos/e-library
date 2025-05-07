@@ -1,6 +1,9 @@
 import csv
 import logging
 
+from databases.publisher_db import PublisherRepository
+from models.publisher import Publisher
+
 # Настройка логирования
 logging.basicConfig(
     filename='library.log',
@@ -11,15 +14,16 @@ logging.basicConfig(
 
 class CSVPublisherReader:
 
-    def __init__(self, file):
+    def __init__(self, file, repo: PublisherRepository):
         self.csv_file = file
+        self.repo = repo
         logging.info("Инициализация csvreader")
 
     def load_from_csv(self):
         logging.info(f"Загрузка CSV: {self.csv_file}")
         publishers = []
         try:
-            with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
+            with open(self.csv_file, 'r') as file:
                 reader = csv.DictReader(file)
                 required_fields = ['Название','Адрес','Номер телефона','Почта']
 
@@ -39,7 +43,12 @@ class CSVPublisherReader:
                             'phone': row['Номер телефона'].strip(),
                             'mail': row['Почта'].strip()
                         }
+                        publisher = Publisher(name=publisher['name'],
+                                              address=publisher['address'],
+                                              phone=publisher['phone'],
+                                              mail=publisher['mail'])
                         publishers.append(publisher)
+                        self.repo.save(publisher)
                     except (KeyError, ValueError) as e:
                         logging.warning(f"Ошибка парсинга строки: {row}. Ошибка: {str(e)}")
                 logging.info(f"Загружено издательств из CSV: {len(publishers)}")
@@ -49,6 +58,7 @@ class CSVPublisherReader:
             return []
 
 
-b = CSVPublisherReader("test_publishers.csv")
-p = b.load_from_csv()
-print(*p)
+repo = PublisherRepository()
+b = CSVPublisherReader("C:/Users/student/PycharmProjects/booksdb/data/csv/test_publishers.csv", repo)
+b.load_from_csv()
+repo.show_all()
