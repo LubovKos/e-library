@@ -11,7 +11,6 @@ class Genre:
 
     def __post_init__(self):
         # Валидация данных при создании объекта
-        if not self.title:
-            raise ValueError("Название книги не может быть пустым")
+
 
 

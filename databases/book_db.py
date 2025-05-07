@@ -67,7 +67,6 @@ class BookRepository:
             return book.id
 
     def show_all(self):
-
         """Красивый вывод с использованием tabulate"""
         headers = ["ID", "Название", "Автор", "Год", "Жанр", "Страниц", "Издательство"]
         with self._get_connection() as conn:
@@ -89,6 +88,37 @@ class BookRepository:
             print("\n" + "=" * 100)
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
+
+    def test(self, field: str, title: str, author: str, new_val):
+        with self._get_connection() as conn:
+            query = 'SELECT * FROM book WHERE title = ? AND author = ?'
+            print(query)
+            cursor = conn.execute(query, (title, author))
+            books = cursor.fetchall()
+            # Выводим результаты
+            table_data = []
+            for book in books:
+                table_data.append([
+                    book[0],
+                    book[1],
+                    book[2],
+                    book[3],
+                    book[4],
+                    book[5],
+                    book[7]
+                ])
+
+            headers = ["ID", "Название", "Автор", "Год", "Жанр", "Страниц", "Издательство"]
+            print("\n" + "=" * 100)
+            print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
+            print("=" * 100 + "\n")
+
+
+    def update(self, field: str, title: str, author: str, new_val):
+        with self._get_connection() as conn:
+            query = 'UPDATE book SET ' + field + ' = ? WHERE title = ? AND author = ?'
+            print(query)
+            conn.execute(query, (new_val, title, author))
 
     def find_by_id(self, book_id: int) -> Optional[Book]:
         """Находит книгу по ID"""

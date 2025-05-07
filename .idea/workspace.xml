@@ -4,20 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="the approximate logic of the application is outlined, the necessary files for each part are created, databases are made, reading from csv files (for most structures), interaction with databases is mostly written, and the initial initialization of structures (via csv)">
-      <change afterPath="$PROJECT_DIR$/data_import/json/books.json" afterDir="false" />
+    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="slightly corrected the logic of the database for books, added reading books from a csv file and json + provided for the occurrence of errors. tested new parts of the code.added a beautiful output of the book database.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/author_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/author_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/book_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/book_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/library.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/reader_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/reader_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/test_books.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/test_authors.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/test_authors.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/json/book_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/book_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/author_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/databases/author_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/json/books.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/books.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databases/book_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/databases/book_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/book.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/genre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/publishing.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/publishing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/query_processor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/report_generator.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +44,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.author_importer.executor": "Run",
-    "Python.book_db.executor": "Run",
-    "Python.book_importer.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/student/PycharmProjects/booksdb/data_import/json",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.author_importer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.book_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.book_importer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/student/PycharmProjects/booksdb/data_import/json&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\student\PycharmProjects\booksdb\data_import\json" />
@@ -95,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746454007743</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="slightly corrected the logic of the database for books, added reading books from a csv file and json + provided for the occurrence of errors. tested new parts of the code.added a beautiful output of the book database.">
+      <option name="closed" value="true" />
+      <created>1746533844555</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746533844555</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +117,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="the approximate logic of the application is outlined, the necessary files for each part are created, databases are made, reading from csv files (for most structures), interaction with databases is mostly written, and the initial initialization of structures (via csv)" />
-    <option name="LAST_COMMIT_MESSAGE" value="the approximate logic of the application is outlined, the necessary files for each part are created, databases are made, reading from csv files (for most structures), interaction with databases is mostly written, and the initial initialization of structures (via csv)" />
+    <MESSAGE value="slightly corrected the logic of the database for books, added reading books from a csv file and json + provided for the occurrence of errors. tested new parts of the code.added a beautiful output of the book database." />
+    <option name="LAST_COMMIT_MESSAGE" value="slightly corrected the logic of the database for books, added reading books from a csv file and json + provided for the occurrence of errors. tested new parts of the code.added a beautiful output of the book database." />
   </component>
 </project>

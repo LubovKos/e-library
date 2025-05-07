@@ -20,8 +20,8 @@ class Book:
         # Валидация данных при создании объекта
         if self.title == "":
             raise ValueError("Название книги не может быть пустым")
-        # if not self.author:
-        #     raise ValueError("Поле автора не может быть пустым")
+        if self.author == "":
+            raise ValueError("Поле автора не может быть пустым")
         if self.year > datetime.now().year:
             raise ValueError("Год издания не может быть в будущем")
 

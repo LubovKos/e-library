@@ -12,7 +12,6 @@ class Reader:
 
     def __post_init__(self):
         # Валидация данных при создании объекта
-        if not self.full_name:
-            raise ValueError("Название книги не может быть пустым")
+
 
 

@@ -79,4 +79,6 @@ importer = JSONBookReader("books.json", repo)
 # Импорт
 importer.load_from_json()
 repo.show_all()
+repo.update("pages", "Преступление и наказание", "Фёдор Достоевский", 608)
+repo.show_all()
 
