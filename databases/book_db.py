@@ -1,9 +1,7 @@
 import sqlite3
 from typing import Optional
 from pathlib import Path
-
 from tabulate import tabulate
-
 from models.book import Book
 
 
@@ -89,11 +87,26 @@ class BookRepository:
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
 
-    def test(self, field: str, title: str, author: str, new_val):
+    def update(self, field: str, title: str, author: str, new_val):
         with self._get_connection() as conn:
-            query = 'SELECT * FROM book WHERE title = ? AND author = ?'
+            query = 'UPDATE book SET ' + field + ' = ? WHERE title = ? AND author = ?'
             print(query)
-            cursor = conn.execute(query, (title, author))
+            conn.execute(query, (new_val, title, author))
+
+    def delete(self, field: str, value):
+        with self._get_connection() as conn:
+            conn.execute("DELETE FROM book WHERE " + field + " = ?",(value,))
+
+    def filter(self, field: str, direction):
+        if direction == "up":
+            query = "SELECT * FROM book ORDER BY " + field + " ASC"
+        elif direction == "down":
+            query = "SELECT * FROM book ORDER BY " + field + " DESC"
+        else:
+            # записать в лог
+            raise ValueError("Некорректное значение направления сортировки")
+        with self._get_connection() as conn:
+            cursor = conn.execute(query)
             books = cursor.fetchall()
             # Выводим результаты
             table_data = []
@@ -113,33 +126,25 @@ class BookRepository:
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
 
-
-    def update(self, field: str, title: str, author: str, new_val):
+    def find(self, field: str, value):
+        headers = ["ID", "Название", "Автор", "Год", "Жанр", "Страниц", "Издательство"]
         with self._get_connection() as conn:
-            query = 'UPDATE book SET ' + field + ' = ? WHERE title = ? AND author = ?'
-            print(query)
-            conn.execute(query, (new_val, title, author))
+            cursor = conn.execute('SELECT * FROM book WHERE ' + field + " = ?", (value,))
+            books = cursor.fetchall()
+            # Выводим результаты
+            table_data = []
+            for book in books:
+                table_data.append([
+                    book[0],
+                    book[1],
+                    book[2],
+                    book[3],
+                    book[4],
+                    book[5],
+                    book[7]
+                ])
 
-    def find_by_id(self, book_id: int) -> Optional[Book]:
-        """Находит книгу по ID"""
-        with self._get_connection() as conn:
-            row = conn.execute("""
-                SELECT 
-                    id, title, author, year, genre,
-                    pages, description, publisher, created_at
-                FROM book WHERE id = ?
-            """, (book_id,)).fetchone()
-
-            if not row:
-                return None
-
-            return Book(
-                id=row[0],
-                title=row[1],
-                author=row[2],
-                year=row[3],
-                genre=row[4],
-                pages=row[5],
-                description=row[6],
-                publisher=row[7])
+            print("\n" + "=" * 100)
+            print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
+            print("=" * 100 + "\n")
 

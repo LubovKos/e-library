@@ -1,0 +1,513 @@
+2025-05-06 13:14:49,623 [INFO] [__init__:18] Инициализация jsonreader
+2025-05-06 13:15:22,192 [INFO] [__init__:18] Инициализация jsonreader
+2025-05-06 13:15:45,942 [INFO] [__init__:18] Инициализация jsonreader
+2025-05-06 13:15:45,943 [INFO] [load_from_json:21] Загрузка JSON: data/json/books.json
+2025-05-06 13:15:45,943 [ERROR] [load_from_json:58] Ошибка при чтении CSV: [Errno 2] No such file or directory: 'data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 24, in load_from_json
+    with open(self.json_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/json/books.json'
+2025-05-06 13:16:19,922 [INFO] [__init__:18] Инициализация jsonreader
+2025-05-06 13:16:19,922 [INFO] [load_from_json:21] Загрузка JSON: books.json
+2025-05-06 13:16:19,923 [ERROR] [load_from_json:58] Ошибка при чтении CSV: [Errno 2] No such file or directory: 'books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 24, in load_from_json
+    with open(self.json_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'books.json'
+2025-05-06 13:16:36,760 [INFO] [__init__:18] Инициализация jsonreader
+2025-05-06 13:16:36,760 [INFO] [load_from_json:21] Загрузка JSON: books.json
+2025-05-06 13:16:36,762 [ERROR] [load_from_json:58] Ошибка при чтении CSV: 'utf-8' codec can't decode byte 0xcd in position 13: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 28, in load_from_json
+    for item in parser:
+  File "C:\Users\student\PycharmProjects\booksdb\.venv\Lib\site-packages\ijson\compat.py", line 16, in read
+    return self.str_reader.read(n).encode('utf-8')
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+  File "C:\Users\student\AppData\Local\Programs\Python\Python312\Lib\encodings\utf_8_sig.py", line 69, in _buffer_decode
+    return codecs.utf_8_decode(input, errors, final)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xcd in position 13: invalid continuation byte
+2025-05-06 13:16:52,945 [INFO] [__init__:18] Инициализация jsonreader
+2025-05-06 13:16:52,945 [INFO] [load_from_json:21] Загрузка JSON: books.json
+2025-05-06 13:17:28,211 [INFO] [__init__:18] Инициализация jsonreader
+2025-05-06 13:17:28,212 [INFO] [load_from_json:21] Загрузка JSON: books.json
+2025-05-06 13:19:29,859 [INFO] [__init__:19] Инициализация jsonreader
+2025-05-06 13:19:29,860 [INFO] [load_from_json:22] Загрузка JSON: books.json
+2025-05-06 13:19:29,864 [ERROR] [load_from_json:73] Ошибка при чтении CSV: <_yajl2.items object at 0x000002ABF96D80D0> is not of type 'object'
+
+Failed validating 'type' in schema:
+    {'type': 'object',
+     'properties': {'name': {'type': 'string'},
+                    'age': {'type': 'number'},
+                    'isStudent': {'type': 'boolean'}},
+     'required': ['name', 'age']}
+
+On instance:
+    <_yajl2.items object at 0x000002ABF96D80D0>
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 40, in load_from_json
+    validate(instance=parser, schema=schema)
+  File "C:\Users\student\PycharmProjects\booksdb\.venv\Lib\site-packages\jsonschema\validators.py", line 1332, in validate
+    raise error
+jsonschema.exceptions.ValidationError: <_yajl2.items object at 0x000002ABF96D80D0> is not of type 'object'
+
+Failed validating 'type' in schema:
+    {'type': 'object',
+     'properties': {'name': {'type': 'string'},
+                    'age': {'type': 'number'},
+                    'isStudent': {'type': 'boolean'}},
+     'required': ['name', 'age']}
+
+On instance:
+    <_yajl2.items object at 0x000002ABF96D80D0>
+2025-05-06 13:20:48,061 [INFO] [__init__:19] Инициализация jsonreader
+2025-05-06 13:20:48,281 [INFO] [load_from_json:22] Загрузка JSON: books.json
+2025-05-06 14:21:41,375 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:21:41,375 [INFO] [load_from_json:23] Загрузка JSON: data/json/test_books.json
+2025-05-06 14:21:41,375 [ERROR] [load_from_json:58] Ошибка при чтении JSON: [Errno 2] No such file or directory: 'data/json/test_books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/json/test_books.json'
+2025-05-06 14:22:09,316 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:22:09,317 [INFO] [load_from_json:23] Загрузка JSON: data/json/books.json
+2025-05-06 14:22:09,317 [ERROR] [load_from_json:58] Ошибка при чтении JSON: [Errno 2] No such file or directory: 'data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/json/books.json'
+2025-05-06 14:22:14,952 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:22:14,952 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:22:14,954 [ERROR] [load_from_json:32] Отсутствуют обязательные заголовки
+2025-05-06 14:22:14,954 [ERROR] [load_from_json:58] Ошибка при чтении JSON: JSON не содержит необходимые заголовки
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 33, in load_from_json
+    raise ValueError("JSON не содержит необходимые заголовки")
+ValueError: JSON не содержит необходимые заголовки
+2025-05-06 14:23:38,804 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:23:38,805 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:23:38,807 [ERROR] [load_from_json:33] Отсутствуют обязательные заголовки
+2025-05-06 14:23:38,807 [ERROR] [load_from_json:59] Ошибка при чтении JSON: JSON не содержит необходимые заголовки
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 34, in load_from_json
+    raise ValueError("JSON не содержит необходимые заголовки")
+ValueError: JSON не содержит необходимые заголовки
+2025-05-06 14:24:48,536 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:24:48,537 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:24:48,540 [ERROR] [load_from_json:34] Отсутствуют обязательные заголовки
+2025-05-06 14:24:48,540 [ERROR] [load_from_json:60] Ошибка при чтении JSON: JSON не содержит необходимые заголовки
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 35, in load_from_json
+    raise ValueError("JSON не содержит необходимые заголовки")
+ValueError: JSON не содержит необходимые заголовки
+2025-05-06 14:34:27,971 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:34:27,971 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:34:27,973 [ERROR] [load_from_json:37] Отсутствуют обязательные заголовки
+2025-05-06 14:34:27,973 [ERROR] [load_from_json:61] Ошибка при чтении JSON: JSON не содержит необходимые заголовки
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 38, in load_from_json
+    raise ValueError("JSON не содержит необходимые заголовки")
+ValueError: JSON не содержит необходимые заголовки
+2025-05-06 14:37:47,464 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:37:47,465 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:37:47,467 [ERROR] [load_from_json:37] Отсутствуют обязательные заголовки
+2025-05-06 14:37:47,467 [ERROR] [load_from_json:61] Ошибка при чтении JSON: JSON не содержит необходимые заголовки
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 38, in load_from_json
+    raise ValueError("JSON не содержит необходимые заголовки")
+ValueError: JSON не содержит необходимые заголовки
+2025-05-06 14:39:21,431 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:39:21,431 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:39:21,433 [ERROR] [load_from_json:36] Отсутствуют обязательные заголовки
+2025-05-06 14:39:21,434 [ERROR] [load_from_json:60] Ошибка при чтении JSON: JSON не содержит необходимые заголовки
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 37, in load_from_json
+    raise ValueError("JSON не содержит необходимые заголовки")
+ValueError: JSON не содержит необходимые заголовки
+2025-05-06 14:39:34,304 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:39:34,305 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:39:34,307 [ERROR] [load_from_json:36] Отсутствуют обязательные заголовки
+2025-05-06 14:39:34,307 [ERROR] [load_from_json:60] Ошибка при чтении JSON: JSON не содержит необходимые заголовки
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 37, in load_from_json
+    raise ValueError("JSON не содержит необходимые заголовки")
+ValueError: JSON не содержит необходимые заголовки
+2025-05-06 14:42:09,933 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:42:09,934 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:42:09,935 [ERROR] [load_from_json:36] Отсутствуют обязательные заголовки
+2025-05-06 14:42:09,936 [ERROR] [load_from_json:60] Ошибка при чтении JSON: JSON не содержит необходимые заголовки
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 37, in load_from_json
+    raise ValueError("JSON не содержит необходимые заголовки")
+ValueError: JSON не содержит необходимые заголовки
+2025-05-06 14:47:18,087 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:47:18,088 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:47:18,090 [ERROR] [load_from_json:47] Отсутствуют обязательные заголовки
+2025-05-06 14:47:18,090 [ERROR] [load_from_json:71] Ошибка при чтении JSON: JSON не содержит необходимые заголовки
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 48, in load_from_json
+    raise ValueError("JSON не содержит необходимые заголовки")
+ValueError: JSON не содержит необходимые заголовки
+2025-05-06 14:48:45,011 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:48:45,023 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:48:45,024 [DEBUG] [load_from_json:52] Обрабатываем строку: 1
+2025-05-06 14:48:45,035 [DEBUG] [load_from_json:52] Обрабатываем строку: 2
+2025-05-06 14:48:45,045 [DEBUG] [load_from_json:52] Обрабатываем строку: 3
+2025-05-06 14:48:45,057 [DEBUG] [load_from_json:52] Обрабатываем строку: 4
+2025-05-06 14:48:45,074 [DEBUG] [load_from_json:52] Обрабатываем строку: 5
+2025-05-06 14:48:45,097 [INFO] [load_from_json:69] Загружено книг из JSON: 5
+2025-05-06 14:49:14,538 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:49:14,539 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:49:14,539 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-06 14:49:14,550 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-06 14:49:14,557 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-06 14:49:14,567 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-06 14:49:14,575 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-06 14:49:14,595 [INFO] [load_from_json:68] Загружено книг из JSON: 5
+2025-05-06 14:50:35,945 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:50:35,946 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:50:35,946 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-06 14:50:35,954 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-06 14:50:35,964 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-06 14:50:35,976 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-06 14:50:35,986 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-06 14:50:36,001 [INFO] [load_from_json:68] Загружено книг из JSON: 5
+2025-05-06 14:50:58,006 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 14:50:58,007 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 14:50:58,007 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-06 14:50:58,018 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-06 14:50:58,045 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-06 14:50:58,054 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-06 14:50:58,066 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-06 14:50:58,074 [INFO] [load_from_json:68] Загружено книг из JSON: 5
+2025-05-06 15:03:41,665 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 15:03:41,666 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 15:03:41,667 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-06 15:03:41,668 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-06 15:03:41,669 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-06 15:03:41,670 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-06 15:03:41,671 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-06 15:03:41,672 [INFO] [load_from_json:68] Загружено книг из JSON: 5
+2025-05-06 15:03:43,386 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 15:03:43,387 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 15:03:43,387 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-06 15:03:43,389 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-06 15:03:43,390 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-06 15:03:43,391 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-06 15:03:43,392 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-06 15:03:43,393 [INFO] [load_from_json:68] Загружено книг из JSON: 5
+2025-05-06 15:09:30,797 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 15:09:30,798 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 15:09:30,824 [ERROR] [load_from_json:72] Ошибка при чтении JSON: parse error: invalid object key (must be a string)
+          ости системы.",   },   {     "Название к
+                     (right here) ------^
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 29, in load_from_json
+    for book in parser:
+ijson.common.IncompleteJSONError: parse error: invalid object key (must be a string)
+          ости системы.",   },   {     "Название к
+                     (right here) ------^
+
+2025-05-06 15:10:18,191 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-06 15:10:18,192 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-06 15:10:18,204 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-06 15:10:18,205 [WARNING] [load_from_json:47] Отсутствуют поля в строке 2: {'Издательство'}
+2025-05-06 15:10:18,205 [ERROR] [load_from_json:72] Ошибка при чтении JSON: JSON не содержит необходимые заголовки
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 48, in load_from_json
+    raise ValueError("JSON не содержит необходимые заголовки")
+ValueError: JSON не содержит необходимые заголовки
+2025-05-07 10:34:36,052 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 10:34:36,053 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 10:34:36,054 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 10:34:36,054 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 10:34:36,054 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 10:34:36,055 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 10:34:36,056 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 10:34:36,057 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 10:34:36,058 [INFO] [load_from_json:68] Загружено книг из JSON: 4
+2025-05-07 10:37:51,661 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 10:37:51,662 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 10:37:51,673 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 10:37:51,673 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 10:37:51,673 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 10:37:51,673 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 10:37:51,673 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 10:37:51,676 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 10:37:51,677 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 10:37:51,680 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 10:49:42,802 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 10:49:42,803 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 10:49:42,803 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 10:49:42,803 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 10:49:42,803 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 10:49:42,804 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 10:49:42,804 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 10:49:42,805 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 10:49:42,806 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 10:49:42,807 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 10:51:07,634 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 10:51:07,635 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 10:51:07,636 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 10:51:07,636 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 10:51:07,636 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 10:51:07,636 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 10:51:07,636 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 10:51:07,637 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 10:51:07,639 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 10:51:07,640 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 10:54:51,409 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 10:54:51,410 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 10:54:51,411 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 10:54:51,411 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 10:54:51,411 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 10:54:51,411 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 10:54:51,411 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 10:54:51,413 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 10:54:51,415 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 10:54:51,416 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 10:57:37,704 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 10:57:37,705 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 10:57:37,706 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 10:57:37,706 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 10:57:37,706 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 10:57:37,706 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 10:57:37,706 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 10:57:37,708 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 10:57:37,709 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 10:57:37,710 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 10:58:06,469 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 10:58:06,469 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 10:58:06,470 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 10:58:06,471 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 10:58:06,471 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 10:58:06,471 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 10:58:06,471 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 10:58:06,472 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 10:58:06,473 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 10:58:06,474 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 10:58:16,842 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 10:58:16,846 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 10:58:16,848 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 10:58:16,848 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 10:58:16,848 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 10:58:16,848 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 10:58:16,848 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 10:58:16,851 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 10:58:16,853 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 10:58:16,855 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 11:32:43,563 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 11:32:43,566 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 11:32:43,568 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 11:32:43,568 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 11:32:43,568 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 11:32:43,568 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 11:32:43,568 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 11:32:43,570 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 11:32:43,571 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 11:32:43,573 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 11:33:11,175 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 11:33:11,176 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 11:33:11,176 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 11:33:11,177 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 11:33:11,177 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 11:33:11,177 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 11:33:11,177 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 11:33:11,178 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 11:33:11,179 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 11:33:11,180 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 11:34:30,783 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 11:34:30,783 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 11:34:30,784 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 11:34:30,785 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 11:34:30,785 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 11:34:30,785 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 11:34:30,785 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 11:34:30,786 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 11:34:30,787 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 11:34:30,789 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 11:35:04,395 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 11:35:04,395 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 11:35:04,396 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 11:35:04,396 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 11:35:04,396 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 11:35:04,396 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 11:35:04,396 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 11:35:04,397 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 11:35:04,399 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 11:35:04,400 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 11:35:45,114 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 11:35:45,115 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 11:35:45,116 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 11:35:45,117 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 11:35:45,117 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 11:35:45,117 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 11:35:45,117 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 11:35:45,118 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 11:35:45,120 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 11:35:45,121 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 11:37:09,767 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 11:37:09,768 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 11:37:09,769 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 11:37:09,769 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 11:37:09,769 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 11:37:09,769 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 11:37:09,769 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 11:37:09,771 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 11:37:09,773 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 11:37:09,775 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 11:39:22,392 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 11:39:22,393 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 11:39:22,394 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 11:39:22,395 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 11:39:22,395 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 11:39:22,395 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 11:39:22,395 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 11:39:22,396 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 11:39:22,397 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 11:39:22,398 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 11:39:33,303 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 11:39:33,304 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 11:39:33,305 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 11:39:33,305 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 11:39:33,305 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 11:39:33,305 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 11:39:33,305 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 11:39:33,306 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 11:39:33,308 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 11:39:33,309 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 11:40:33,985 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 11:40:33,987 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 11:40:33,987 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 11:40:33,988 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 11:40:33,988 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 11:40:33,988 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 11:40:33,988 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 11:40:33,990 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 11:40:33,991 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 11:40:33,992 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:06:19,677 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:06:19,678 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:06:19,679 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:06:19,679 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:06:19,679 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:06:19,679 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:06:19,679 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:06:19,680 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:06:19,690 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:06:19,692 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:07:25,584 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:07:25,585 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:07:25,585 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:07:25,586 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:07:25,586 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:07:25,586 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:07:25,586 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:07:25,587 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:07:25,602 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:07:25,603 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:10:27,675 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:10:27,676 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:10:27,676 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:10:27,676 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:10:27,676 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:10:27,676 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:10:27,676 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:10:27,678 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:10:27,685 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:10:27,686 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:10:39,036 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:10:39,038 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:10:39,038 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:10:39,039 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:10:39,039 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:10:39,039 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:10:39,039 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:10:39,040 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:10:39,047 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:10:39,048 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:10:54,974 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:10:54,974 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:10:54,975 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:10:54,975 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:10:54,975 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:10:54,975 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:10:54,975 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:10:54,976 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:10:54,989 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:10:54,990 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:11:03,928 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:11:03,929 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:11:03,930 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:11:03,930 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:11:03,930 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:11:03,930 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:11:03,930 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:11:03,931 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:11:03,940 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:11:03,942 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:13:13,080 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:13:13,081 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:13:13,082 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:13:13,082 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:13:13,082 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:13:13,082 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:13:13,082 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:13:13,083 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:13:13,093 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:13:13,095 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:13:17,504 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:13:17,505 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:13:17,506 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:13:17,507 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:13:17,507 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:13:17,507 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:13:17,507 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:13:17,509 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:13:17,520 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:13:17,522 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:16:38,250 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:16:38,251 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:16:38,252 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:16:38,252 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:16:38,252 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:16:38,252 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:16:38,252 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:16:38,254 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:16:38,262 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:16:38,264 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:16:47,452 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:16:47,452 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:16:47,454 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:16:47,454 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:16:47,454 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:16:47,454 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:16:47,454 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:16:47,455 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:16:47,466 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:16:47,468 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:17:03,939 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:17:03,940 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:17:03,941 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:17:03,941 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:17:03,941 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:17:03,941 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:17:03,941 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:17:03,942 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:17:03,961 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:17:03,963 [INFO] [load_from_json:68] Загружено книг из JSON: 3
+2025-05-07 12:17:18,954 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-07 12:17:18,956 [INFO] [load_from_json:23] Загрузка JSON: books.json
+2025-05-07 12:17:18,957 [DEBUG] [load_from_json:51] Обрабатываем строку: 1
+2025-05-07 12:17:18,957 [WARNING] [load_from_json:67] Ошибка парсинга строки: 2. Ошибка: Год издания не может быть в будущем
+2025-05-07 12:17:18,957 [DEBUG] [load_from_json:51] Обрабатываем строку: 2
+2025-05-07 12:17:18,957 [WARNING] [load_from_json:67] Ошибка парсинга строки: 3. Ошибка: Поле автора не может быть пустым
+2025-05-07 12:17:18,957 [DEBUG] [load_from_json:51] Обрабатываем строку: 3
+2025-05-07 12:17:18,958 [DEBUG] [load_from_json:51] Обрабатываем строку: 4
+2025-05-07 12:17:18,970 [DEBUG] [load_from_json:51] Обрабатываем строку: 5
+2025-05-07 12:17:18,972 [INFO] [load_from_json:68] Загружено книг из JSON: 3

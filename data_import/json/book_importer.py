@@ -81,4 +81,7 @@ importer.load_from_json()
 repo.show_all()
 repo.update("pages", "Преступление и наказание", "Фёдор Достоевский", 608)
 repo.show_all()
+repo.delete("title", "Мастер и Маргарита")
+repo.show_all()
+repo.find("pages", 480)
 

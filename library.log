@@ -1,0 +1,503 @@
+2025-05-06 11:03:18,458 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:03:35,904 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:03:35,905 [INFO] [load_from_csv:21] Загрузка CSV: <databases.book_db.BookRepository object at 0x00000150FB5DD2E0>
+2025-05-06 11:03:35,906 [ERROR] [load_from_csv:55] Ошибка при чтении CSV: expected str, bytes or os.PathLike object, not BookRepository
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 24, in load_from_csv
+    with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not BookRepository
+2025-05-06 11:11:32,546 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:11:32,550 [INFO] [load_from_csv:21] Загрузка CSV: <databases.book_db.BookRepository object at 0x0000021278D2D3D0>
+2025-05-06 11:11:32,550 [ERROR] [load_from_csv:55] Ошибка при чтении CSV: expected str, bytes or os.PathLike object, not BookRepository
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 24, in load_from_csv
+    with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not BookRepository
+2025-05-06 11:11:50,198 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:11:50,200 [INFO] [load_from_csv:21] Загрузка CSV: <databases.book_db.BookRepository object at 0x0000013CBC91D3D0>
+2025-05-06 11:11:50,201 [ERROR] [load_from_csv:55] Ошибка при чтении CSV: expected str, bytes or os.PathLike object, not BookRepository
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 24, in load_from_csv
+    with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not BookRepository
+2025-05-06 11:12:25,396 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:12:25,397 [INFO] [load_from_csv:21] Загрузка CSV: <databases.book_db.BookRepository object at 0x000001D7A17FD3D0>
+2025-05-06 11:12:25,397 [ERROR] [load_from_csv:55] Ошибка при чтении CSV: expected str, bytes or os.PathLike object, not BookRepository
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 24, in load_from_csv
+    with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not BookRepository
+2025-05-06 11:13:02,887 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:13:02,887 [INFO] [load_from_csv:21] Загрузка CSV: <databases.book_db.BookRepository object at 0x0000023A87D2D3D0>
+2025-05-06 11:13:02,887 [ERROR] [load_from_csv:55] Ошибка при чтении CSV: expected str, bytes or os.PathLike object, not BookRepository
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 24, in load_from_csv
+    with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not BookRepository
+2025-05-06 11:13:58,553 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:13:58,559 [INFO] [load_from_csv:21] Загрузка CSV: <databases.book_db.BookRepository object at 0x0000021DD7E2D3D0>
+2025-05-06 11:13:58,560 [ERROR] [load_from_csv:55] Ошибка при чтении CSV: expected str, bytes or os.PathLike object, not BookRepository
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 24, in load_from_csv
+    with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not BookRepository
+2025-05-06 11:14:20,682 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:14:20,682 [INFO] [load_from_csv:21] Загрузка CSV: <databases.book_db.BookRepository object at 0x00000276AE55D3D0>
+2025-05-06 11:14:20,683 [ERROR] [load_from_csv:56] Ошибка при чтении CSV: expected str, bytes or os.PathLike object, not BookRepository
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 24, in load_from_csv
+    with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not BookRepository
+2025-05-06 11:16:24,739 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:16:24,739 [INFO] [load_from_csv:21] Загрузка CSV: <databases.book_db.BookRepository object at 0x000002820E12D3D0>
+2025-05-06 11:16:24,740 [ERROR] [load_from_csv:57] Ошибка при чтении CSV: expected str, bytes or os.PathLike object, not BookRepository
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 25, in load_from_csv
+    with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not BookRepository
+2025-05-06 11:17:25,957 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:17:25,958 [INFO] [load_from_csv:21] Загрузка CSV: <databases.book_db.BookRepository object at 0x0000018C819BD3D0>
+2025-05-06 11:17:25,958 [ERROR] [load_from_csv:58] Ошибка при чтении CSV: expected str, bytes or os.PathLike object, not BookRepository
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 25, in load_from_csv
+    with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not BookRepository
+2025-05-06 11:17:50,566 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:17:50,566 [INFO] [load_from_csv:21] Загрузка CSV: <databases.book_db.BookRepository object at 0x0000020B8E32D3D0>
+2025-05-06 11:17:50,567 [ERROR] [load_from_csv:58] Ошибка при чтении CSV: expected str, bytes or os.PathLike object, not BookRepository
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 25, in load_from_csv
+    with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not BookRepository
+2025-05-06 11:18:15,473 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:18:15,473 [INFO] [load_from_csv:21] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:18:15,476 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:18:15,476 [DEBUG] [load_from_csv:37] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:18:15,477 [ERROR] [load_from_csv:58] Ошибка при чтении CSV: 'dict' object has no attribute 'title'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 52, in load_from_csv
+    print(self.repo.save(book))
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 43, in save
+    book.title,
+    ^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'title'
+2025-05-06 11:19:47,255 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:19:47,255 [INFO] [load_from_csv:21] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:19:47,257 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:19:47,257 [DEBUG] [load_from_csv:37] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:19:47,257 [WARNING] [load_from_csv:54] Ошибка парсинга строки: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}. Ошибка: invalid literal for int() with base 10: 'Фёдор Достоевский'
+2025-05-06 11:19:47,258 [DEBUG] [load_from_csv:37] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 11:19:47,258 [WARNING] [load_from_csv:54] Ошибка парсинга строки: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}. Ошибка: invalid literal for int() with base 10: 'Рэй Брэдбери'
+2025-05-06 11:19:47,258 [DEBUG] [load_from_csv:37] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 11:19:47,258 [WARNING] [load_from_csv:54] Ошибка парсинга строки: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}. Ошибка: invalid literal for int() with base 10: 'Джоан Роулинг'
+2025-05-06 11:19:47,258 [DEBUG] [load_from_csv:37] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 11:19:47,258 [WARNING] [load_from_csv:54] Ошибка парсинга строки: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}. Ошибка: invalid literal for int() with base 10: 'Михаил Булгаков'
+2025-05-06 11:19:47,258 [DEBUG] [load_from_csv:37] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 11:19:47,258 [WARNING] [load_from_csv:54] Ошибка парсинга строки: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}. Ошибка: invalid literal for int() with base 10: 'Стивен Хокинг'
+2025-05-06 11:19:47,258 [INFO] [load_from_csv:55] Загружено книг из CSV: 0
+2025-05-06 11:21:34,867 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:21:34,867 [INFO] [load_from_csv:21] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:21:34,869 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:21:34,869 [DEBUG] [load_from_csv:37] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:21:34,870 [ERROR] [load_from_csv:58] Ошибка при чтении CSV: 'dict' object has no attribute 'title'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 52, in load_from_csv
+    print(self.repo.save(book))
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 43, in save
+    book.title,
+    ^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'title'
+2025-05-06 11:24:22,250 [INFO] [__init__:18] Инициализация csvreader
+2025-05-06 11:24:22,251 [INFO] [load_from_csv:21] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:24:22,252 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:24:22,253 [DEBUG] [load_from_csv:37] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:24:22,254 [ERROR] [load_from_csv:58] Ошибка при чтении CSV: 'dict' object has no attribute 'title'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 52, in load_from_csv
+    print(self.repo.save(book))
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 43, in save
+    book.title,
+    ^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'title'
+2025-05-06 11:33:54,198 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 11:33:54,201 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:33:54,204 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:33:54,204 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:33:54,204 [WARNING] [load_from_csv:65] Ошибка парсинга строки: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}. Ошибка: 'Название'
+2025-05-06 11:33:54,204 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 11:33:54,204 [WARNING] [load_from_csv:65] Ошибка парсинга строки: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}. Ошибка: 'Название'
+2025-05-06 11:33:54,204 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 11:33:54,205 [WARNING] [load_from_csv:65] Ошибка парсинга строки: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}. Ошибка: 'Название'
+2025-05-06 11:33:54,205 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 11:33:54,205 [WARNING] [load_from_csv:65] Ошибка парсинга строки: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}. Ошибка: 'Название'
+2025-05-06 11:33:54,205 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 11:33:54,205 [WARNING] [load_from_csv:65] Ошибка парсинга строки: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}. Ошибка: 'Название'
+2025-05-06 11:33:54,205 [INFO] [load_from_csv:66] Загружено книг из CSV: 5
+2025-05-06 11:35:55,045 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 11:35:55,046 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:35:55,049 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:35:55,049 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:35:55,049 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: Book.__init__() got an unexpected keyword argument 'author_id'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 52, in load_from_csv
+    book = Book(
+           ^^^^^
+TypeError: Book.__init__() got an unexpected keyword argument 'author_id'
+2025-05-06 11:36:38,968 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 11:36:38,968 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:36:38,970 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:36:38,970 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:36:38,970 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: Book.__init__() got an unexpected keyword argument 'year'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 52, in load_from_csv
+    book = Book(
+           ^^^^^
+TypeError: Book.__init__() got an unexpected keyword argument 'year'
+2025-05-06 11:37:19,702 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 11:37:19,702 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:37:19,704 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:37:19,704 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:37:19,706 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 63, in load_from_csv
+    print(self.repo.save(book))
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 37, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 11:39:13,022 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 11:39:13,022 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:39:13,024 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:39:13,024 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:39:13,025 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 63, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 37, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 11:41:21,685 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 11:41:21,688 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:41:21,694 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:41:21,695 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:41:21,697 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 63, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 38, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 11:42:06,613 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 11:42:06,614 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:42:06,615 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:42:06,616 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:42:06,617 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 63, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 38, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 11:42:36,158 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 11:42:36,163 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:42:36,166 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:42:36,166 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:42:36,168 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 63, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 39, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 11:44:23,774 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 11:44:23,775 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:44:23,777 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:44:23,777 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:44:23,778 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 63, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 40, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 11:44:37,658 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 11:44:37,661 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 11:44:37,663 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 11:44:37,663 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 11:44:37,665 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 63, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 40, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 12:10:39,292 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:10:39,293 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:10:39,294 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:10:39,295 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:10:39,296 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 63, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 38, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 12:12:45,259 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:12:45,260 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:12:45,261 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:12:45,262 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:12:45,263 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 63, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 38, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 12:13:56,008 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:13:56,008 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:13:56,011 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:13:56,011 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:13:56,011 [ERROR] [load_from_csv:69] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 63, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 38, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 12:20:04,998 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:20:04,999 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:20:05,001 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:20:05,001 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:20:05,002 [ERROR] [load_from_csv:66] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 60, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 36, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 12:20:47,926 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:20:47,926 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:20:47,928 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:20:47,928 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:20:47,929 [ERROR] [load_from_csv:66] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 60, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 36, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 12:23:31,799 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:23:31,800 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:23:31,802 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:23:31,802 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:23:31,803 [ERROR] [load_from_csv:65] Ошибка при чтении CSV: Book.__init__() missing 1 required positional argument: 'author'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 50, in load_from_csv
+    book2 = Book(
+            ^^^^^
+TypeError: Book.__init__() missing 1 required positional argument: 'author'
+2025-05-06 12:25:03,206 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:25:03,207 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:25:03,208 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:25:03,208 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:25:03,209 [ERROR] [load_from_csv:66] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 60, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 36, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 12:26:27,556 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:26:27,556 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:26:27,558 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:26:27,558 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:26:27,560 [ERROR] [load_from_csv:66] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 60, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 36, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 12:27:50,408 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:27:50,409 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:27:50,411 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:27:50,411 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:27:50,413 [ERROR] [load_from_csv:66] Ошибка при чтении CSV: table books has no column named author
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 60, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 36, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named author
+2025-05-06 12:28:33,371 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:28:33,371 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:28:33,372 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:28:33,373 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:28:33,374 [ERROR] [load_from_csv:66] Ошибка при чтении CSV: table books has no column named publisher
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 60, in load_from_csv
+    print(self.repo.save(book2))
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\student\PycharmProjects\booksdb\databases\book_db.py", line 36, in save
+    cursor = conn.execute("""
+             ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table books has no column named publisher
+2025-05-06 12:35:11,498 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:35:11,499 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:35:11,501 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:35:11,501 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:35:11,529 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 12:35:11,561 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 12:35:11,573 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 12:35:11,591 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 12:35:11,614 [INFO] [load_from_csv:63] Загружено книг из CSV: 5
+2025-05-06 12:41:14,318 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:41:14,327 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:41:14,329 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:41:14,329 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:41:14,329 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 12:41:14,329 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 12:41:14,329 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 12:41:14,330 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 12:41:14,330 [INFO] [load_from_csv:61] Загружено книг из CSV: 5
+2025-05-06 12:43:36,352 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:43:36,353 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:43:36,357 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:43:36,357 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:43:36,357 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 12:43:36,358 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 12:43:36,358 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 12:43:36,359 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 12:43:36,359 [INFO] [load_from_csv:61] Загружено книг из CSV: 5
+2025-05-06 12:48:47,188 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:48:47,189 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:48:47,190 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:48:47,190 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:48:47,190 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 12:48:47,191 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 12:48:47,191 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 12:48:47,191 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 12:48:47,191 [INFO] [load_from_csv:61] Загружено книг из CSV: 5
+2025-05-06 12:50:24,596 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:50:24,600 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:50:24,602 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:50:24,603 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:50:24,603 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 12:50:24,604 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 12:50:24,604 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 12:50:24,604 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 12:50:24,605 [INFO] [load_from_csv:61] Загружено книг из CSV: 5
+2025-05-06 12:50:36,236 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:50:36,236 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:50:36,238 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:50:36,238 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:50:36,238 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 12:50:36,238 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 12:50:36,238 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 12:50:36,238 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 12:50:36,238 [INFO] [load_from_csv:61] Загружено книг из CSV: 5
+2025-05-06 12:51:04,092 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:51:04,093 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:51:04,094 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:51:04,095 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:51:04,095 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 12:51:04,095 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 12:51:04,095 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 12:51:04,095 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 12:51:04,095 [INFO] [load_from_csv:61] Загружено книг из CSV: 5
+2025-05-06 12:52:00,614 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:52:00,621 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:52:00,624 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:52:00,624 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:52:00,624 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 12:52:00,624 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 12:52:00,625 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 12:52:00,625 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 12:52:00,625 [INFO] [load_from_csv:61] Загружено книг из CSV: 5
+2025-05-06 12:52:16,776 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 12:52:16,777 [INFO] [load_from_csv:22] Загрузка CSV: data_import/csv/test_books.csv
+2025-05-06 12:52:16,778 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 12:52:16,779 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 12:52:16,779 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 12:52:16,779 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 12:52:16,779 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 12:52:16,779 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 12:52:16,779 [INFO] [load_from_csv:61] Загружено книг из CSV: 5
+2025-05-06 14:51:14,536 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 14:51:14,536 [INFO] [load_from_csv:22] Загрузка CSV: data/csv/test_books.csv
+2025-05-06 14:51:14,538 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 14:51:14,538 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 14:51:14,546 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 14:51:14,554 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 14:51:14,561 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 14:51:14,568 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 14:51:14,577 [INFO] [load_from_csv:62] Загружено книг из CSV: 5
+2025-05-06 14:51:16,244 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 14:51:16,244 [INFO] [load_from_csv:22] Загрузка CSV: data/csv/test_books.csv
+2025-05-06 14:51:16,246 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 14:51:16,246 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 14:51:16,254 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 14:51:16,263 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 14:51:16,274 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 14:51:16,286 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 14:51:16,294 [INFO] [load_from_csv:62] Загружено книг из CSV: 5
+2025-05-06 15:02:09,273 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 15:02:09,274 [INFO] [load_from_csv:22] Загрузка CSV: data/csv/test_books.csv
+2025-05-06 15:02:09,277 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 15:02:09,277 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 15:02:09,278 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 15:02:09,279 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 15:02:09,280 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 15:02:09,281 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 15:02:09,282 [INFO] [load_from_csv:62] Загружено книг из CSV: 5
+2025-05-06 15:02:14,236 [INFO] [__init__:19] Инициализация csvreader
+2025-05-06 15:02:14,236 [INFO] [load_from_csv:22] Загрузка CSV: data/csv/test_books.csv
+2025-05-06 15:02:14,238 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-06 15:02:14,238 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-06 15:02:14,239 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-06 15:02:14,240 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-06 15:02:14,242 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-06 15:02:14,243 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-06 15:02:14,244 [INFO] [load_from_csv:62] Загружено книг из CSV: 5
