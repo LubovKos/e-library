@@ -501,3 +501,876 @@ sqlite3.OperationalError: table books has no column named publisher
 2025-05-06 15:02:14,242 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
 2025-05-06 15:02:14,243 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
 2025-05-06 15:02:14,244 [INFO] [load_from_csv:62] Загружено книг из CSV: 5
+2025-05-12 10:41:23,334 [INFO] [main:333] Program started
+2025-05-12 10:41:23,335 [INFO] [main_menu:82] Starting main menu
+2025-05-12 10:41:32,853 [DEBUG] [main_menu:93] User selected: 6
+2025-05-12 10:41:32,853 [INFO] [display_records_menu:311] Starting display records menu
+2025-05-12 10:41:35,935 [INFO] [display_records_menu:329] Displayed 0 book records
+2025-05-12 10:54:40,703 [INFO] [main:344] Program started
+2025-05-12 10:54:40,706 [INFO] [main_menu:93] Starting main menu
+2025-05-12 10:54:44,471 [DEBUG] [main_menu:104] User selected: 1
+2025-05-12 10:54:44,471 [INFO] [import_data:175] Starting data import
+2025-05-12 10:54:47,375 [DEBUG] [import_data:186] User selected entity for import: 1
+2025-05-12 10:55:07,023 [DEBUG] [import_data:194] User entered path: csv/test_authors.csv
+2025-05-12 10:55:07,024 [ERROR] [import_data:201] File not found: csv/test_authors.csv
+2025-05-12 11:05:27,169 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:05:27,174 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:05:27,174 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:05:27,202 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:05:27,202 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:05:27,203 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:05:27,216 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:05:27,217 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:05:27,217 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:05:27,218 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:05:27,220 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:05:27,221 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:05:27,222 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:05:27,223 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:05:27,224 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:05:27,225 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:05:27,226 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:05:27,229 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:05:27,230 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:05:27,231 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:05:27,267 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:05:27,268 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:05:27,305 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:05:27,306 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:05:27,349 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:05:27,350 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:05:27,350 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:05:27,361 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:05:27,361 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:05:27,361 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:05:27,370 [INFO] [main:330] Program started
+2025-05-12 11:05:27,370 [INFO] [main_menu:72] Starting main menu
+2025-05-12 11:05:30,067 [DEBUG] [main_menu:83] User selected: 1
+2025-05-12 11:05:30,068 [INFO] [import_data:156] Starting data import
+2025-05-12 11:05:32,015 [DEBUG] [import_data:167] User selected entity for import: 1
+2025-05-12 11:05:51,835 [DEBUG] [import_data:175] User entered path: csv/test_books.csv
+2025-05-12 11:05:51,835 [ERROR] [import_data:182] File not found: csv/test_books.csv
+2025-05-12 11:07:17,232 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:07:17,233 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:07:17,233 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:07:17,256 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:07:17,256 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:07:17,257 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:07:17,264 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:07:17,264 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:07:17,265 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:07:17,266 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:07:17,267 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:07:17,268 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:07:17,269 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:07:17,271 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:07:17,273 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:07:17,274 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:07:17,276 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:07:17,277 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:07:17,280 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:07:17,281 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:07:17,282 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:07:17,283 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:07:17,292 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:07:17,294 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:07:17,321 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:07:17,322 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:07:17,322 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:07:17,331 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:07:17,331 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:07:17,331 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:07:17,340 [INFO] [main:330] Program started
+2025-05-12 11:07:17,340 [INFO] [main_menu:72] Starting main menu
+2025-05-12 11:07:19,846 [DEBUG] [main_menu:83] User selected: 1
+2025-05-12 11:07:19,846 [INFO] [import_data:156] Starting data import
+2025-05-12 11:07:20,819 [DEBUG] [import_data:167] User selected entity for import: 1
+2025-05-12 11:07:34,952 [DEBUG] [import_data:175] User entered path: C:/Users/student/PycharmProjects/booksdb/datacsv/test_authors.csv
+2025-05-12 11:07:34,952 [ERROR] [import_data:182] File not found: C:/Users/student/PycharmProjects/booksdb/datacsv/test_authors.csv
+2025-05-12 11:08:08,083 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:08:08,084 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:08:08,084 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:08:08,106 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:08:08,106 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:08:08,106 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:08:08,115 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:08:08,115 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:08:08,116 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:08:08,117 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:08:08,118 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:08:08,119 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:08:08,120 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:08:08,121 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:08:08,122 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:08:08,123 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:08:08,123 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:08:08,125 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:08:08,127 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:08:08,128 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:08:08,129 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:08:08,130 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:08:08,139 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:08:08,140 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:08:08,169 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:08:08,170 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:08:08,170 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:08:08,176 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:08:08,177 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:08:08,177 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:08:08,184 [INFO] [main:330] Program started
+2025-05-12 11:08:08,184 [INFO] [main_menu:72] Starting main menu
+2025-05-12 11:08:13,770 [DEBUG] [main_menu:83] User selected: 1
+2025-05-12 11:08:13,771 [INFO] [import_data:156] Starting data import
+2025-05-12 11:08:14,971 [DEBUG] [import_data:167] User selected entity for import: 1
+2025-05-12 11:08:16,121 [DEBUG] [import_data:175] User entered path: C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv
+2025-05-12 11:08:16,122 [ERROR] [load_books:51] Error loading file C:/Users/student/PycharmProjects/booksdb/data/C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv: [Errno 22] Invalid argument: 'C:/Users/student/PycharmProjects/booksdb/data/C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv'
+2025-05-12 11:08:16,122 [ERROR] [import_data:193] File is empty or contains errors
+2025-05-12 11:08:38,994 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:08:38,995 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:08:38,995 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:08:39,012 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:08:39,012 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:08:39,013 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:08:39,023 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:08:39,023 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:08:39,024 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:08:39,025 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:08:39,026 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:08:39,028 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:08:39,029 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:08:39,030 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:08:39,031 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:08:39,032 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:08:39,033 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:08:39,034 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:08:39,039 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:08:39,041 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:08:39,042 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:08:39,044 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:08:39,058 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:08:39,059 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:08:39,095 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:08:39,096 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:08:39,096 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:08:39,103 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:08:39,104 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:08:39,104 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:08:39,111 [INFO] [main:329] Program started
+2025-05-12 11:08:39,111 [INFO] [main_menu:71] Starting main menu
+2025-05-12 11:08:41,157 [DEBUG] [main_menu:82] User selected: 1
+2025-05-12 11:08:41,158 [INFO] [import_data:155] Starting data import
+2025-05-12 11:08:41,977 [DEBUG] [import_data:166] User selected entity for import: 1
+2025-05-12 11:08:43,069 [DEBUG] [import_data:174] User entered path: C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv
+2025-05-12 11:08:43,070 [INFO] [__init__:19] Инициализация csvreader
+2025-05-12 11:08:43,070 [ERROR] [load_books:50] Error loading file C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv: 'CSVBookReader' object is not iterable
+2025-05-12 11:08:43,071 [ERROR] [import_data:192] File is empty or contains errors
+2025-05-12 11:13:14,537 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:13:14,540 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:13:14,540 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:13:14,558 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:13:14,559 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:13:14,559 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:13:14,569 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:13:14,569 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:13:14,570 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:13:14,571 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:13:14,572 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:13:14,573 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:13:14,574 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:13:14,576 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:13:14,578 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:13:14,579 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:13:14,581 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:13:14,582 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:13:14,585 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:13:14,586 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:13:14,587 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:13:14,588 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:13:14,597 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:13:14,598 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:13:14,625 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:13:14,626 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:13:14,626 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:13:14,636 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:13:14,636 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:13:14,636 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:13:14,644 [INFO] [main:327] Program started
+2025-05-12 11:13:14,644 [INFO] [main_menu:69] Starting main menu
+2025-05-12 11:13:17,112 [DEBUG] [main_menu:80] User selected: 1
+2025-05-12 11:13:17,112 [INFO] [import_data:153] Starting data import
+2025-05-12 11:13:17,832 [DEBUG] [import_data:164] User selected entity for import: 1
+2025-05-12 11:13:29,104 [DEBUG] [import_data:172] User entered path: C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv
+2025-05-12 11:13:29,104 [INFO] [__init__:19] Инициализация csvreader
+2025-05-12 11:14:39,373 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:14:39,374 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:14:39,374 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:14:39,392 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:14:39,392 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:14:39,392 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:14:39,399 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:14:39,399 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:14:39,400 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:14:39,402 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:14:39,403 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:14:39,404 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:14:39,405 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:14:39,406 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:14:39,407 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:14:39,408 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:14:39,410 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:14:39,411 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:14:39,414 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:14:39,417 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:14:39,418 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:14:39,419 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:14:39,428 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:14:39,430 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:14:39,464 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:14:39,464 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:14:39,464 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:14:39,472 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:14:39,473 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:14:39,473 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:14:39,481 [INFO] [main:327] Program started
+2025-05-12 11:14:39,481 [INFO] [main_menu:69] Starting main menu
+2025-05-12 11:14:46,234 [DEBUG] [main_menu:80] User selected: 1
+2025-05-12 11:14:46,234 [INFO] [import_data:153] Starting data import
+2025-05-12 11:14:46,810 [DEBUG] [import_data:164] User selected entity for import: 1
+2025-05-12 11:14:57,954 [DEBUG] [import_data:172] User entered path: C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv
+2025-05-12 11:14:57,955 [INFO] [__init__:19] Инициализация csvreader
+2025-05-12 11:14:57,955 [INFO] [load_from_csv:22] Загрузка CSV: C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv
+2025-05-12 11:14:57,957 [ERROR] [load_from_csv:31] Отсутствуют обязательные заголовки: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-12 11:14:57,957 [ERROR] [load_from_csv:65] Ошибка при чтении CSV: CSV не содержит необходимые заголовки
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\csv\book_importer.py", line 32, in load_from_csv
+    raise ValueError("CSV не содержит необходимые заголовки")
+ValueError: CSV не содержит необходимые заголовки
+2025-05-12 11:14:57,958 [ERROR] [import_data:190] File is empty or contains errors
+2025-05-12 11:19:46,844 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:19:46,844 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:19:46,844 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:19:46,859 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:19:46,859 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:19:46,859 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:19:47,001 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:19:47,001 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:19:47,002 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:19:47,003 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:19:47,004 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:19:47,005 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:19:47,006 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:19:47,007 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:19:47,008 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:19:47,009 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:19:47,010 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:19:47,011 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:19:47,013 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:19:47,015 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:19:47,016 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:19:47,017 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:19:47,065 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:19:47,067 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:19:47,092 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:19:47,092 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:19:47,092 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:19:47,100 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:19:47,100 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:19:47,100 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:19:47,108 [INFO] [main:327] Program started
+2025-05-12 11:19:47,108 [INFO] [main_menu:69] Starting main menu
+2025-05-12 11:19:55,981 [DEBUG] [main_menu:80] User selected: 1
+2025-05-12 11:19:55,982 [INFO] [import_data:153] Starting data import
+2025-05-12 11:19:56,733 [DEBUG] [import_data:164] User selected entity for import: 1
+2025-05-12 11:20:11,656 [DEBUG] [import_data:172] User entered path: C:/Users/student/PycharmProjects/booksdb/data/csv/test_books.csv
+2025-05-12 11:20:11,657 [INFO] [__init__:19] Инициализация csvreader
+2025-05-12 11:20:11,657 [INFO] [load_from_csv:22] Загрузка CSV: C:/Users/student/PycharmProjects/booksdb/data/csv/test_books.csv
+2025-05-12 11:20:11,669 [DEBUG] [load_from_csv:34] Заголовки CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-12 11:20:11,669 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-12 11:20:11,678 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-12 11:20:11,688 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-12 11:20:11,690 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-12 11:20:11,700 [DEBUG] [load_from_csv:36] Обрабатываем строку: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-12 11:20:11,701 [INFO] [load_from_csv:62] Загружено книг из CSV: 5
+2025-05-12 11:20:11,701 [INFO] [import_data:186] Successfully imported 5 book records
+2025-05-12 11:20:17,658 [DEBUG] [main_menu:80] User selected: 2
+2025-05-12 11:20:17,659 [INFO] [display_records_menu:304] Starting display records menu
+2025-05-12 11:24:38,305 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:24:38,308 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:24:38,309 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:24:38,345 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:24:38,345 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:24:38,345 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:24:38,354 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:24:38,355 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:24:38,355 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:24:38,356 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:24:38,357 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:24:38,358 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:24:38,359 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:24:38,360 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:24:38,361 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:24:38,363 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:24:38,364 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:24:38,365 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:24:38,366 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:24:38,367 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:24:38,370 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:24:38,376 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:24:38,388 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:24:38,390 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:24:38,423 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:24:38,424 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:24:38,424 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:24:38,430 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:24:38,431 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:24:38,431 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:24:38,437 [INFO] [main:333] Program started
+2025-05-12 11:24:38,438 [INFO] [main_menu:75] Starting main menu
+2025-05-12 11:24:42,920 [DEBUG] [main_menu:86] User selected: 2
+2025-05-12 11:24:42,920 [INFO] [display_records_menu:310] Starting display records menu
+2025-05-12 11:25:35,544 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:25:35,550 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:25:35,551 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:25:35,565 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:25:35,566 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:25:35,566 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:25:35,573 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:25:35,573 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:25:35,573 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:25:35,574 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:25:35,575 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:25:35,576 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:25:35,577 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:25:35,578 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:25:35,579 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:25:35,580 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:25:35,581 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:25:35,582 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:25:35,587 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:25:35,588 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:25:35,590 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:25:35,591 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:25:35,608 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:25:35,609 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:25:35,646 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:25:35,646 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:25:35,647 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:25:35,654 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:25:35,654 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:25:35,654 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:25:35,660 [INFO] [main:333] Program started
+2025-05-12 11:25:35,660 [INFO] [main_menu:75] Starting main menu
+2025-05-12 11:25:40,194 [DEBUG] [main_menu:86] User selected: 2
+2025-05-12 11:25:40,194 [INFO] [display_records_menu:310] Starting display records menu
+2025-05-12 11:26:03,371 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:26:03,372 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:26:03,372 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:26:03,385 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:26:03,385 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:26:03,385 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:26:03,393 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:26:03,393 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:26:03,393 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:26:03,395 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:26:03,396 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:26:03,397 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:26:03,398 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:26:03,400 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:26:03,401 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:26:03,403 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:26:03,404 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:26:03,405 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:26:03,408 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:26:03,409 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:26:03,411 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:26:03,411 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:26:03,420 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:26:03,422 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:26:03,450 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:26:03,451 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:26:03,451 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:26:03,459 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:26:03,460 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:26:03,460 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:26:03,469 [INFO] [main:333] Program started
+2025-05-12 11:26:03,470 [INFO] [main_menu:75] Starting main menu
+2025-05-12 11:26:05,560 [DEBUG] [main_menu:86] User selected: 2
+2025-05-12 11:26:05,560 [INFO] [display_records_menu:310] Starting display records menu
+2025-05-12 11:26:12,557 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:26:12,558 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:26:12,558 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:26:12,575 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:26:12,575 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:26:12,575 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:26:12,586 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:26:12,587 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:26:12,588 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:26:12,590 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:26:12,593 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:26:12,594 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:26:12,596 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:26:12,597 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:26:12,599 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:26:12,601 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:26:12,602 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:26:12,603 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:26:12,606 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:26:12,609 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:26:12,610 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:26:12,612 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:26:12,620 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:26:12,622 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:26:12,646 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:26:12,646 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:26:12,646 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:26:12,653 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:26:12,653 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:26:12,654 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:26:12,662 [INFO] [main:333] Program started
+2025-05-12 11:26:12,662 [INFO] [main_menu:75] Starting main menu
+2025-05-12 11:26:13,853 [DEBUG] [main_menu:86] User selected: 2
+2025-05-12 11:26:13,853 [INFO] [display_records_menu:310] Starting display records menu
+2025-05-12 11:26:14,517 [INFO] [display_records_menu:328] Displayed2 book records
+2025-05-12 11:41:20,885 [INFO] [__init__:20] Инициализация csvreader
+2025-05-12 11:41:20,886 [INFO] [load_from_csv:23] Загрузка CSV: C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv
+2025-05-12 11:41:20,888 [DEBUG] [load_from_csv:35] Заголовки CSV: ['ФИО', 'Дата рождения', 'Дата смерти', 'Биография']
+2025-05-12 11:41:20,888 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Фёдор Михайлович Достоевский', 'Дата рождения': '11.11.1891', 'Дата смерти': '09.02.1881', 'Биография': 'Великий русский писатель, мыслитель, философ и публицист. Автор романов «Преступление и наказание», «Идиот», «Братья Карамазовы».'}
+2025-05-12 11:41:20,903 [WARNING] [load_from_csv:53] Ошибка парсинга строки: {'ФИО': 'Фёдор Михайлович Достоевский', 'Дата рождения': '11.11.1891', 'Дата смерти': '09.02.1881', 'Биография': 'Великий русский писатель, мыслитель, философ и публицист. Автор романов «Преступление и наказание», «Идиот», «Братья Карамазовы».'}. Ошибка: Дата смерти не может быть раньше даты рождения
+2025-05-12 11:41:20,903 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Рэй Дуглас Брэдбери', 'Дата рождения': '22.08.1920', 'Дата смерти': '05.06.2032', 'Биография': 'Американский писатель-фантаст, известный по антиутопии «451° по Фаренгейту» и циклу рассказов «Марсианские хроники».'}
+2025-05-12 11:41:20,904 [WARNING] [load_from_csv:53] Ошибка парсинга строки: {'ФИО': 'Рэй Дуглас Брэдбери', 'Дата рождения': '22.08.1920', 'Дата смерти': '05.06.2032', 'Биография': 'Американский писатель-фантаст, известный по антиутопии «451° по Фаренгейту» и циклу рассказов «Марсианские хроники».'}. Ошибка: Дата смерти не может быть в будущем
+2025-05-12 11:41:20,904 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Джоан Роулинг', 'Дата рождения': '31.07.1965', 'Дата смерти': '', 'Биография': 'Британская писательница, автор серии романов о Гарри Поттере. Одна из самых читаемых и коммерчески успешных авторов в мире.'}
+2025-05-12 11:41:20,905 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Михаил Афанасьевич Булгаков', 'Дата рождения': '15.05.1891', 'Дата смерти': '10.03.1940', 'Биография': 'Советский писатель, драматург, театральный режиссёр. Автор романов «Мастер и Маргарита», «Белая гвардия», пьесы «Дни Турбиных».'}
+2025-05-12 11:41:20,922 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Стивен Уильям Хокинг', 'Дата рождения': '08.01.1942', 'Дата смерти': '14.03.2018', 'Биография': 'Английский физик-теоретик, космолог, автор научно-популярных книг, включая «Краткую историю времени». Изучал чёрные дыры и теорию Большого взрыва.'}
+2025-05-12 11:41:20,924 [INFO] [load_from_csv:54] Загружено авторов из CSV: 3
+2025-05-12 11:41:20,975 [INFO] [__init__:20] Инициализация csvreader
+2025-05-12 11:41:20,976 [INFO] [load_from_csv:23] Загрузка CSV: C:/Users/student/PycharmProjects/booksdb/data/csv/test_genres.csv
+2025-05-12 11:41:20,978 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название', 'Описание']
+2025-05-12 11:41:20,978 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Роман', 'Описание': 'Длинное повествовательное произведение, описывающее историю человеческих отношений и переживаний'}
+2025-05-12 11:41:20,979 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Фэнтези', 'Описание': 'Жанр с элементами магии, мифологии и вымышленных миров'}
+2025-05-12 11:41:20,981 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Научная фантастика', 'Описание': 'Произведения, основанные на научных или технологических концепциях будущего'}
+2025-05-12 11:41:20,982 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Детектив', 'Описание': 'Жанр, сосредоточенный на расследовании преступлений и раскрытии тайн'}
+2025-05-12 11:41:20,983 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Триллер', 'Описание': 'Напряженные произведения, вызывающие чувство тревоги и ожидания'}
+2025-05-12 11:41:20,984 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Исторический роман', 'Описание': 'Художественные произведения, основанные на исторических событиях'}
+2025-05-12 11:41:20,985 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Ужасы', 'Описание': 'Жанр, предназначенный вызвать чувство страха и тревоги у читателя'}
+2025-05-12 11:41:20,987 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Биография', 'Описание': 'Нехудожественные произведения, описывающие жизнь реальных людей'}
+2025-05-12 11:41:20,989 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Поэзия', 'Описание': 'Литературная форма, использующая ритм и образность языка'}
+2025-05-12 11:41:20,991 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Драма', 'Описание': 'Произведения, сосредоточенные на эмоциональных и конфликтных ситуациях'}
+2025-05-12 11:41:20,992 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Приключения', 'Описание': 'Жанр с динамичным сюжетом и экстремальными ситуациями'}
+2025-05-12 11:41:20,993 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Антиутопия', 'Описание': 'Произведения, изображающие мрачное будущее общества'}
+2025-05-12 11:41:20,994 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Классика', 'Описание': 'Произведения, признанные выдающимися и имеющие непреходящую ценность'}
+2025-05-12 11:41:20,995 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Юмор', 'Описание': 'Произведения, предназначенные вызвать смех и развлечь читателя'}
+2025-05-12 11:41:21,009 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Психологический роман', 'Описание': 'Произведения с глубоким анализом внутреннего мира персонажей'}
+2025-05-12 11:41:21,011 [INFO] [load_from_csv:50] Загружено жанров из CSV: 15
+2025-05-12 11:41:21,062 [INFO] [__init__:20] Инициализация csvreader
+2025-05-12 11:41:21,063 [INFO] [load_from_csv:23] Загрузка CSV: C:/Users/student/PycharmProjects/booksdb/data/csv/test_publishers.csv
+2025-05-12 11:41:21,064 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название', 'Адрес', 'Номер телефона', 'Почта']
+2025-05-12 11:41:21,064 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Эксмо', 'Адрес': 'Москва, ул. Зорге, д. 1', 'Номер телефона': '+7 (495) 411-68-86', 'Почта': 'info@eksmo.ru'}
+2025-05-12 11:41:21,080 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'АСТ', 'Адрес': 'Москва, Пресненская наб., д. 6, стр. 2', 'Номер телефона': '+7 (495) 232-63-33', 'Почта': 'info@ast.ru'}
+2025-05-12 11:41:21,091 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Дрофа', 'Адрес': 'Москва, Огородный проезд, д. 5', 'Номер телефона': '+7 (495) 795-05-50', 'Почта': 'info@drofa.ru'}
+2025-05-12 11:41:21,117 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Просвещение', 'Адрес': 'Москва, 3-й проезд Марьиной рощи, д. 41', 'Номер телефона': '+7 (495) 789-30-40', 'Почта': 'info@prosv.ru'}
+2025-05-12 11:41:21,128 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Росмэн', 'Адрес': 'Москва, ул. Октябрьская, д. 4, стр. 2', 'Номер телефона': '+7 (495) 777-48-00', 'Почта': 'info@rosman.ru'}
+2025-05-12 11:41:21,137 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Азбука', 'Адрес': 'Санкт-Петербург, Невский пр., д. 84', 'Номер телефона': '+7 (812) 336-14-63', 'Почта': 'info@azbooka.ru'}
+2025-05-12 11:41:21,146 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Манн, Иванов и Фербер', 'Адрес': 'Москва, ул. Шаболовка, д. 34, стр. 3', 'Номер телефона': '+7 (495) 120-11-11', 'Почта': 'info@mann-ivanov-ferber.ru'}
+2025-05-12 11:41:21,155 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Альпина Паблишер', 'Адрес': 'Москва, ул. 4-я Магистральная, д. 5, стр. 1', 'Номер телефона': '+7 (495) 980-53-54', 'Почта': 'info@alpina.ru'}
+2025-05-12 11:41:21,169 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Corpus', 'Адрес': 'Москва, ул. Правды, д. 1', 'Номер телефона': '+7 (495) 775-31-31', 'Почта': 'info@corpus.ru'}
+2025-05-12 11:41:21,179 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Ad Marginem', 'Адрес': 'Москва, ул. 1905 года, д. 7', 'Номер телефона': '+7 (495) 229-58-06', 'Почта': 'info@admarginem.ru'}
+2025-05-12 11:41:21,191 [INFO] [load_from_csv:54] Загружено издательств из CSV: 10
+2025-05-12 11:41:21,208 [INFO] [__init__:20] Инициализация csvreader
+2025-05-12 11:41:21,208 [INFO] [load_from_csv:23] Загрузка CSV: C:/Users/student/PycharmProjects/booksdb/data/csv/test_readers.csv
+2025-05-12 11:41:21,208 [DEBUG] [load_from_csv:35] Заголовки CSV: ['ФИО', 'Телефон', 'Почта']
+2025-05-12 11:41:21,208 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Косульникова Любовь Дмитриевна', 'Телефон': '+7 962 204 90 40', 'Почта': 'kosulnikova03@mail.ru'}
+2025-05-12 11:41:21,209 [INFO] [load_from_csv:52] Загружено издательств из CSV: 1
+2025-05-12 11:41:21,563 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:41:21,563 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:41:21,564 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:41:21,578 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:41:21,579 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:41:21,579 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:41:21,587 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:41:21,587 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:41:21,588 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:41:21,589 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:41:21,591 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:41:21,592 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:41:21,594 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:41:21,595 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:41:21,596 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:41:21,598 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:41:21,599 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:41:21,600 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:41:21,601 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:41:21,602 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:41:21,603 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:41:21,604 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:41:21,617 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:41:21,619 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:41:21,641 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:41:21,641 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:41:21,642 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:41:21,654 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:41:21,654 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:41:21,655 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:41:21,665 [INFO] [main:362] Program started
+2025-05-12 11:41:21,665 [INFO] [main_menu:105] Starting main menu
+2025-05-12 11:41:26,011 [DEBUG] [main_menu:116] User selected: 2
+2025-05-12 11:41:26,012 [INFO] [display_records_menu:340] Starting display records menu
+2025-05-12 11:41:27,471 [INFO] [display_records_menu:357] Displayed genre records
+2025-05-12 11:41:59,587 [DEBUG] [main_menu:116] User selected: 2
+2025-05-12 11:41:59,587 [INFO] [display_records_menu:340] Starting display records menu
+2025-05-12 11:42:00,510 [INFO] [display_records_menu:357] Displayed book records
+2025-05-12 11:44:16,222 [INFO] [__init__:20] Инициализация csvreader
+2025-05-12 11:44:16,222 [INFO] [load_from_csv:23] Загрузка CSV: C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv
+2025-05-12 11:44:16,222 [DEBUG] [load_from_csv:35] Заголовки CSV: ['ФИО', 'Дата рождения', 'Дата смерти', 'Биография']
+2025-05-12 11:44:16,222 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Фёдор Михайлович Достоевский', 'Дата рождения': '11.11.1891', 'Дата смерти': '09.02.1881', 'Биография': 'Великий русский писатель, мыслитель, философ и публицист. Автор романов «Преступление и наказание», «Идиот», «Братья Карамазовы».'}
+2025-05-12 11:44:16,258 [WARNING] [load_from_csv:53] Ошибка парсинга строки: {'ФИО': 'Фёдор Михайлович Достоевский', 'Дата рождения': '11.11.1891', 'Дата смерти': '09.02.1881', 'Биография': 'Великий русский писатель, мыслитель, философ и публицист. Автор романов «Преступление и наказание», «Идиот», «Братья Карамазовы».'}. Ошибка: Дата смерти не может быть раньше даты рождения
+2025-05-12 11:44:16,258 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Рэй Дуглас Брэдбери', 'Дата рождения': '22.08.1920', 'Дата смерти': '05.06.2032', 'Биография': 'Американский писатель-фантаст, известный по антиутопии «451° по Фаренгейту» и циклу рассказов «Марсианские хроники».'}
+2025-05-12 11:44:16,258 [WARNING] [load_from_csv:53] Ошибка парсинга строки: {'ФИО': 'Рэй Дуглас Брэдбери', 'Дата рождения': '22.08.1920', 'Дата смерти': '05.06.2032', 'Биография': 'Американский писатель-фантаст, известный по антиутопии «451° по Фаренгейту» и циклу рассказов «Марсианские хроники».'}. Ошибка: Дата смерти не может быть в будущем
+2025-05-12 11:44:16,258 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Джоан Роулинг', 'Дата рождения': '31.07.1965', 'Дата смерти': '', 'Биография': 'Британская писательница, автор серии романов о Гарри Поттере. Одна из самых читаемых и коммерчески успешных авторов в мире.'}
+2025-05-12 11:44:16,259 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Михаил Афанасьевич Булгаков', 'Дата рождения': '15.05.1891', 'Дата смерти': '10.03.1940', 'Биография': 'Советский писатель, драматург, театральный режиссёр. Автор романов «Мастер и Маргарита», «Белая гвардия», пьесы «Дни Турбиных».'}
+2025-05-12 11:44:16,276 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Стивен Уильям Хокинг', 'Дата рождения': '08.01.1942', 'Дата смерти': '14.03.2018', 'Биография': 'Английский физик-теоретик, космолог, автор научно-популярных книг, включая «Краткую историю времени». Изучал чёрные дыры и теорию Большого взрыва.'}
+2025-05-12 11:44:16,278 [INFO] [load_from_csv:54] Загружено авторов из CSV: 3
+2025-05-12 11:44:16,322 [INFO] [__init__:20] Инициализация csvreader
+2025-05-12 11:44:16,325 [INFO] [load_from_csv:23] Загрузка CSV: C:/Users/student/PycharmProjects/booksdb/data/csv/test_genres.csv
+2025-05-12 11:44:16,326 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название', 'Описание']
+2025-05-12 11:44:16,327 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Роман', 'Описание': 'Длинное повествовательное произведение, описывающее историю человеческих отношений и переживаний'}
+2025-05-12 11:44:16,330 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Фэнтези', 'Описание': 'Жанр с элементами магии, мифологии и вымышленных миров'}
+2025-05-12 11:44:16,332 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Научная фантастика', 'Описание': 'Произведения, основанные на научных или технологических концепциях будущего'}
+2025-05-12 11:44:16,333 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Детектив', 'Описание': 'Жанр, сосредоточенный на расследовании преступлений и раскрытии тайн'}
+2025-05-12 11:44:16,334 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Триллер', 'Описание': 'Напряженные произведения, вызывающие чувство тревоги и ожидания'}
+2025-05-12 11:44:16,335 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Исторический роман', 'Описание': 'Художественные произведения, основанные на исторических событиях'}
+2025-05-12 11:44:16,336 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Ужасы', 'Описание': 'Жанр, предназначенный вызвать чувство страха и тревоги у читателя'}
+2025-05-12 11:44:16,339 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Биография', 'Описание': 'Нехудожественные произведения, описывающие жизнь реальных людей'}
+2025-05-12 11:44:16,340 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Поэзия', 'Описание': 'Литературная форма, использующая ритм и образность языка'}
+2025-05-12 11:44:16,341 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Драма', 'Описание': 'Произведения, сосредоточенные на эмоциональных и конфликтных ситуациях'}
+2025-05-12 11:44:16,359 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Приключения', 'Описание': 'Жанр с динамичным сюжетом и экстремальными ситуациями'}
+2025-05-12 11:44:16,361 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Антиутопия', 'Описание': 'Произведения, изображающие мрачное будущее общества'}
+2025-05-12 11:44:16,366 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Классика', 'Описание': 'Произведения, признанные выдающимися и имеющие непреходящую ценность'}
+2025-05-12 11:44:16,367 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Юмор', 'Описание': 'Произведения, предназначенные вызвать смех и развлечь читателя'}
+2025-05-12 11:44:16,388 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Психологический роман', 'Описание': 'Произведения с глубоким анализом внутреннего мира персонажей'}
+2025-05-12 11:44:16,390 [INFO] [load_from_csv:50] Загружено жанров из CSV: 15
+2025-05-12 11:44:16,415 [INFO] [__init__:20] Инициализация csvreader
+2025-05-12 11:44:16,416 [INFO] [load_from_csv:23] Загрузка CSV: C:/Users/student/PycharmProjects/booksdb/data/csv/test_publishers.csv
+2025-05-12 11:44:16,416 [DEBUG] [load_from_csv:35] Заголовки CSV: ['Название', 'Адрес', 'Номер телефона', 'Почта']
+2025-05-12 11:44:16,416 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Эксмо', 'Адрес': 'Москва, ул. Зорге, д. 1', 'Номер телефона': '+7 (495) 411-68-86', 'Почта': 'info@eksmo.ru'}
+2025-05-12 11:44:16,425 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'АСТ', 'Адрес': 'Москва, Пресненская наб., д. 6, стр. 2', 'Номер телефона': '+7 (495) 232-63-33', 'Почта': 'info@ast.ru'}
+2025-05-12 11:44:16,433 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Дрофа', 'Адрес': 'Москва, Огородный проезд, д. 5', 'Номер телефона': '+7 (495) 795-05-50', 'Почта': 'info@drofa.ru'}
+2025-05-12 11:44:16,442 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Просвещение', 'Адрес': 'Москва, 3-й проезд Марьиной рощи, д. 41', 'Номер телефона': '+7 (495) 789-30-40', 'Почта': 'info@prosv.ru'}
+2025-05-12 11:44:16,448 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Росмэн', 'Адрес': 'Москва, ул. Октябрьская, д. 4, стр. 2', 'Номер телефона': '+7 (495) 777-48-00', 'Почта': 'info@rosman.ru'}
+2025-05-12 11:44:16,455 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Азбука', 'Адрес': 'Санкт-Петербург, Невский пр., д. 84', 'Номер телефона': '+7 (812) 336-14-63', 'Почта': 'info@azbooka.ru'}
+2025-05-12 11:44:16,462 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Манн, Иванов и Фербер', 'Адрес': 'Москва, ул. Шаболовка, д. 34, стр. 3', 'Номер телефона': '+7 (495) 120-11-11', 'Почта': 'info@mann-ivanov-ferber.ru'}
+2025-05-12 11:44:16,468 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Альпина Паблишер', 'Адрес': 'Москва, ул. 4-я Магистральная, д. 5, стр. 1', 'Номер телефона': '+7 (495) 980-53-54', 'Почта': 'info@alpina.ru'}
+2025-05-12 11:44:16,475 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Corpus', 'Адрес': 'Москва, ул. Правды, д. 1', 'Номер телефона': '+7 (495) 775-31-31', 'Почта': 'info@corpus.ru'}
+2025-05-12 11:44:16,483 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'Название': 'Ad Marginem', 'Адрес': 'Москва, ул. 1905 года, д. 7', 'Номер телефона': '+7 (495) 229-58-06', 'Почта': 'info@admarginem.ru'}
+2025-05-12 11:44:16,556 [INFO] [load_from_csv:54] Загружено издательств из CSV: 10
+2025-05-12 11:44:16,565 [INFO] [__init__:20] Инициализация csvreader
+2025-05-12 11:44:16,565 [INFO] [load_from_csv:23] Загрузка CSV: C:/Users/student/PycharmProjects/booksdb/data/csv/test_readers.csv
+2025-05-12 11:44:16,565 [DEBUG] [load_from_csv:35] Заголовки CSV: ['ФИО', 'Телефон', 'Почта']
+2025-05-12 11:44:16,566 [DEBUG] [load_from_csv:38] Обрабатываем строку: {'ФИО': 'Косульникова Любовь Дмитриевна', 'Телефон': '+7 962 204 90 40', 'Почта': 'kosulnikova03@mail.ru'}
+2025-05-12 11:44:16,567 [INFO] [load_from_csv:52] Загружено издательств из CSV: 1
+2025-05-12 11:44:16,933 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:44:16,933 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/books.json
+2025-05-12 11:44:16,933 [ERROR] [load_from_json:72] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/books.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\book_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/books.json'
+2025-05-12 11:44:16,949 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:44:16,949 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/authors.json
+2025-05-12 11:44:16,949 [ERROR] [load_from_json:63] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/authors.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\author_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/authors.json'
+2025-05-12 11:44:16,955 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:44:16,955 [INFO] [load_from_json:23] Загрузка JSON: C:/Users/student/PycharmProjects/booksdb/data/json/genres.json
+2025-05-12 11:44:16,957 [DEBUG] [load_from_json:41] Обрабатываем строку: 1
+2025-05-12 11:44:16,958 [DEBUG] [load_from_json:41] Обрабатываем строку: 2
+2025-05-12 11:44:16,960 [DEBUG] [load_from_json:41] Обрабатываем строку: 3
+2025-05-12 11:44:16,961 [DEBUG] [load_from_json:41] Обрабатываем строку: 4
+2025-05-12 11:44:16,962 [DEBUG] [load_from_json:41] Обрабатываем строку: 5
+2025-05-12 11:44:16,963 [DEBUG] [load_from_json:41] Обрабатываем строку: 6
+2025-05-12 11:44:16,964 [DEBUG] [load_from_json:41] Обрабатываем строку: 7
+2025-05-12 11:44:16,965 [DEBUG] [load_from_json:41] Обрабатываем строку: 8
+2025-05-12 11:44:16,967 [DEBUG] [load_from_json:41] Обрабатываем строку: 9
+2025-05-12 11:44:16,968 [DEBUG] [load_from_json:41] Обрабатываем строку: 10
+2025-05-12 11:44:16,969 [DEBUG] [load_from_json:41] Обрабатываем строку: 11
+2025-05-12 11:44:16,970 [DEBUG] [load_from_json:41] Обрабатываем строку: 12
+2025-05-12 11:44:16,971 [DEBUG] [load_from_json:41] Обрабатываем строку: 13
+2025-05-12 11:44:16,972 [DEBUG] [load_from_json:41] Обрабатываем строку: 14
+2025-05-12 11:44:16,981 [DEBUG] [load_from_json:41] Обрабатываем строку: 15
+2025-05-12 11:44:16,982 [INFO] [load_from_json:53] Загружено жанров из JSON: 15
+2025-05-12 11:44:17,013 [INFO] [__init__:21] Инициализация jsonreader
+2025-05-12 11:44:17,013 [INFO] [load_from_json:24] Загрузка JSON: ../../data/json/publishers.json
+2025-05-12 11:44:17,013 [ERROR] [load_from_json:62] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\publisher_importer.py", line 27, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/publishers.json'
+2025-05-12 11:44:17,020 [INFO] [__init__:20] Инициализация jsonreader
+2025-05-12 11:44:17,020 [INFO] [load_from_json:23] Загрузка JSON: ../../data/json/readers.json
+2025-05-12 11:44:17,021 [ERROR] [load_from_json:59] Ошибка при чтении JSON: [Errno 2] No such file or directory: '../../data/json/readers.json'
+Traceback (most recent call last):
+  File "C:\Users\student\PycharmProjects\booksdb\data_import\json\reader_importer.py", line 26, in load_from_json
+    with open(self.json_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/json/readers.json'
+2025-05-12 11:44:17,034 [INFO] [main:363] Program started
+2025-05-12 11:44:17,034 [INFO] [main_menu:106] Starting main menu
+2025-05-12 11:44:20,777 [DEBUG] [main_menu:117] User selected: 2
+2025-05-12 11:44:20,777 [INFO] [display_records_menu:341] Starting display records menu
+2025-05-12 11:44:21,549 [INFO] [display_records_menu:358] Displayed book records
+2025-05-12 11:44:25,526 [DEBUG] [main_menu:117] User selected: 2
+2025-05-12 11:44:25,527 [INFO] [display_records_menu:341] Starting display records menu
+2025-05-12 11:44:26,873 [INFO] [display_records_menu:358] Displayed author records
+2025-05-12 11:44:32,581 [DEBUG] [main_menu:117] User selected: 2
+2025-05-12 11:44:32,582 [INFO] [display_records_menu:341] Starting display records menu
+2025-05-12 11:44:33,761 [INFO] [display_records_menu:358] Displayed publisher records
+2025-05-12 11:44:38,761 [DEBUG] [main_menu:117] User selected: 2
+2025-05-12 11:44:38,762 [INFO] [display_records_menu:341] Starting display records menu
+2025-05-12 11:44:39,622 [INFO] [display_records_menu:358] Displayed genre records
+2025-05-12 11:44:42,985 [DEBUG] [main_menu:117] User selected: 2
+2025-05-12 11:44:42,985 [INFO] [display_records_menu:341] Starting display records menu
+2025-05-12 11:44:43,513 [INFO] [display_records_menu:358] Displayed reader records

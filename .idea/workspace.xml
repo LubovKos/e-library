@@ -4,30 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="added files json/csv">
-      <change afterPath="$PROJECT_DIR$/databases/publisher_db.py" afterDir="false" />
+    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="interaction with all databases is almost completely finished, json/csv files are filled">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/csv/test_publishers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/test_publishers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/csv/test_readers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/test_readers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/publishers.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json/publishers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/author.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/bases/author.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/genre_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/genre_importer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bases/author.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bases/authors.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bases/books.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bases/genre.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/json/readers.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json/readers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/csv/library.log" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/library.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/publishing_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/publisher_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/reader_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/reader_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/json/book_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/book_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/json/books.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/bases/books.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/json/books.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json/books.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/csv/publisher.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/csv/reader.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/json/author_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/author_importer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/json/genre_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/genre_importer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/json/library.log" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/library.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/json/publishing_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/publisher_importer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/json/publisher_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/publisher_importer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/json/reader_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/reader_importer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/author_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/databases/author_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/book_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/databases/book_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databases/genre_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/databases/genre_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/publishing_db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/publisher_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/databases/publisher_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databases/reader_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/databases/reader_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/genre.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/publishing.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/publisher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library.log" beforeDir="false" afterPath="$PROJECT_DIR$/library.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/book.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,25 +56,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.author.executor": "Run",
-    "Python.author_importer.executor": "Run",
-    "Python.book_db.executor": "Run",
-    "Python.book_importer.executor": "Run",
-    "Python.genre_db.executor": "Run",
-    "Python.genre_importer.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.publisher_importer.executor": "Run",
-    "Python.reader_db.executor": "Run",
-    "Python.reader_importer.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/student/PycharmProjects/booksdb/data_import/json",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.author.executor&quot;: &quot;Run&quot;,
+    &quot;Python.author_importer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.book_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.book_importer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.genre_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.genre_importer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.publisher_importer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reader_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reader_importer.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/student/PycharmProjects/booksdb/data_import/json&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\student\PycharmProjects\booksdb\data_import\json" />
@@ -151,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746625036375</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="interaction with all databases is almost completely finished, json/csv files are filled">
+      <option name="closed" value="true" />
+      <created>1746627003046</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746627003046</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +179,7 @@
     <MESSAGE value="extra files and unnecessary comments have been removed" />
     <MESSAGE value="crud functions for books and author have been completed (adding records to the table, changing, deleting, output) &#10;+ filtering and sorting. This functionality has been tested a little bit right away." />
     <MESSAGE value="added files json/csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="added files json/csv" />
+    <MESSAGE value="interaction with all databases is almost completely finished, json/csv files are filled" />
+    <option name="LAST_COMMIT_MESSAGE" value="interaction with all databases is almost completely finished, json/csv files are filled" />
   </component>
 </project>

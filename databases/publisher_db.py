@@ -8,7 +8,7 @@ from models.publisher import (Publisher)
 
 
 class PublisherRepository:
-    def __init__(self, db_path: str = "publisher.db"):
+    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/bases/publisher.db"):
         self.db_path = Path(db_path)
         self._init_db()
 

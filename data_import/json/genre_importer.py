@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 import logging
 import ijson
 from databases.genre_db import GenreRepository
 from models.genre import Genre
 
-# Настройка логирования
+# РќР°СЃС‚СЂРѕР№РєР° Р»РѕРіРёСЂРѕРІР°РЅРёСЏ
 logging.basicConfig(
     filename='library.log',
     level=logging.DEBUG,
@@ -16,10 +17,10 @@ class JSONGenreReader:
     def __init__(self, file, repo: GenreRepository):
         self.repo = repo
         self.json_file = file
-        logging.info("Инициализация jsonreader")
+        logging.info("РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ jsonreader")
 
     def load_from_json(self):
-        logging.info(f"Загрузка JSON: {self.json_file}")
+        logging.info(f"Р—Р°РіСЂСѓР·РєР° JSON: {self.json_file}")
         genres = []
         try:
             with open(self.json_file, 'r') as file:
@@ -27,44 +28,42 @@ class JSONGenreReader:
                 row_number = 1
                 for genre in parser:
                     required_fields = {
-                        "Название",
-                        "Описание"
+                        "РќР°Р·РІР°РЅРёРµ",
+                        "РћРїРёСЃР°РЅРёРµ"
                     }
 
-                    # Проверка наличия всех полей
+                    # РџСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ РІСЃРµС… РїРѕР»РµР№
                     missing_fields = required_fields - set(genre.keys())
                     if missing_fields:
-                        logging.warning(f"Отсутствуют поля в строке {row_number}: {missing_fields}")
-                        raise ValueError("JSON не содержит необходимые заголовки")
+                        logging.warning(f"РћС‚СЃСѓС‚СЃС‚РІСѓСЋС‚ РїРѕР»СЏ РІ СЃС‚СЂРѕРєРµ {row_number}: {missing_fields}")
+                        raise ValueError("JSON РЅРµ СЃРѕРґРµСЂР¶РёС‚ РЅРµРѕР±С…РѕРґРёРјС‹Рµ Р·Р°РіРѕР»РѕРІРєРё")
 
-                    logging.debug(f"Обрабатываем строку: {row_number}")
+                    logging.debug(f"РћР±СЂР°Р±Р°С‚С‹РІР°РµРј СЃС‚СЂРѕРєСѓ: {row_number}")
                     row_number += 1
                     try:
                         genre = Genre(
-                            title=genre['Название'],
-                            description=genre['Описание']
+                            title=genre['РќР°Р·РІР°РЅРёРµ'],
+                            description=genre['РћРїРёСЃР°РЅРёРµ']
                         )
                         self.repo.save(genre)
                         genres.append(genre)
 
                     except (KeyError, ValueError) as e:
-                        logging.warning(f"Ошибка парсинга строки: {row_number}. Ошибка: {str(e)}")
-                logging.info(f"Загружено жанров из JSON: {len(genres)}")
+                        logging.warning(f"РћС€РёР±РєР° РїР°СЂСЃРёРЅРіР° СЃС‚СЂРѕРєРё: {row_number}. РћС€РёР±РєР°: {str(e)}")
+                logging.info(f"Р—Р°РіСЂСѓР¶РµРЅРѕ Р¶Р°РЅСЂРѕРІ РёР· JSON: {len(genres)}")
                 return genres
 
         except Exception as e:
-            logging.error(f"Ошибка при чтении JSON: {str(e)}", exc_info=True)
+            logging.error(f"РћС€РёР±РєР° РїСЂРё С‡С‚РµРЅРёРё JSON: {str(e)}", exc_info=True)
             return []
 
 
-# repo = GenreRepository()
-# importer = JSONGenreReader("C:/Users/student/PycharmProjects/booksdb/data/csv/test_genres.csv", repo)
-# # Импорт
-# importer.load_from_json()
-# repo.show_all()
-# repo.delete("title", "Юмор")
-# repo.show_all()
-# repo.filter("title", "up")
-# repo.find("title", "Роман")
-
-# TODO: ошибка при запуске файла
+repo = GenreRepository()
+importer = JSONGenreReader("C:/Users/student/PycharmProjects/booksdb/data/json/genres.json", repo)
+# РРјРїРѕСЂС‚
+importer.load_from_json()
+repo.show_all()
+repo.delete("title", "Р®РјРѕСЂ")
+repo.show_all()
+repo.filter("title", "up")
+repo.find("title", "Р РѕРјР°РЅ")

@@ -8,7 +8,7 @@ from models.reader import (Reader)
 
 
 class ReaderRepository:
-    def __init__(self, db_path: str = "reader.db"):
+    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/bases/reader.db"):
         self.db_path = Path(db_path)
         self._init_db()
 

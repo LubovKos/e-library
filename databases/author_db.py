@@ -8,7 +8,7 @@ from models.author import Author
 
 
 class AuthorRepository:
-    def __init__(self, db_path: str = "author.db"):
+    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/bases/author.db"):
         self.db_path = Path(db_path)
         self._init_db()
 

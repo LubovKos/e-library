@@ -8,7 +8,7 @@ from models.genre import Genre
 
 
 class GenreRepository:
-    def __init__(self, db_path: str = "genre.db"):
+    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/bases/genre.db"):
         self.db_path = Path(db_path)
         self._init_db()
 

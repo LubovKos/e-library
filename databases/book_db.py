@@ -6,7 +6,7 @@ from models.book import Book
 
 
 class BookRepository:
-    def __init__(self, db_path: str = "books.db"):
+    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/bases/books.db"):
         self.db_path = Path(db_path)
         self._init_db()
 
