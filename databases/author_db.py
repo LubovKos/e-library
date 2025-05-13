@@ -76,7 +76,6 @@ class AuthorRepository:
     def update(self, field: str, author: str, new_val):
         with self._get_connection() as conn:
             query = 'UPDATE author SET ' + field + ' = ? WHERE full_name = ?'
-            print(query)
             conn.execute(query, (new_val, author))
 
     def delete(self, field: str, value):
@@ -127,5 +126,5 @@ class AuthorRepository:
             print("\n" + "=" * 100)
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
-
+            return len(authors)
 

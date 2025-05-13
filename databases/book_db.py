@@ -90,7 +90,6 @@ class BookRepository:
     def update(self, field: str, title: str, author: str, new_val):
         with self._get_connection() as conn:
             query = 'UPDATE book SET ' + field + ' = ? WHERE title = ? AND author = ?'
-            print(query)
             conn.execute(query, (new_val, title, author))
 
     def delete(self, field: str, value):
@@ -147,4 +146,5 @@ class BookRepository:
             print("\n" + "=" * 100)
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
+            return len(books)
 

@@ -77,7 +77,6 @@ class PublisherRepository:
     def update(self, field: str, title: str, new_val):
         with self._get_connection() as conn:
             query = 'UPDATE publisher SET ' + field + ' = ? WHERE name = ?'
-            print(query)
             conn.execute(query, (new_val, title))
 
     def delete(self, field: str, value):
@@ -130,3 +129,4 @@ class PublisherRepository:
             print("\n" + "=" * 100)
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
+            return len(publishers)
