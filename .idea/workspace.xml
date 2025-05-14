@@ -4,34 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="Minor bugs in methods inside databases have been fixed, console interaction with the user has been written. It remains to finish writing the method for adding a new record to the database.">
-      <change afterPath="$PROJECT_DIR$/joiner.py" afterDir="false" />
+    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="The method for adding new data to tables has been added. All tables are now stored in one database. A method has been added for combining tables (books) with others (to obtain full information).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bases/author.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bases/books.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bases/genre.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bases/publisher.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bases/reader.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/csv/test_books.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/test_books.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/json/books.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json/books.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/csv/author_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/author_importer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/csv/book_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/book_importer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/csv/genre_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/genre_importer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/csv/library.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/csv/publisher_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/publisher_importer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/csv/reader_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/reader_importer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/json/author_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/author_importer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/json/book_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/book_importer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/json/genre_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/genre_importer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_import/json/library.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/json/publisher_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/publisher_importer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/json/reader_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/reader_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/author_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/author_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/book_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/book_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/genre_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/genre_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/publisher_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/publisher_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/reader_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/reader_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.log" beforeDir="false" afterPath="$PROJECT_DIR$/library.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/author.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/author.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/book.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/genre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/publisher.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/publisher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/reader.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747143585572</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="The method for adding new data to tables has been added. All tables are now stored in one database. A method has been added for combining tables (books) with others (to obtain full information).">
+      <option name="closed" value="true" />
+      <created>1747212394004</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747212394004</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +212,7 @@
     <MESSAGE value="imports from csv/json files are fully completed, all methods are tested, all information is filled into databases. Work with console interaction has begun (import and display of databases is done)" />
     <MESSAGE value="filled databases" />
     <MESSAGE value="Minor bugs in methods inside databases have been fixed, console interaction with the user has been written. It remains to finish writing the method for adding a new record to the database." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor bugs in methods inside databases have been fixed, console interaction with the user has been written. It remains to finish writing the method for adding a new record to the database." />
+    <MESSAGE value="The method for adding new data to tables has been added. All tables are now stored in one database. A method has been added for combining tables (books) with others (to obtain full information)." />
+    <option name="LAST_COMMIT_MESSAGE" value="The method for adding new data to tables has been added. All tables are now stored in one database. A method has been added for combining tables (books) with others (to obtain full information)." />
   </component>
 </project>

@@ -17,25 +17,25 @@ class CSVPublisherReader:
     def __init__(self, file, repo: PublisherRepository):
         self.csv_file = file
         self.repo = repo
-        logging.info("Инициализация csvreader")
+        logging.info("Initialization csvreader")
 
     def load_from_csv(self):
-        logging.info(f"Загрузка CSV: {self.csv_file}")
+        logging.info(f"Downloading CSV: {self.csv_file}")
         publishers = []
         try:
             with open(self.csv_file, 'r') as file:
                 reader = csv.DictReader(file)
-                required_fields = ['Название','Адрес','Номер телефона','Почта']
+                required_fields = ['Название', 'Адрес', 'Номер телефона', 'Почта']
 
                 if not all(field in reader.fieldnames for field in required_fields):
                     missing = [f for f in required_fields if f not in reader.fieldnames]
-                    logging.error(f"Отсутствуют обязательные заголовки: {missing}")
-                    raise ValueError("CSV не содержит необходимые заголовки")
+                    logging.error(f"Missing required fields: {missing}")
+                    raise ValueError("CSV does not contain required headers")
 
-                logging.debug(f"Заголовки CSV: {reader.fieldnames}")
+                logging.debug(f"Fieldnames of CSV: {reader.fieldnames}")
 
                 for row in reader:
-                    logging.debug(f"Обрабатываем строку: {row}")
+                    logging.debug(f"Process the line: {row}")
                     try:
                         publisher = {
                             'name': row['Название'].strip(),
@@ -50,15 +50,9 @@ class CSVPublisherReader:
                         publishers.append(publisher)
                         self.repo.save(publisher)
                     except (KeyError, ValueError) as e:
-                        logging.warning(f"Ошибка парсинга строки: {row}. Ошибка: {str(e)}")
-                logging.info(f"Загружено издательств из CSV: {len(publishers)}")
+                        logging.warning(f"Error parsing string: {row}. Error: {str(e)}")
+                logging.info(f"Downloaded publishers from CSV: {len(publishers)}")
             return publishers
         except Exception as e:
-            logging.error(f"Ошибка при чтении CSV: {str(e)}", exc_info=True)
+            logging.error(f"Error reading CSV: {str(e)}", exc_info=True)
             return []
-
-#
-# repo = PublisherRepository()
-# b = CSVPublisherReader("C:/Users/student/PycharmProjects/booksdb/data/csv/test_publishers.csv", repo)
-# b.load_from_csv()
-# repo.show_all()

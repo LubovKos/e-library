@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from typing import Optional
-
+import re
 
 @dataclass
 class Publisher:
@@ -14,8 +14,13 @@ class Publisher:
     def __post_init__(self):
         # Валидация данных при создании объекта
         if self.name == "":
-            raise ValueError("Название издательства не должно быть пустым")
-        # todo: можно задушнить и сделать проверку на корректность телефона и почты
+            raise ValueError("Publisher name must not be empty")
+        # Регулярное выражение
+        pattern = re.compile(r"^\S+@\S+\.\S+$")
+        # Проводим проверку электронного адреса
+        is_valid = pattern.match(self.mail)
+        if not is_valid:
+            raise ValueError("Incorrect mail")
 
 
 

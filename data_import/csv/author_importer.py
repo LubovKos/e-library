@@ -17,25 +17,25 @@ class CSVAuthorReader:
     def __init__(self, file, repo: AuthorRepository):
         self.csv_file = file
         self.repo = repo
-        logging.info("Инициализация csvreader")
+        logging.info("Initialization csvreader")
 
     def load_from_csv(self):
-        logging.info(f"Загрузка CSV: {self.csv_file}")
+        logging.info(f"Downloading CSV: {self.csv_file}")
         authors = []
         try:
             with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
                 reader = csv.DictReader(file)
-                required_fields = ['ФИО','Дата рождения','Дата смерти','Биография']
+                required_fields = ['ФИО', 'Дата рождения', 'Дата смерти', 'Биография']
 
                 if not all(field in reader.fieldnames for field in required_fields):
                     missing = [f for f in required_fields if f not in reader.fieldnames]
-                    logging.error(f"Отсутствуют обязательные заголовки: {missing}")
-                    raise ValueError("CSV не содержит необходимые заголовки")
+                    logging.error(f"Missing required fields: {missing}")
+                    raise ValueError("CSV does not contain required headers")
 
-                logging.debug(f"Заголовки CSV: {reader.fieldnames}")
+                logging.debug(f"Fieldnames CSV: {reader.fieldnames}")
 
                 for row in reader:
-                    logging.debug(f"Обрабатываем строку: {row}")
+                    logging.debug(f"Process the line: {row}")
                     try:
                         author = {
                             'full_name': row['ФИО'].strip(),
@@ -50,23 +50,9 @@ class CSVAuthorReader:
                         authors.append(author)
                         self.repo.save(author)
                     except (KeyError, ValueError) as e:
-                        logging.warning(f"Ошибка парсинга строки: {row}. Ошибка: {str(e)}")
-                logging.info(f"Загружено авторов из CSV: {len(authors)}")
+                        logging.warning(f"Error parsing string: {row}. Error: {str(e)}")
+                logging.info(f"Downloaded authors from CSV: {len(authors)}")
             return authors
         except Exception as e:
-            logging.error(f"Ошибка при чтении CSV: {str(e)}", exc_info=True)
+            logging.error(f"Error reading CSV: {str(e)}", exc_info=True)
             return []
-
-
-# test
-# repo = AuthorRepository()
-# importer = CSVAuthorReader("C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv", repo)
-# # Импорт
-# importer.load_from_csv()
-# repo.show_all()
-# repo.update("date_of_birth", "Михаил Афанасьевич Булгаков", "09.09.1881")
-# repo.show_all()
-# repo.delete("date_of_birth", "09.09.1881")
-# repo.show_all()
-# repo.filter("full_name", "down")
-

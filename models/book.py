@@ -18,11 +18,11 @@ class Book:
     def __post_init__(self):
         # Валидация данных при создании объекта
         if self.title == "":
-            raise ValueError("Название книги не может быть пустым")
+            raise ValueError("Book title must not be empty")
         if self.author == "":
-            raise ValueError("Поле автора не может быть пустым")
+            raise ValueError("Author field must not be empty")
         if self.year > datetime.now().year:
-            raise ValueError("Год издания не может быть в будущем")
+            raise ValueError("The year of publication cannot be in the future")
 
 
 

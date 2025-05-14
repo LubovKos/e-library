@@ -16,24 +16,25 @@ class CSVBookReader:
     def __init__(self, file, repo: BookRepository):
         self.repo = repo
         self.csv_file = file
-        logging.info("Инициализация csvreader")
+        logging.info("Initialization csvreader")
 
     def load_from_csv(self):
-        logging.info(f"Загрузка CSV: {self.csv_file}")
+        logging.info(f"Downloading CSV: {self.csv_file}")
         books = []
         try:
             with open(self.csv_file, 'r', encoding='utf-8-sig') as file:
                 reader = csv.DictReader(file)
-                required_fields = ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+                required_fields = ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги',
+                                   'Страниц', 'Описание', 'Издательство']
 
                 if not all(field in reader.fieldnames for field in required_fields):
                     missing = [f for f in required_fields if f not in reader.fieldnames]
-                    logging.error(f"Отсутствуют обязательные заголовки: {missing}")
-                    raise ValueError("CSV не содержит необходимые заголовки")
+                    logging.error(f"Missing required fields: {missing}")
+                    raise ValueError("CSV does not contain required headers")
 
-                logging.debug(f"Заголовки CSV: {reader.fieldnames}")
+                logging.debug(f"Fieldnames CSV: {reader.fieldnames}")
                 for row in reader:
-                    logging.debug(f"Обрабатываем строку: {row}")
+                    logging.debug(f"Process the line: {row}")
                     try:
                         year = int(row['Год выпуска книги'])
                         book = {
@@ -58,19 +59,9 @@ class CSVBookReader:
                         )
                         self.repo.save(book2)
                     except (KeyError, ValueError) as e:
-                        logging.warning(f"Ошибка парсинга строки: {row}. Ошибка: {str(e)}")
-                logging.info(f"Загружено книг из CSV: {len(books)}")
+                        logging.warning(f"Error parsing string: {row}. Error: {str(e)}")
+                logging.info(f"Downloaded books from CSV: {len(books)}")
             return books
         except Exception as e:
-            logging.error(f"Ошибка при чтении CSV: {str(e)}", exc_info=True)
+            logging.error(f"Error reading CSV: {str(e)}", exc_info=True)
             return []
-
-
-
-
-
-
-
-# b = CSVBookReader("test_books.csv")
-# books = b.load_from_csv()
-# print(*books)

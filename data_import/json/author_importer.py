@@ -18,10 +18,10 @@ class JSONAuthorReader:
     def __init__(self, file, repo: AuthorRepository):
         self.repo = repo
         self.json_file = file
-        logging.info("Инициализация jsonreader")
+        logging.info("Initialization jsonreader")
 
     def load_from_json(self):
-        logging.info(f"Загрузка JSON: {self.json_file}")
+        logging.info(f"Downloading JSON: {self.json_file}")
         authors = []
         try:
             with open(self.json_file, 'r') as file:
@@ -38,11 +38,9 @@ class JSONAuthorReader:
                     # Проверка наличия всех полей
                     missing_fields = required_fields - set(author.keys())
                     if missing_fields:
-                        logging.warning(f"Отсутствуют поля в строке {row_number}: {missing_fields}")
-                        raise ValueError("JSON не содержит необходимые заголовки")
-
-
-                    logging.debug(f"Обрабатываем строку: {row_number}")
+                        logging.warning(f"Missing fields in the row {row_number}: {missing_fields}")
+                        raise ValueError("JSON does not contain required headers")
+                    logging.debug(f"Process line: {row_number}")
                     row_number += 1
                     try:
                         author = Author(
@@ -55,19 +53,10 @@ class JSONAuthorReader:
                         authors.append(author)
 
                     except (KeyError, ValueError) as e:
-                        logging.warning(f"Ошибка парсинга строки: {row_number}. Ошибка: {str(e)}")
-                logging.info(f"Загружено авторов из JSON: {len(authors)}")
+                        logging.warning(f"Error parsing string: {row_number}. Error: {str(e)}")
+                logging.info(f"Downloaded authors from JSON: {len(authors)}")
                 return authors
 
         except Exception as e:
-            logging.error(f"Ошибка при чтении JSON: {str(e)}", exc_info=True)
+            logging.error(f"Error reading JSON: {str(e)}", exc_info=True)
             return []
-
-
-# # test
-# repo = AuthorRepository()
-# importer = JSONAuthorReader("../../data/json/authors.json", repo)
-# # Импорт
-# importer.load_from_json()
-# repo.show_all()
-

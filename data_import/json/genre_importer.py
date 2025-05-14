@@ -17,10 +17,10 @@ class JSONGenreReader:
     def __init__(self, file, repo: GenreRepository):
         self.repo = repo
         self.json_file = file
-        logging.info("Инициализация jsonreader")
+        logging.info("Initialization jsonreader")
 
     def load_from_json(self):
-        logging.info(f"Загрузка JSON: {self.json_file}")
+        logging.info(f"Downloading JSON: {self.json_file}")
         genres = []
         try:
             with open(self.json_file, 'r') as file:
@@ -35,10 +35,10 @@ class JSONGenreReader:
                     # Проверка наличия всех полей
                     missing_fields = required_fields - set(genre.keys())
                     if missing_fields:
-                        logging.warning(f"Отсутствуют поля в строке {row_number}: {missing_fields}")
-                        raise ValueError("JSON не содержит необходимые заголовки")
+                        logging.warning(f"Missing fields in the row {row_number}: {missing_fields}")
+                        raise ValueError("JSON does not contain required headers")
 
-                    logging.debug(f"Обрабатываем строку: {row_number}")
+                    logging.debug(f"Process the line: {row_number}")
                     row_number += 1
                     try:
                         genre = Genre(
@@ -49,21 +49,10 @@ class JSONGenreReader:
                         genres.append(genre)
 
                     except (KeyError, ValueError) as e:
-                        logging.warning(f"Ошибка парсинга строки: {row_number}. Ошибка: {str(e)}")
-                logging.info(f"Загружено жанров из JSON: {len(genres)}")
+                        logging.warning(f"Error parsing string: {row_number}. Error: {str(e)}")
+                logging.info(f"Downloaded genres from JSON: {len(genres)}")
                 return genres
 
         except Exception as e:
-            logging.error(f"Ошибка при чтении JSON: {str(e)}", exc_info=True)
+            logging.error(f"Error reading JSON: {str(e)}", exc_info=True)
             return []
-
-#
-# repo = GenreRepository()
-# importer = JSONGenreReader("C:/Users/student/PycharmProjects/booksdb/data/json/genres.json", repo)
-# # Импорт
-# importer.load_from_json()
-# repo.show_all()
-# repo.delete("title", "Юмор")
-# repo.show_all()
-# repo.filter("title", "up")
-# repo.find("title", "Роман")

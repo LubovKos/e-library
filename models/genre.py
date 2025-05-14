@@ -12,7 +12,7 @@ class Genre:
     def __post_init__(self):
         # Валидация данных при создании объекта
         if self.title == "":
-            raise ValueError("Название  жанра не может быть пустым")
+            raise ValueError("Genre name must not be empty")
 
 
 
