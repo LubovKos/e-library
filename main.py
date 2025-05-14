@@ -13,11 +13,17 @@ from data_import.json.author_importer import JSONAuthorReader
 from data_import.json.genre_importer import JSONGenreReader
 from data_import.json.publisher_importer import JSONPublisherReader
 from data_import.json.reader_importer import JSONReaderImporter
-from databases.book_db import BookRepository
-from databases.author_db import AuthorRepository
-from databases.publisher_db import PublisherRepository
-from databases.genre_db import GenreRepository
-from databases.reader_db import ReaderRepository
+from tables.book_db import BookRepository
+from tables.author_db import AuthorRepository
+from tables.publisher_db import PublisherRepository
+from tables.genre_db import GenreRepository
+from tables.reader_db import ReaderRepository
+from models.author import Author
+from models.book import Book
+from models.genre import Genre
+from models.publisher import Publisher
+from models.reader import Reader
+from joiner import Joiner
 
 # Настройка логирования
 logging.basicConfig(
@@ -34,6 +40,7 @@ class Library:
         self.publisher_repo = PublisherRepository()
         self.genre_repo = GenreRepository()
         self.reader_repo = ReaderRepository()
+        self.joiner = Joiner()
         self.path = "C:/Users/student/PycharmProjects/booksdb/data/"
 
     def load(self, path, choice):
@@ -101,9 +108,37 @@ class Library:
             logging.error(f"Error searching: {e}")
             return 0
 
-    def add_record(self, entity_type, record):
+    def add_record(self, choice, record):
         """Add a new record to the specified entity."""
-        return
+        try:
+            if choice == '1':
+                book = Book(title=record['title'], author=record['author'],
+                            year=int(record['year']), pages=int(record['pages']), description=record['description'],
+                            genre=record['genre'], publisher=record['publisher'])
+                id = self.book_repo.save(book)
+                return id
+            elif choice == '2':
+                author = Author(full_name=record['full_name'], date_of_birth=record['date_of_birth'],
+                                date_of_death=record['date_of_death'], biography=record['biography'])
+                id = self.author_repo.save(author)
+                return id
+            elif choice == '3':
+                publisher = Publisher(name=record['name'], address=record['address'],
+                                phone=record['phone'], mail=record['mail'])
+                id = self.publisher_repo.save(publisher)
+                return id
+            elif choice == '4':
+                genre = Genre(title=record['title'], description=record['description'])
+                id = self.genre_repo.save(genre)
+                return id
+            else:
+                reader = Reader(full_name=record['full_name'], phone=record['phone'],
+                                mail=record['mail'])
+                id = self.reader_repo.save(reader)
+                return id
+        except Exception as e:
+            logging.error(f"Error saving: {e}")
+        return -1
 
     def update_record(self, choice, field, new_val, author="", title=""):
         """Update an existing record."""
@@ -155,6 +190,17 @@ class Library:
         except Exception as e:
             logging.error(f"Error displaying: {e}")
 
+    def join(self, choice):
+        try:
+            if choice == '1':
+                self.joiner.join("author")
+            elif choice == '2':
+                self.joiner.join("publisher")
+            elif choice == '3':
+                self.joiner.join("genre")
+        except Exception as e:
+            logging.error(f"Error displaying: {e}")
+
 
 def main_menu(library):
     logging.info("Starting main menu")
@@ -167,7 +213,8 @@ def main_menu(library):
         print("5. Delete Record")
         print("6. Search Records")
         print("7. Filter Records")
-        print("8. Exit")
+        print("8. Get more information")
+        print("9. Exit")
         choice = input("Select an option: ").strip()
         logging.debug(f"User selected: {choice}")
 
@@ -186,6 +233,8 @@ def main_menu(library):
         elif choice == '7':
             filtering_menu(library)
         elif choice == '8':
+            show_full_info(library)
+        elif choice == '9':
             logging.info("User chose to exit")
             print("Goodbye!")
             break
@@ -306,19 +355,26 @@ def add_record_menu(library):
         return
 
     entity = entity_types[choice]
-    record = {}
-    # fields = {
-    #     'book': ['title', 'genre', 'author', 'year'],
-    #     'author': ['name', 'birth_year'],
-    #     'publisher': ['name', 'city'],
-    #     'genre': ['name'],
-    #     'reader': ['name', 'email']
-    # }
-    # for field in fields[entity]:
-    #     value = input(f"Enter {field}: ").strip()
-    #     record[field] = value
-    library.add_record(entity, record)
-    print(f"{entity.capitalize()} added successfully")
+    print(f"\nAdding new {entity.capitalize()}")
+    field_options = {
+        'book': {'title', 'author', 'year', 'genre', 'pages', 'publisher', 'description'},
+        'author': {'full_name', 'date_of_birth', 'date_of_death', 'biography'},
+        'publisher': {'name', 'address', 'phone', 'mail'},
+        'genre': {'title', 'description'},
+        'reader': {'full_name', 'phone', 'mail'}
+    }
+    curr_data = {}
+    for v in field_options[entity]:
+        print(f"Enter the {v.capitalize()}")
+        info = input()
+        curr_data[v] = info
+    if library.add_record(choice, curr_data) >= 0:
+        print(f"{entity.capitalize()} added successfully")
+        logging.info(f"{entity.capitalize()} added successfully")
+    else:
+        logging.info(f"Error with adding")
+        print(f"Error with adding the {entity.capitalize()}")
+        return
 
 
 def update_record_menu(library):
@@ -353,7 +409,7 @@ def update_record_menu(library):
             field, new_val = data[0], data[1]
         except Exception as e:
             logging.info(f"Error: {e}")
-        author = input("Enter the author that you want to update")
+        author = input("Enter the author that you want to update: ")
         try:
             library.update_record(choice=choice, field=field, author=author, new_val=new_val)
         except Exception as e:
@@ -366,7 +422,7 @@ def update_record_menu(library):
             field, new_val = data[0], data[1]
         except Exception as e:
             logging.info(f"Error: {e}")
-        title = input("Enter the title of publisher that you want to update")
+        title = input("Enter the title of publisher that you want to update: ")
         try:
             library.update_record(choice=choice, field=field, title=title, new_val=new_val)
         except Exception as e:
@@ -379,7 +435,7 @@ def update_record_menu(library):
             field, new_val = data[0], data[1]
         except Exception as e:
             logging.info(f"Error: {e}")
-        title = input("Enter the title of genre that you want to update")
+        title = input("Enter the title of genre that you want to update: ")
         try:
             library.update_record(choice=choice, field=field, title=title, new_val=new_val)
         except Exception as e:
@@ -392,11 +448,32 @@ def update_record_menu(library):
             field, new_val = data[0], data[1]
         except Exception as e:
             logging.info(f"Error: {e}")
-        title = input("Enter the title of publisher that you want to update")
+        title = input("Enter the title of publisher that you want to update: ")
         try:
             library.update_record(choice=choice, field=field, title=title, new_val=new_val)
         except Exception as e:
-            print("No updating")
+            print("No update")
+            logging.info(f"Error: {e}")
+    else:
+        logging.warning(f"Invalid entity choice: {choice}")
+        print("Invalid entity choice")
+        return
+
+
+def show_full_info(library):
+    logging.info("Starting showing all information about books")
+    entity_types = {'1': 'author', '2': 'publisher', '3': 'genre', '0': 'Back'}
+    print("\nYou want to know more information about: ")
+    for k, v in entity_types.items():
+        print(f"{k}. {v.capitalize()}")
+    choice = input("Select entity: ").strip()
+    logging.info("Joining " + entity_types[choice])
+    if choice == '0':
+        return
+    elif choice in entity_types:
+        try:
+            library.join(choice)
+        except Exception as e:
             logging.info(f"Error: {e}")
     else:
         logging.warning(f"Invalid entity choice: {choice}")

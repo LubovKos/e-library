@@ -8,7 +8,7 @@ from models.reader import (Reader)
 
 
 class ReaderRepository:
-    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/bases/reader.db"):
+    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/library.db"):
         self.db_path = Path(db_path)
         self._init_db()
 
@@ -41,7 +41,7 @@ class ReaderRepository:
 
     def save(self, reader: Reader) -> int:
         if self.reader_exists(reader):
-            return 0
+            return -1
         """Сохраняет издательство и возвращает ID"""
         with self._get_connection() as conn:
             cursor = conn.execute("""

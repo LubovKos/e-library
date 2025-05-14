@@ -15,11 +15,10 @@ class Author:
         # Валидация данных при создании объекта
         if self.full_name == "":
             raise ValueError("ФИО автора не может быть пустым")
-        print(len(self.date_of_death))
-        if len(self.date_of_birth) != 0 and len(self.date_of_death) != 0:
+        if self.date_of_birth is not None and self.date_of_death is not None:
             if dt.strptime(self.date_of_birth, '%d.%m.%Y') > dt.strptime(self.date_of_death, '%d.%m.%Y'):
                 raise ValueError("Дата смерти не может быть раньше даты рождения")
-        if len(self.date_of_birth) != 0 and dt.strptime(self.date_of_birth, '%d.%m.%Y') > dt.now():
+        if self.date_of_birth is not None and dt.strptime(self.date_of_birth, '%d.%m.%Y') > dt.now():
             raise ValueError("Дата рождения не может быть в будущем")
-        if len(self.date_of_death) != 0 and dt.strptime(self.date_of_death, '%d.%m.%Y') > dt.now():
+        if self.date_of_death is not None and dt.strptime(self.date_of_death, '%d.%m.%Y') > dt.now():
             raise ValueError("Дата смерти не может быть в будущем")

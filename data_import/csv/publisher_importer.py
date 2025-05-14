@@ -1,7 +1,7 @@
 import csv
 import logging
 
-from databases.publisher_db import PublisherRepository
+from tables.publisher_db import PublisherRepository
 from models.publisher import Publisher
 
 # Настройка логирования
@@ -57,8 +57,8 @@ class CSVPublisherReader:
             logging.error(f"Ошибка при чтении CSV: {str(e)}", exc_info=True)
             return []
 
-
-repo = PublisherRepository()
-b = CSVPublisherReader("C:/Users/student/PycharmProjects/booksdb/data/csv/test_publishers.csv", repo)
-b.load_from_csv()
-repo.show_all()
+#
+# repo = PublisherRepository()
+# b = CSVPublisherReader("C:/Users/student/PycharmProjects/booksdb/data/csv/test_publishers.csv", repo)
+# b.load_from_csv()
+# repo.show_all()

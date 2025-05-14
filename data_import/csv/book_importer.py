@@ -1,6 +1,6 @@
 import csv
 import logging
-from databases.book_db import BookRepository
+from tables.book_db import BookRepository
 from models.book import Book
 
 # Настройка логирования

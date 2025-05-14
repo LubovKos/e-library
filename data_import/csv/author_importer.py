@@ -1,7 +1,7 @@
 import csv
 import logging
 
-from databases.author_db import AuthorRepository
+from tables.author_db import AuthorRepository
 from models.author import Author
 
 # Настройка логирования
@@ -59,14 +59,14 @@ class CSVAuthorReader:
 
 
 # test
-repo = AuthorRepository()
-importer = CSVAuthorReader("C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv", repo)
-# Импорт
-importer.load_from_csv()
-repo.show_all()
-repo.update("date_of_birth", "Михаил Афанасьевич Булгаков", "09.09.1881")
-repo.show_all()
-repo.delete("date_of_birth", "09.09.1881")
-repo.show_all()
-repo.filter("full_name", "down")
+# repo = AuthorRepository()
+# importer = CSVAuthorReader("C:/Users/student/PycharmProjects/booksdb/data/csv/test_authors.csv", repo)
+# # Импорт
+# importer.load_from_csv()
+# repo.show_all()
+# repo.update("date_of_birth", "Михаил Афанасьевич Булгаков", "09.09.1881")
+# repo.show_all()
+# repo.delete("date_of_birth", "09.09.1881")
+# repo.show_all()
+# repo.filter("full_name", "down")
 

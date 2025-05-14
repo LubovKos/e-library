@@ -6,7 +6,7 @@ from models.book import Book
 
 
 class BookRepository:
-    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/bases/books.db"):
+    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/library.db"):
         self.db_path = Path(db_path)
         self._init_db()
 
@@ -25,9 +25,11 @@ class BookRepository:
                     genre TEXT,
                     pages INTEGER,
                     description TEXT,
-                    publisher TEXT NOT NULL
+                    publisher TEXT NOT NULL,
+                    FOREIGN KEY (author) REFERENCES author(full_name),
+                    FOREIGN KEY (genre) REFERENCES genre(title),
+                    FOREIGN KEY (publisher) REFERENCES publisher(name)
                 )
-               
             """)
 
     def book_exists(self, book: Book) -> bool:
@@ -44,7 +46,7 @@ class BookRepository:
 
     def save(self, book: Book) -> int:
         if self.book_exists(book):
-            return 0
+            return -1
         """Сохраняет книгу и возвращает её ID"""
         with self._get_connection() as conn:
             cursor = conn.execute("""

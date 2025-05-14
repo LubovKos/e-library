@@ -2,7 +2,7 @@
 import logging
 import ijson
 from jsonschema import validate
-from databases.author_db import AuthorRepository
+from tables.author_db import AuthorRepository
 from models.author import Author
 
 # Настройка логирования
@@ -64,10 +64,10 @@ class JSONAuthorReader:
             return []
 
 
-# test
-repo = AuthorRepository()
-importer = JSONAuthorReader("../../data/json/authors.json", repo)
-# Импорт
-importer.load_from_json()
-repo.show_all()
+# # test
+# repo = AuthorRepository()
+# importer = JSONAuthorReader("../../data/json/authors.json", repo)
+# # Импорт
+# importer.load_from_json()
+# repo.show_all()
 

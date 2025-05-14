@@ -1,7 +1,7 @@
 import csv
 import logging
 
-from databases.reader_db import ReaderRepository
+from tables.reader_db import ReaderRepository
 from models.reader import Reader
 
 # Настройка логирования
@@ -56,8 +56,8 @@ class CSVReaderImporter:
             return []
 
 
-repo = ReaderRepository()
-
-b = CSVReaderImporter("C:/Users/student/PycharmProjects/booksdb/data/csv/test_readers.csv", repo)
-b.load_from_csv()
-repo.show_all()
+# repo = ReaderRepository()
+#
+# b = CSVReaderImporter("C:/Users/student/PycharmProjects/booksdb/data/csv/test_readers.csv", repo)
+# b.load_from_csv()
+# repo.show_all()

@@ -4,11 +4,11 @@ from pathlib import Path
 
 from tabulate import tabulate
 
-from models.publisher import (Publisher)
+from models.genre import Genre
 
 
-class PublisherRepository:
-    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/bases/publisher.db"):
+class GenreRepository:
+    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/library.db"):
         self.db_path = Path(db_path)
         self._init_db()
 
@@ -19,55 +19,53 @@ class PublisherRepository:
         """Создаёт таблицу, если её нет"""
         with self._get_connection() as conn:
             conn.execute("""
-                CREATE TABLE IF NOT EXISTS publisher (
+                CREATE TABLE IF NOT EXISTS genre (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    name TEXT NOT NULL,
-                    address TEXT,
-                    phone TEXT,
-                    mail TEXT
+                    title TEXT NOT NULL,
+                    description TEXT
                 )
             """)
 
-    def publisher_exists(self, publisher: Publisher) -> bool:
+    def genre_exists(self, genre: Genre) -> bool:
         """Проверяет, существует ли жанр в БД"""
         with self._get_connection() as conn:
             cursor = conn.execute(
                 """
-                SELECT 1 FROM publisher
-                WHERE name = ? 
+                SELECT 1 FROM genre
+                WHERE title = ? 
                 """,
-                (publisher.name,)
+                (genre.title,)
             )
             return cursor.fetchone() is not None
 
-    def save(self, publisher: Publisher) -> int:
-        """Сохраняет издательство и возвращает ID"""
+    def save(self, genre: Genre) -> int:
+        if self.genre_exists(genre):
+            return -1
+        """Сохраняет жанры и возвращает ID"""
         with self._get_connection() as conn:
             cursor = conn.execute("""
-                INSERT INTO publisher (
-                    name, address, phone, mail
-                ) VALUES (?, ?, ?, ?)
+                INSERT INTO genre (
+                    title, description
+                ) VALUES (?, ?)
             """, (
-                publisher.name, publisher.address, publisher.phone, publisher.mail
+                genre.title, genre.description
             ))
-            publisher.id = cursor.lastrowid
-            return publisher.id
+            genre.id = cursor.lastrowid
+            return genre.id
 
     def show_all(self):
         """Красивый вывод с использованием tabulate"""
-        headers = ["ID", "Название", "Адрес", "Телефон", "Почта"]
+        headers = ["ID", "Название", "Описание"]
         with self._get_connection() as conn:
-            cursor = conn.execute('SELECT * FROM publisher')
-            publishers = cursor.fetchall()
+            cursor = conn.execute('SELECT * FROM genre')
+            genres = cursor.fetchall()
             # Выводим результаты
             table_data = []
-            for publisher in publishers:
+            for genre in genres:
                 table_data.append([
-                    publisher[0],
-                    publisher[1],
-                    publisher[2],
-                    publisher[3],
-                    publisher[4]
+                    genre[0],
+                    genre[1],
+                    genre[2]
                 ])
 
             print("\n" + "=" * 100)
@@ -76,57 +74,53 @@ class PublisherRepository:
 
     def update(self, field: str, title: str, new_val):
         with self._get_connection() as conn:
-            query = 'UPDATE publisher SET ' + field + ' = ? WHERE name = ?'
+            query = 'UPDATE genre SET ' + field + ' = ? WHERE title = ?'
             conn.execute(query, (new_val, title))
 
     def delete(self, field: str, value):
         with self._get_connection() as conn:
-            conn.execute("DELETE FROM publisher WHERE " + field + " = ?", (value,))
+            conn.execute("DELETE FROM genre WHERE " + field + " = ?", (value,))
 
     def filter(self, field: str, direction):
         if direction == "up":
-            query = "SELECT * FROM publisher ORDER BY " + field + " ASC"
+            query = "SELECT * FROM genre ORDER BY " + field + " ASC"
         elif direction == "down":
-            query = "SELECT * FROM publisher ORDER BY " + field + " DESC"
+            query = "SELECT * FROM genre ORDER BY " + field + " DESC"
         else:
             # записать в лог
             raise ValueError("Некорректное значение направления сортировки")
         with self._get_connection() as conn:
             cursor = conn.execute(query)
-            publishers = cursor.fetchall()
+            genres = cursor.fetchall()
             # Выводим результаты
             table_data = []
-            for publisher in publishers:
+            for genre in genres:
                 table_data.append([
-                    publisher[0],
-                    publisher[1],
-                    publisher[2],
-                    publisher[3],
-                    publisher[4]
+                    genre[0],
+                    genre[1],
+                    genre[2]
                 ])
 
-            headers = ["ID", "Название", "Адрес", "Телефон", "Почта"]
+            headers = ["ID", "Название", "Описание"]
             print("\n" + "=" * 100)
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
 
     def find(self, field: str, value):
-        headers = ["ID", "Название", "Адрес", "Телефон", "Почта"]
+        headers = ["ID", "Название", "Описание"]
         with self._get_connection() as conn:
-            cursor = conn.execute('SELECT * FROM publisher WHERE ' + field + " = ?", (value,))
-            publishers = cursor.fetchall()
+            cursor = conn.execute('SELECT * FROM genre WHERE ' + field + " = ?", (value,))
+            genres = cursor.fetchall()
             # Выводим результаты
             table_data = []
-            for publisher in publishers:
+            for genre in genres:
                 table_data.append([
-                    publisher[0],
-                    publisher[1],
-                    publisher[2],
-                    publisher[3],
-                    publisher[4]
+                    genre[0],
+                    genre[1],
+                    genre[2]
                 ])
 
             print("\n" + "=" * 100)
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
-            return len(publishers)
+            return len(genres)

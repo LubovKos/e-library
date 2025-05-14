@@ -8,7 +8,7 @@ from models.author import Author
 
 
 class AuthorRepository:
-    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/bases/author.db"):
+    def __init__(self, db_path: str = "C:/Users/student/PycharmProjects/booksdb/data/library.db"):
         self.db_path = Path(db_path)
         self._init_db()
 
@@ -41,7 +41,7 @@ class AuthorRepository:
 
     def save(self, author: Author) -> int:
         if self.author_exists(author):
-            return 0
+            return -1
         """Сохраняет автора и возвращает ID"""
         with self._get_connection() as conn:
             cursor = conn.execute("""

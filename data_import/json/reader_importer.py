@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 import ijson
-from databases.reader_db import ReaderRepository
+from tables.reader_db import ReaderRepository
 from models.reader import Reader
 
 # Настройка логирования
@@ -61,8 +61,8 @@ class JSONReaderImporter:
 
 
 # test
-repo = ReaderRepository()
-importer = JSONReaderImporter("../../data/json/readers.json", repo)
-# Импорт
-importer.load_from_json()
-repo.show_all()
+# repo = ReaderRepository()
+# importer = JSONReaderImporter("../../data/json/readers.json", repo)
+# # Импорт
+# importer.load_from_json()
+# repo.show_all()

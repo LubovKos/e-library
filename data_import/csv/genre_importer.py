@@ -1,7 +1,7 @@
 import csv
 import logging
 
-from databases.genre_db import GenreRepository
+from tables.genre_db import GenreRepository
 from models.genre import Genre
 
 # Настройка логирования
@@ -55,15 +55,15 @@ class CSVGenreReader:
 
 
 # test
-repo = GenreRepository()
-importer = CSVGenreReader("C:/Users/student/PycharmProjects/booksdb/data/csv/test_genres.csv", repo)
-# Импорт
-importer.load_from_csv()
-repo.show_all()
-repo.delete("title", "Юмор")
-repo.show_all()
-repo.filter("title", "up")
-repo.find("title", "Роман")
-
+# repo = GenreRepository()
+# importer = CSVGenreReader("C:/Users/student/PycharmProjects/booksdb/data/csv/test_genres.csv", repo)
+# # Импорт
+# importer.load_from_csv()
+# repo.show_all()
+# repo.delete("title", "Юмор")
+# repo.show_all()
+# repo.filter("title", "up")
+# repo.find("title", "Роман")
+#
 
 

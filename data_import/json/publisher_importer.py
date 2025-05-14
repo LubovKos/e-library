@@ -2,7 +2,7 @@
 import logging
 import ijson
 from jsonschema import validate
-from databases.publisher_db import PublisherRepository
+from tables.publisher_db import PublisherRepository
 from models.publisher import Publisher
 
 # Настройка логирования
@@ -64,8 +64,8 @@ class JSONPublisherReader:
 
 
 # test
-repo = PublisherRepository()
-importer = JSONPublisherReader("../../data/json/publishers.json", repo)
-# Импорт
-importer.load_from_json()
-repo.show_all()
+# repo = PublisherRepository()
+# importer = JSONPublisherReader("../../data/json/publishers.json", repo)
+# # Импорт
+# importer.load_from_json()
+# repo.show_all()

@@ -1,7 +1,7 @@
 import logging
 import ijson
 from jsonschema import validate
-from databases.book_db import BookRepository
+from tables.book_db import BookRepository
 from models.book import Book
 
 # Настройка логирования
@@ -74,14 +74,14 @@ class JSONBookReader:
 
 
 # test
-repo = BookRepository()
-importer = JSONBookReader("../../data/json/books.json", repo)
-# Импорт
-importer.load_from_json()
-repo.show_all()
-repo.update("pages", "Преступление и наказание", "Фёдор Достоевский", 608)
-repo.show_all()
-repo.delete("title", "Мастер и Маргарита")
-repo.show_all()
-repo.find("pages", 480)
+# repo = BookRepository()
+# importer = JSONBookReader("../../data/json/books.json", repo)
+# # Импорт
+# importer.load_from_json()
+# repo.show_all()
+# repo.update("pages", "Преступление и наказание", "Фёдор Достоевский", 608)
+# repo.show_all()
+# repo.delete("title", "Мастер и Маргарита")
+# repo.show_all()
+# repo.find("pages", 480)
 

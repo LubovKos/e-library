@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 import ijson
-from databases.genre_db import GenreRepository
+from tables.genre_db import GenreRepository
 from models.genre import Genre
 
 # Настройка логирования
@@ -57,13 +57,13 @@ class JSONGenreReader:
             logging.error(f"Ошибка при чтении JSON: {str(e)}", exc_info=True)
             return []
 
-
-repo = GenreRepository()
-importer = JSONGenreReader("C:/Users/student/PycharmProjects/booksdb/data/json/genres.json", repo)
-# Импорт
-importer.load_from_json()
-repo.show_all()
-repo.delete("title", "Юмор")
-repo.show_all()
-repo.filter("title", "up")
-repo.find("title", "Роман")
+#
+# repo = GenreRepository()
+# importer = JSONGenreReader("C:/Users/student/PycharmProjects/booksdb/data/json/genres.json", repo)
+# # Импорт
+# importer.load_from_json()
+# repo.show_all()
+# repo.delete("title", "Юмор")
+# repo.show_all()
+# repo.filter("title", "up")
+# repo.find("title", "Роман")
