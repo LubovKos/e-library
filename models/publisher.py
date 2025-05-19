@@ -2,9 +2,10 @@ from dataclasses import dataclass
 from typing import Optional
 import re
 
+
 @dataclass
 class Publisher:
-    """Модель книги с базовой валидацией"""
+    """Модель издательства с базовой валидацией"""
     name: str
     address: str
     phone: str

@@ -1,3 +1,4 @@
+import json
 import sqlite3
 from typing import Optional
 from pathlib import Path
@@ -124,3 +125,17 @@ class GenreRepository:
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
             return len(genres)
+
+    def export(self):
+        with self._get_connection() as conn:
+            headers = ["ID", "Название", "Описание"]
+            cursor = conn.execute('SELECT * FROM genre')
+            genres = cursor.fetchall()
+            for genre in genres:
+                data = {
+                    headers[0]: genre[0],
+                    headers[1]: genre[1],
+                    headers[2]: genre[2]
+                }
+                with open('C:/Users/student/PycharmProjects/booksdb/export/json/genre_export.json', 'w', encoding='utf-8') as file:
+                    json.dump(data, file, ensure_ascii=False, indent=4)

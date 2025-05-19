@@ -5,7 +5,7 @@ from typing import Optional, List
 
 @dataclass
 class Author:
-    """Модель книги с базовой валидацией"""
+    """Модель автора с базовой валидацией"""
     full_name: str
     biography: str
     date_of_birth: str

@@ -4,25 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="The method for adding new data to tables has been added. All tables are now stored in one database. A method has been added for combining tables (books) with others (to obtain full information).">
+    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="Added minor improvements for validation. Adjustments were made to logging.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/author_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/author_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/book_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/book_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/genre_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/genre_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/library.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/publisher_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/publisher_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/csv/reader_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/csv/reader_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/json/author_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/author_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/json/book_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/book_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/json/genre_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/genre_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/json/library.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/json/publisher_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/publisher_importer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_import/json/reader_importer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/json/reader_importer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/library.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library.log" beforeDir="false" afterPath="$PROJECT_DIR$/library.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/author.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/author.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/book.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/genre.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/publisher.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/publisher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables/author_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/author_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables/book_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/book_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables/genre_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/genre_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables/publisher_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/publisher_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables/reader_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/reader_db.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,37 +45,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.author.executor": "Run",
-    "Python.author_importer.executor": "Run",
-    "Python.book_db.executor": "Run",
-    "Python.book_importer.executor": "Run",
-    "Python.genre_db.executor": "Run",
-    "Python.genre_importer.executor": "Run",
-    "Python.joiner.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.publisher_db.executor": "Run",
-    "Python.publisher_importer.executor": "Run",
-    "Python.reader_db.executor": "Run",
-    "Python.reader_importer.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/student/PycharmProjects/booksdb/data_import/json",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.author.executor&quot;: &quot;Run&quot;,
+    &quot;Python.author_importer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.book_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.book_importer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.genre_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.genre_importer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.joiner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.publisher_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.publisher_importer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reader_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reader_importer.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/student/PycharmProjects/booksdb/data_import/json&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\student\PycharmProjects\booksdb\data_import\json" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\student\PycharmProjects\booksdb\export\json" />
       <recent name="C:\Users\student\PycharmProjects\booksdb\data\bases" />
       <recent name="C:\Users\student\PycharmProjects\booksdb\data\json" />
       <recent name="C:\Users\student\PycharmProjects\booksdb\data_import\json" />
       <recent name="C:\Users\student\PycharmProjects\booksdb\data\csv" />
-      <recent name="C:\Users\student\PycharmProjects\booksdb\data" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -188,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747212394004</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added minor improvements for validation. Adjustments were made to logging.">
+      <option name="closed" value="true" />
+      <created>1747230750039</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747230750039</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +215,7 @@
     <MESSAGE value="filled databases" />
     <MESSAGE value="Minor bugs in methods inside databases have been fixed, console interaction with the user has been written. It remains to finish writing the method for adding a new record to the database." />
     <MESSAGE value="The method for adding new data to tables has been added. All tables are now stored in one database. A method has been added for combining tables (books) with others (to obtain full information)." />
-    <option name="LAST_COMMIT_MESSAGE" value="The method for adding new data to tables has been added. All tables are now stored in one database. A method has been added for combining tables (books) with others (to obtain full information)." />
+    <MESSAGE value="Added minor improvements for validation. Adjustments were made to logging." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added minor improvements for validation. Adjustments were made to logging." />
   </component>
 </project>

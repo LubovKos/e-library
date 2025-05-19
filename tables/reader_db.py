@@ -1,3 +1,6 @@
+import csv
+import json
+import os
 import sqlite3
 from typing import Optional
 from pathlib import Path
@@ -128,3 +131,38 @@ class ReaderRepository:
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
             return len(readers)
+
+    import csv
+    import json
+    import os
+
+    def export(self, format_type='both'):
+        # Проверяем существование директорий, создаем их, если не существуют
+        base_path = 'C:/Users/student/PycharmProjects/booksdb/export'
+
+        with self._get_connection() as conn:
+            headers = ["ID", "ФИО", "Телефон", "Почта"]
+            cursor = conn.execute('SELECT * FROM reader')
+            readers = cursor.fetchall()
+            print(format_type.lower())
+
+            # Экспорт в CSV, если выбран csv или оба формата
+            if format_type.lower() == 'csv':
+                with open(f'{base_path}/csv/reader_export.csv', 'w', encoding='utf-8', newline='') as file:
+                    writer = csv.writer(file)
+                    writer.writerow(headers)
+                    for reader in readers:
+                        writer.writerow(reader)
+
+            # Экспорт в JSON, если выбран json или оба формата
+            if format_type.lower() == 'json':
+                for reader in readers:
+                    data = {
+                        headers[0]: reader[0],
+                        headers[1]: reader[1],
+                        headers[2]: reader[2],
+                        headers[3]: reader[3]
+                    }
+                    print(data)
+                    with open(f'{base_path}/json/reader_export.json', 'w', encoding='utf-8') as file:
+                        json.dump(data, file, ensure_ascii=False, indent=4)

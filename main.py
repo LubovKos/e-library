@@ -201,6 +201,18 @@ class Library:
         except Exception as e:
             logging.error(f"Error displaying: {e}")
 
+    def export_data(self, choice, file_choice):
+        if choice == '1':
+            self.book_repo.export(file_choice)
+        elif choice == '2':
+            self.author_repo.export(file_choice)
+        elif choice == '3':
+            self.publisher_repo.export(file_choice)
+        elif choice == '4':
+            self.genre_repo.export(file_choice)
+        else:
+            self.reader_repo.export(file_choice)
+
 
 def main_menu(library):
     logging.info("Starting main menu")
@@ -214,7 +226,8 @@ def main_menu(library):
         print("6. Search Records")
         print("7. Filter Records")
         print("8. Get more information")
-        print("9. Exit")
+        print("9. Export data")
+        print("0. Exit")
         choice = input("Select an option: ").strip()
         logging.debug(f"User selected: {choice}")
 
@@ -235,6 +248,8 @@ def main_menu(library):
         elif choice == '8':
             show_full_info(library)
         elif choice == '9':
+            export_data_menu(library)
+        elif choice == '0':
             logging.info("User chose to exit")
             print("Goodbye!")
             break
@@ -607,6 +622,43 @@ def display_records_menu(library):
     entity = entity_types[choice]
     library.display_all(choice)
     logging.info(f"Displayed {entity} records")
+
+
+def export_data_menu(library):
+    logging.info("Starting exporting data menu")
+    entity_types = {'1': 'book', '2': 'author', '3': 'publisher', '4': 'genre', '5': 'reader'}
+    print("\nExport data for:")
+    for k, v in entity_types.items():
+        print(f"{k}. {v.capitalize()}")
+    print("0. Back")
+    choice = input("Select entity: ").strip()
+    if choice == '0':
+        return
+    if choice not in entity_types:
+        logging.warning(f"Invalid entity choice: {choice}")
+        print("Invalid entity choice")
+        return
+
+    entity = entity_types[choice]
+    logging.info(f"Exported data for {entity}")
+
+    logging.info("Choosing extension of file for export")
+    entity_file_types = {'1': 'json', '2': 'csv'}
+    print("\nFile format:")
+    for k, v in entity_file_types.items():
+        print(f"{k}. {v.capitalize()}")
+    print("0. Back")
+    file_choice = input("Select entity: ").strip()
+    if file_choice == '0':
+        return
+    if file_choice not in entity_file_types:
+        logging.warning(f"Invalid entity choice: {file_choice}")
+        print("Invalid entity choice")
+        return
+
+    entity_file = entity_file_types[file_choice]
+    library.export_data(choice, entity_file)
+    logging.info(f"Exported data in {entity_file}")
 
 
 def main():

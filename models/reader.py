@@ -5,7 +5,7 @@ import re
 
 @dataclass
 class Reader:
-    """Модель книги с базовой валидацией"""
+    """Модель читателя с базовой валидацией"""
     full_name: str
     phone: str
     mail: str

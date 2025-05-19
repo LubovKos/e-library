@@ -1,3 +1,4 @@
+import json
 import sqlite3
 from typing import Optional
 from pathlib import Path
@@ -36,6 +37,7 @@ class AuthorRepository:
                 WHERE full_name = ? 
                 """,
                 (author.full_name,)
+
             )
             return cursor.fetchone() is not None
 
@@ -128,3 +130,17 @@ class AuthorRepository:
             print("=" * 100 + "\n")
             return len(authors)
 
+    def export(self):
+        with self._get_connection() as conn:
+            headers = ["ФИО", "Дата рождения", "Дата смерти", "Биография"]
+            cursor = conn.execute('SELECT * FROM author')
+            authors = cursor.fetchall()
+            for author in authors:
+                data = {
+                    headers[0]: author[0],
+                    headers[1]: author[1],
+                    headers[2]: author[2],
+                    headers[3]: author[3]
+                }
+                with open('C:/Users/student/PycharmProjects/booksdb/export/json/author_export.json', 'w', encoding='utf-8') as file:
+                    json.dump(data, file, ensure_ascii=False, indent=4)

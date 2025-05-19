@@ -6415,3 +6415,138 @@ TypeError: object of type 'NoneType' has no len()
 2025-05-14 11:43:00,101 [DEBUG] [main_menu:219] User selected: 8
 2025-05-14 11:43:00,101 [INFO] [show_full_info:464] Starting showing all information about books
 2025-05-14 11:43:01,371 [INFO] [show_full_info:470] Joining author
+2025-05-19 14:31:12,618 [INFO] [main:614] Program started
+2025-05-19 14:31:12,624 [INFO] [main_menu:206] Starting main menu
+2025-05-19 14:31:17,276 [DEBUG] [main_menu:219] User selected: 1
+2025-05-19 14:31:17,276 [INFO] [import_data:297] Starting data import
+2025-05-19 14:31:19,832 [DEBUG] [import_data:308] User selected entity for import: 1
+2025-05-19 14:31:47,926 [DEBUG] [import_data:316] User entered path: C:/Users/student/PycharmProjects/booksdb/data/csv/test_books.csv
+2025-05-19 14:31:47,927 [INFO] [__init__:19] Initialization csvreader
+2025-05-19 14:31:47,927 [INFO] [load_from_csv:22] Downloading CSV: C:/Users/student/PycharmProjects/booksdb/data/csv/test_books.csv
+2025-05-19 14:31:47,948 [DEBUG] [load_from_csv:35] Fieldnames CSV: ['Название книги', 'Автор книги', 'Жанр книги', 'Год выпуска книги', 'Страниц', 'Описание', 'Издательство']
+2025-05-19 14:31:47,948 [DEBUG] [load_from_csv:37] Process the line: {'Название книги': 'Преступление и наказание', 'Автор книги': 'Фёдор Достоевский', 'Жанр книги': 'Психологический роман', 'Год выпуска книги': '1866', 'Страниц': '608', 'Описание': 'История бывшего студента Родиона Раскольникова, совершившего убийство и пытающегося найти оправдание своему поступку.', 'Издательство': 'Русский вестник'}
+2025-05-19 14:31:47,961 [DEBUG] [load_from_csv:37] Process the line: {'Название книги': '451° по Фаренгейту', 'Автор книги': 'Рэй Брэдбери', 'Жанр книги': 'Антиутопия', 'Год выпуска книги': '1953', 'Страниц': '256', 'Описание': 'Мир будущего, где пожарные сжигают книги, а один из них начинает сомневаться в правильности системы.', 'Издательство': 'Ballantine Books'}
+2025-05-19 14:31:47,970 [DEBUG] [load_from_csv:37] Process the line: {'Название книги': 'Гарри Поттер и философский камень', 'Автор книги': 'Джоан Роулинг', 'Жанр книги': 'Фэнтези', 'Год выпуска книги': '1997', 'Страниц': '432', 'Описание': 'Первая книга о приключениях мальчика-волшебника Гарри Поттера в школе Хогвартс.', 'Издательство': 'Bloomsbury'}
+2025-05-19 14:31:47,980 [DEBUG] [load_from_csv:37] Process the line: {'Название книги': 'Мастер и Маргарита', 'Автор книги': 'Михаил Афанасьевич Булгаков', 'Жанр книги': 'Мистический роман', 'Год выпуска книги': '1967', 'Страниц': '480', 'Описание': 'Фантасмагорическая история о визите дьявола в Москву 1930-х годов и связанных с этим событиях.', 'Издательство': 'YMCA-Press'}
+2025-05-19 14:31:47,988 [DEBUG] [load_from_csv:37] Process the line: {'Название книги': 'Краткая история времени', 'Автор книги': 'Стивен Уильям Хокинг', 'Жанр книги': 'Научно-популярная', 'Год выпуска книги': '1988', 'Страниц': '256', 'Описание': 'Популярное изложение космологических теорий, включая Большой взрыв и чёрные дыры.', 'Издательство': 'Bantam Books'}
+2025-05-19 14:31:47,997 [INFO] [load_from_csv:63] Downloaded books from CSV: 5
+2025-05-19 14:31:47,997 [INFO] [import_data:330] Successfully imported 5 book records
+2025-05-19 14:31:51,587 [DEBUG] [main_menu:219] User selected: 2
+2025-05-19 14:31:51,587 [INFO] [display_records_menu:592] Starting display records menu
+2025-05-19 14:31:53,427 [INFO] [display_records_menu:609] Displayed book records
+2025-05-19 14:32:00,762 [DEBUG] [main_menu:219] User selected: 3
+2025-05-19 14:32:00,762 [INFO] [add_record_menu:342] Starting add record menu
+2025-05-19 14:32:26,433 [INFO] [add_record_menu:373] Book added successfully
+2025-05-19 14:32:29,923 [DEBUG] [main_menu:219] User selected: 2
+2025-05-19 14:32:29,923 [INFO] [display_records_menu:592] Starting display records menu
+2025-05-19 14:32:30,883 [INFO] [display_records_menu:609] Displayed book records
+2025-05-19 14:32:35,972 [DEBUG] [main_menu:219] User selected: 4
+2025-05-19 14:32:35,972 [INFO] [update_record_menu:381] Starting update record menu
+2025-05-19 14:32:37,431 [INFO] [update_record_menu:388] Updating book
+2025-05-19 14:33:08,967 [DEBUG] [main_menu:219] User selected: 4
+2025-05-19 14:33:08,967 [INFO] [update_record_menu:381] Starting update record menu
+2025-05-19 14:34:05,634 [INFO] [update_record_menu:388] Updating book
+2025-05-19 14:34:19,151 [DEBUG] [main_menu:219] User selected: 2
+2025-05-19 14:34:19,151 [INFO] [display_records_menu:592] Starting display records menu
+2025-05-19 14:34:20,843 [INFO] [display_records_menu:609] Displayed book records
+2025-05-19 14:34:24,924 [DEBUG] [main_menu:219] User selected: 5
+2025-05-19 14:34:24,924 [INFO] [delete_record_menu:485] Starting delete record menu
+2025-05-19 14:34:37,600 [DEBUG] [main_menu:219] User selected: 2
+2025-05-19 14:34:37,600 [INFO] [display_records_menu:592] Starting display records menu
+2025-05-19 14:34:39,403 [INFO] [display_records_menu:609] Displayed book records
+2025-05-19 14:35:12,296 [DEBUG] [main_menu:219] User selected: 5
+2025-05-19 14:35:12,297 [INFO] [delete_record_menu:485] Starting delete record menu
+2025-05-19 14:35:41,243 [DEBUG] [main_menu:219] User selected: 2
+2025-05-19 14:35:41,243 [INFO] [display_records_menu:592] Starting display records menu
+2025-05-19 14:35:41,930 [INFO] [display_records_menu:609] Displayed book records
+2025-05-19 16:15:13,113 [INFO] [main:666] Program started
+2025-05-19 16:15:13,114 [INFO] [main_menu:219] Starting main menu
+2025-05-19 16:16:04,037 [INFO] [main:667] Program started
+2025-05-19 16:16:04,038 [INFO] [main_menu:219] Starting main menu
+2025-05-19 16:16:07,398 [DEBUG] [main_menu:233] User selected: 2
+2025-05-19 16:16:07,399 [INFO] [display_records_menu:608] Starting display records menu
+2025-05-19 16:16:09,234 [INFO] [display_records_menu:625] Displayed book records
+2025-05-19 16:16:12,378 [DEBUG] [main_menu:233] User selected: 9
+2025-05-19 16:16:12,379 [INFO] [export_data_menu:629] Starting exporting data menu
+2025-05-19 16:16:15,462 [INFO] [export_data_menu:644] Exported data for book
+2025-05-19 16:16:15,462 [INFO] [export_data_menu:646] Choosing extension of file for export
+2025-05-19 16:16:19,200 [INFO] [export_data_menu:662] Exported data in json
+2025-05-19 16:18:59,396 [INFO] [main:667] Program started
+2025-05-19 16:18:59,397 [INFO] [main_menu:219] Starting main menu
+2025-05-19 16:19:02,664 [DEBUG] [main_menu:233] User selected: 9
+2025-05-19 16:19:02,665 [INFO] [export_data_menu:629] Starting exporting data menu
+2025-05-19 16:19:04,364 [INFO] [export_data_menu:644] Exported data for book
+2025-05-19 16:19:04,365 [INFO] [export_data_menu:646] Choosing extension of file for export
+2025-05-19 16:19:07,070 [INFO] [export_data_menu:662] Exported data in json
+2025-05-19 16:32:32,984 [INFO] [main:667] Program started
+2025-05-19 16:32:32,985 [INFO] [main_menu:219] Starting main menu
+2025-05-19 16:32:40,076 [DEBUG] [main_menu:233] User selected: 9
+2025-05-19 16:32:40,076 [INFO] [export_data_menu:629] Starting exporting data menu
+2025-05-19 16:32:42,032 [INFO] [export_data_menu:644] Exported data for book
+2025-05-19 16:32:42,032 [INFO] [export_data_menu:646] Choosing extension of file for export
+2025-05-19 16:32:44,237 [INFO] [export_data_menu:662] Exported data in json
+2025-05-19 16:32:53,074 [DEBUG] [main_menu:233] User selected: 9
+2025-05-19 16:32:53,074 [INFO] [export_data_menu:629] Starting exporting data menu
+2025-05-19 16:32:55,083 [INFO] [export_data_menu:644] Exported data for book
+2025-05-19 16:32:55,083 [INFO] [export_data_menu:646] Choosing extension of file for export
+2025-05-19 16:32:57,492 [INFO] [export_data_menu:662] Exported data in csv
+2025-05-19 16:33:54,468 [DEBUG] [main_menu:233] User selected: 1
+2025-05-19 16:33:54,468 [INFO] [import_data:313] Starting data import
+2025-05-19 16:33:59,136 [DEBUG] [import_data:324] User selected entity for import: 4
+2025-05-19 16:34:02,736 [DEBUG] [import_data:332] User entered path: C:/Users/student/PycharmProjects/booksdb/data/2
+2025-05-19 16:34:02,737 [ERROR] [import_data:339] File not found: C:/Users/student/PycharmProjects/booksdb/data/2
+2025-05-19 16:34:08,967 [DEBUG] [import_data:324] User selected entity for import: 5
+2025-05-19 16:34:31,212 [DEBUG] [import_data:332] User entered path: C:/Users/student/PycharmProjects/booksdb/data/json/readers.json
+2025-05-19 16:34:31,213 [INFO] [__init__:20] Initialization jsonreader
+2025-05-19 16:34:31,213 [INFO] [load_from_json:23] Downloading JSON: C:/Users/student/PycharmProjects/booksdb/data/json/readers.json
+2025-05-19 16:34:31,225 [DEBUG] [load_from_json:42] Process the line: 1
+2025-05-19 16:34:31,236 [INFO] [load_from_json:55] Downloaded readers from JSON: 1
+2025-05-19 16:34:31,237 [INFO] [import_data:346] Successfully imported 1 reader records
+2025-05-19 16:34:34,294 [DEBUG] [main_menu:233] User selected: 2
+2025-05-19 16:34:34,294 [INFO] [display_records_menu:608] Starting display records menu
+2025-05-19 16:34:35,930 [INFO] [display_records_menu:625] Displayed reader records
+2025-05-19 16:34:38,726 [DEBUG] [main_menu:233] User selected: 
+2025-05-19 16:34:38,726 [WARNING] [main_menu:258] Invalid choice: 
+2025-05-19 16:34:42,428 [DEBUG] [main_menu:233] User selected: 9
+2025-05-19 16:34:42,429 [INFO] [export_data_menu:629] Starting exporting data menu
+2025-05-19 16:34:47,230 [INFO] [export_data_menu:644] Exported data for reader
+2025-05-19 16:34:47,230 [INFO] [export_data_menu:646] Choosing extension of file for export
+2025-05-19 16:34:51,350 [INFO] [export_data_menu:662] Exported data in json
+2025-05-19 16:34:52,132 [DEBUG] [main_menu:233] User selected: 
+2025-05-19 16:34:52,132 [WARNING] [main_menu:258] Invalid choice: 
+2025-05-19 16:42:39,954 [INFO] [main:666] Program started
+2025-05-19 16:42:39,959 [INFO] [main_menu:218] Starting main menu
+2025-05-19 16:42:40,037 [INFO] [main:666] Program started
+2025-05-19 16:42:40,037 [INFO] [main_menu:218] Starting main menu
+2025-05-19 16:42:54,255 [DEBUG] [main_menu:232] User selected: 9
+2025-05-19 16:42:54,255 [INFO] [export_data_menu:628] Starting exporting data menu
+2025-05-19 16:42:57,193 [INFO] [export_data_menu:643] Exported data for reader
+2025-05-19 16:42:57,193 [INFO] [export_data_menu:645] Choosing extension of file for export
+2025-05-19 16:42:59,178 [INFO] [export_data_menu:661] Exported data in json
+2025-05-19 16:45:17,108 [INFO] [main:666] Program started
+2025-05-19 16:45:17,109 [INFO] [main_menu:218] Starting main menu
+2025-05-19 16:45:20,546 [DEBUG] [main_menu:232] User selected: 9
+2025-05-19 16:45:20,546 [INFO] [export_data_menu:628] Starting exporting data menu
+2025-05-19 16:45:21,159 [INFO] [export_data_menu:643] Exported data for book
+2025-05-19 16:45:21,159 [INFO] [export_data_menu:645] Choosing extension of file for export
+2025-05-19 16:46:07,693 [INFO] [main:666] Program started
+2025-05-19 16:46:07,698 [INFO] [main_menu:218] Starting main menu
+2025-05-19 16:46:10,252 [DEBUG] [main_menu:232] User selected: 9
+2025-05-19 16:46:10,253 [INFO] [export_data_menu:628] Starting exporting data menu
+2025-05-19 16:46:14,468 [INFO] [export_data_menu:643] Exported data for reader
+2025-05-19 16:46:14,468 [INFO] [export_data_menu:645] Choosing extension of file for export
+2025-05-19 16:46:15,774 [INFO] [export_data_menu:661] Exported data in json
+2025-05-19 16:47:40,752 [INFO] [main:666] Program started
+2025-05-19 16:47:40,753 [INFO] [main_menu:218] Starting main menu
+2025-05-19 16:47:47,517 [DEBUG] [main_menu:232] User selected: 9
+2025-05-19 16:47:47,517 [INFO] [export_data_menu:628] Starting exporting data menu
+2025-05-19 16:47:49,550 [INFO] [export_data_menu:643] Exported data for reader
+2025-05-19 16:47:49,550 [INFO] [export_data_menu:645] Choosing extension of file for export
+2025-05-19 16:47:50,541 [INFO] [export_data_menu:661] Exported data in csv
+2025-05-19 16:48:00,830 [INFO] [main:666] Program started
+2025-05-19 16:48:00,831 [INFO] [main_menu:218] Starting main menu
+2025-05-19 16:48:01,911 [DEBUG] [main_menu:232] User selected: 9
+2025-05-19 16:48:01,911 [INFO] [export_data_menu:628] Starting exporting data menu
+2025-05-19 16:48:03,579 [INFO] [export_data_menu:643] Exported data for reader
+2025-05-19 16:48:03,579 [INFO] [export_data_menu:645] Choosing extension of file for export
+2025-05-19 16:48:04,839 [INFO] [export_data_menu:661] Exported data in json

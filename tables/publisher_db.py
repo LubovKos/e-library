@@ -1,3 +1,4 @@
+import json
 import sqlite3
 from typing import Optional
 from pathlib import Path
@@ -132,3 +133,19 @@ class PublisherRepository:
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
             return len(publishers)
+
+    def export(self):
+        with self._get_connection() as conn:
+            headers = ["ID", "Название", "Адрес", "Телефон", "Почта"]
+            cursor = conn.execute('SELECT * FROM publisher')
+            publishers = cursor.fetchall()
+            for publisher in publishers:
+                data = {
+                    headers[0]: publisher[0],
+                    headers[1]: publisher[1],
+                    headers[2]: publisher[2],
+                    headers[3]: publisher[3],
+                    headers[4]: publisher[4]
+                }
+                with open('C:/Users/student/PycharmProjects/booksdb/export/json/publisher_export.json', 'w', encoding='utf-8') as file:
+                    json.dump(data, file, ensure_ascii=False, indent=4)

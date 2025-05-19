@@ -3,6 +3,7 @@ from typing import Optional
 from pathlib import Path
 from tabulate import tabulate
 from models.book import Book
+import json
 
 
 class BookRepository:
@@ -149,4 +150,23 @@ class BookRepository:
             print(tabulate(table_data, headers=headers, tablefmt="grid", stralign="left"))
             print("=" * 100 + "\n")
             return len(books)
+
+    def export(self, format):
+        with self._get_connection() as conn:
+            headers = ["ID", "Название", "Автор", "Год", "Жанр", "Страниц", "Издательство"]
+            cursor = conn.execute('SELECT * FROM book')
+            books = cursor.fetchall()
+            for book in books:
+                data = {
+                    headers[0]: book[0],
+                    headers[1]: book[1],
+                    headers[2]: book[2],
+                    headers[3]: book[3],
+                    headers[4]: book[4],
+                    headers[5]: book[5],
+                    headers[6]: book[6]
+                }
+                with open('C:/Users/student/PycharmProjects/booksdb/export/json/book_export.json', 'w', encoding='utf-8') as file:
+                    json.dump(data, file, ensure_ascii=False, indent=4)
+
 
