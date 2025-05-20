@@ -1,7 +1,6 @@
 import logging
 import os
-import json
-import csv
+import traceback
 
 from data_import.csv.author_importer import CSVAuthorReader
 from data_import.csv.book_importer import CSVBookReader
@@ -144,33 +143,32 @@ class Library:
         """Update an existing record."""
         try:
             if choice == '1':
-                self.book_repo.update(field, title, author, new_val)
+                return self.book_repo.update(field, title, author, new_val)
             elif choice == '2':
-                self.author_repo.update(field, author, new_val)
+                return self.author_repo.update(field, author, new_val)
             elif choice == '3':
-                self.publisher_repo.update(field, title, new_val)
+                return self.publisher_repo.update(field, title, new_val)
             elif choice == '4':
-                self.genre_repo.update(field, title, new_val)
+                return self.genre_repo.update(field, title, new_val)
             elif choice == '5':
-                self.reader_repo.update(field, title, new_val)
+                return self.reader_repo.update(field, title, new_val)
             return
         except Exception as e:
             logging.error(f"Error updating db: {e}")
             return e
 
     def delete_record(self, choice, field, value):
-        """Delete a record by index."""
         try:
             if choice == '1':
-                self.book_repo.delete(field, value)
+                return self.book_repo.delete(field, value)
             elif choice == '2':
-                self.author_repo.delete(field, value)
+                return self.author_repo.delete(field, value)
             elif choice == '3':
-                self.publisher_repo.delete(field, value)
+                return self.publisher_repo.delete(field, value)
             elif choice == '4':
-                self.genre_repo.delete(field, value)
+                return self.genre_repo.delete(field, value)
             else:
-                self.author_repo.delete(field, value)
+                return self.author_repo.delete(field, value)
         except Exception as e:
             logging.error(f"Error deleting db: {e}")
             return e
@@ -228,6 +226,7 @@ def main_menu(library):
         print("8. Get more information")
         print("9. Export data")
         print("0. Exit")
+
         choice = input("Select an option: ").strip()
         logging.debug(f"User selected: {choice}")
 
@@ -412,11 +411,16 @@ def update_record_menu(library):
             logging.info(f"Error: {e}")
         author = input("Enter the author of book which you want to update: ")
         title = input("Enter the title of book which you want to update: ")
-        try:
-            library.update_record(choice=choice, field=field, author=author, title=title, new_val=new_val)
-        except Exception as e:
-            print("No update")
-            logging.info(f"Error: {e}")
+        result = library.update_record(choice=choice, title=title, author=author, new_val=new_val, field=field)
+        if result is True:
+            print("Successfully updated!")
+            logging.info(f"Successfully updated row: {field} = {new_val}")
+        elif result is False:
+            print("No records found to update.")
+            logging.info(f"No rows found with author = {author} and title = {title}")
+        else:
+            print("Error with updating")
+            logging.info(f"Error with updating")
     elif choice == '2':
         data = list(input("Enter the field that needs updating and the new value for it "
                           "(full_name, date_of_birth, date_of_death, biography): ").split())
@@ -425,11 +429,16 @@ def update_record_menu(library):
         except Exception as e:
             logging.info(f"Error: {e}")
         author = input("Enter the author that you want to update: ")
-        try:
-            library.update_record(choice=choice, field=field, author=author, new_val=new_val)
-        except Exception as e:
-            print("No update")
-            logging.info(f"Error: {e}")
+        result = library.update_record(choice=choice, author=author, new_val=new_val, field=field)
+        if result is True:
+            print("Successfully updated!")
+            logging.info(f"Successfully updated row: {field} = {new_val}")
+        elif result is False:
+            print("No records found to update.")
+            logging.info(f"No rows found with author = {author}")
+        else:
+            print("Error with updating")
+            logging.info(f"Error with updating")
     elif choice == '3':
         data = list(input("Enter the field that needs updating and the new value for it "
                           "(name, address, phone, mail): ").split())
@@ -438,11 +447,16 @@ def update_record_menu(library):
         except Exception as e:
             logging.info(f"Error: {e}")
         title = input("Enter the title of publisher that you want to update: ")
-        try:
-            library.update_record(choice=choice, field=field, title=title, new_val=new_val)
-        except Exception as e:
-            print("No update")
-            logging.info(f"Error: {e}")
+        result = library.update_record(choice=choice, title=title, new_val=new_val, field=field)
+        if result is True:
+            print("Successfully updated!")
+            logging.info(f"Successfully updated row: {field} = {new_val}")
+        elif result is False:
+            print("No records found to update.")
+            logging.info(f"No rows found with title = {title}")
+        else:
+            print("Error with updating")
+            logging.info(f"Error with updating")
     elif choice == '4':
         data = list(input("Enter the field that needs updating and the new value for it "
                           "(title, description): ").split())
@@ -451,11 +465,16 @@ def update_record_menu(library):
         except Exception as e:
             logging.info(f"Error: {e}")
         title = input("Enter the title of genre that you want to update: ")
-        try:
-            library.update_record(choice=choice, field=field, title=title, new_val=new_val)
-        except Exception as e:
-            print("No update")
-            logging.info(f"Error: {e}")
+        result = library.update_record(choice=choice, title=title, new_val=new_val, field=field)
+        if result is True:
+            print("Successfully updated!")
+            logging.info(f"Successfully updated row: {field} = {new_val}")
+        elif result is False:
+            print("No records found to update.")
+            logging.info(f"No rows found with title = {title}")
+        else:
+            print("Error with updating")
+            logging.info(f"Error with updating")
     elif choice == '5':
         data = list(input("Enter the field that needs updating and the new value for it "
                           "(full_name, phone, mail): ").split())
@@ -464,11 +483,16 @@ def update_record_menu(library):
         except Exception as e:
             logging.info(f"Error: {e}")
         title = input("Enter the title of publisher that you want to update: ")
-        try:
-            library.update_record(choice=choice, field=field, title=title, new_val=new_val)
-        except Exception as e:
-            print("No update")
-            logging.info(f"Error: {e}")
+        result = library.update_record(choice=choice, title=title, new_val=new_val, field=field)
+        if result is True:
+            print("Successfully updated!")
+            logging.info(f"Successfully updated row: {field} = {new_val}")
+        elif result is False:
+            print("No records found to update.")
+            logging.info(f"No rows found with title = {title}")
+        else:
+            print("Error with updating")
+            logging.info(f"Error with updating")
     else:
         logging.warning(f"Invalid entity choice: {choice}")
         print("Invalid entity choice")
@@ -498,54 +522,49 @@ def show_full_info(library):
 
 def delete_record_menu(library):
     logging.info("Starting delete record menu")
-    entity_types = {'1': 'book', '2': 'author', '3': 'publisher', '4': 'genre', '5': 'reader'}
+    entity_types = {
+        '1': ('book', ["title", "author", "year", "genre", "pages", "publisher"]),
+        '2': ('author', ["full_name", "date_of_birth", "date_of_death", "biography"]),
+        '3': ('publisher', ["name", "address", "phone", "mail"]),
+        '4': ('genre', ["title", "description"]),
+        '5': ('reader', ["full_name", "phone", "mail"])
+    }
+
     print("\nDelete Record for:")
     for k, v in entity_types.items():
-        print(f"{k}. {v.capitalize()}")
+        print(f"{k}. {v[0].capitalize()}")
     print("0. Back")
+
     choice = input("Select entity: ").strip()
-    print("Deleting by field\n")
     if choice == '0':
         return
-    elif choice == '1':
-        field = input("Enter the field (title, author, year, genre, pages, publisher): ")
-        value = input("Enter the value of this field: ")
-        try:
-            library.delete_record(choice, field, value)
-        except Exception as e:
-            logging.info(f"Error: {e}")
-    elif choice == '2':
-        field = input("Enter the field (full_name, date_of_birth, date_of_death, biography): ")
-        value = input("Enter the value of this field: ")
-        try:
-            library.delete_record(choice, field, value)
-        except Exception as e:
-            logging.info(f"Error: {e}")
-    elif choice == '3':
-        field = input("Enter the field (name, address, phone, mail): ")
-        value = input("Enter the value of this field: ")
-        try:
-            library.delete_record(choice, field, value)
-        except Exception as e:
-            logging.info(f"Error: {e}")
-    elif choice == '4':
-        field = input("Enter the field (title, description): ")
-        value = input("Enter the value of this field: ")
-        try:
-            library.delete_record(choice, field, value)
-        except Exception as e:
-            logging.info(f"Error: {e}")
-    elif choice == '5':
-        field = input("Enter the field (full_name, phone, mail): ")
-        value = input("Enter the value of this field: ")
-        try:
-            library.delete_record(choice, field, value)
-        except Exception as e:
-            logging.info(f"Error: {e}")
-    else:
+
+    if choice not in entity_types:
         logging.warning(f"Invalid entity choice: {choice}")
         print("Invalid entity choice")
         return
+
+    entity_name, fields = entity_types[choice]
+    print(f"\nDeleting {entity_name} by field")
+    print("Available fields:", ", ".join(fields))
+
+    field = input("Enter the field: ").strip()
+    if field not in fields:
+        print("Invalid field!")
+        return
+
+    value = input("Enter the value of this field: ").strip()
+
+    result = library.delete_record(choice, field, value)
+    if result is True:
+        print("Successfully deleted!")
+        logging.info(f"Successfully deleted {entity_name} where {field}={value}")
+    elif result is False:
+        print("No records found to delete.")
+        logging.info(f"No {entity_name} found with {field}={value}")
+    else:
+        print("Error with deleting")
+        logging.info(f"Error with deleting")
 
 
 def filtering_menu(library):
@@ -662,10 +681,14 @@ def export_data_menu(library):
 
 
 def main():
-    library = Library()
-    logging.info("Program started")
-    print("Welcome to the Library Management System")
-    main_menu(library)
+    try:
+        library = Library()
+        main_menu(library)
+        logging.info("Program started")
+        print("Welcome to the Library Management System")
+    except KeyboardInterrupt:
+        print("\nThe program has been terminated at the user's request")
+        exit(0)
 
 
 if __name__ == "__main__":

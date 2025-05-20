@@ -79,12 +79,19 @@ class ReaderRepository:
 
     def update(self, field: str, title: str, new_val):
         with self._get_connection() as conn:
+            cursor = conn.execute('SELECT * FROM reader WHERE full_name = ?', (title, ))
+            ans = len(cursor.fetchall())
             query = 'UPDATE reader SET ' + field + ' = ? WHERE full_name = ?'
             conn.execute(query, (new_val, title))
+            return ans
 
     def delete(self, field: str, value):
         with self._get_connection() as conn:
+            cursor = conn.execute('SELECT * FROM reader WHERE' + field + " = ?", (value,))
+            ans = len(cursor.fetchall())
             conn.execute("DELETE FROM reader WHERE " + field + " = ?", (value,))
+            return ans
+
 
     def filter(self, field: str, direction):
         if direction == "up":
@@ -132,11 +139,7 @@ class ReaderRepository:
             print("=" * 100 + "\n")
             return len(readers)
 
-    import csv
-    import json
-    import os
-
-    def export(self, format_type='both'):
+    def export(self, format_type):
         # Проверяем существование директорий, создаем их, если не существуют
         base_path = 'C:/Users/student/PycharmProjects/booksdb/export'
 
@@ -145,16 +148,12 @@ class ReaderRepository:
             cursor = conn.execute('SELECT * FROM reader')
             readers = cursor.fetchall()
             print(format_type.lower())
-
-            # Экспорт в CSV, если выбран csv или оба формата
             if format_type.lower() == 'csv':
                 with open(f'{base_path}/csv/reader_export.csv', 'w', encoding='utf-8', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow(headers)
                     for reader in readers:
                         writer.writerow(reader)
-
-            # Экспорт в JSON, если выбран json или оба формата
             if format_type.lower() == 'json':
                 for reader in readers:
                     data = {

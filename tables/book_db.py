@@ -1,3 +1,4 @@
+import csv
 import sqlite3
 from typing import Optional
 from pathlib import Path
@@ -92,12 +93,18 @@ class BookRepository:
 
     def update(self, field: str, title: str, author: str, new_val):
         with self._get_connection() as conn:
+            cursor = conn.execute("SELECT * FROM book WHERE title = ? AND author = ?", (title, author))
+            ans = len(cursor.fetchall()) > 0
             query = 'UPDATE book SET ' + field + ' = ? WHERE title = ? AND author = ?'
             conn.execute(query, (new_val, title, author))
+            return ans
 
     def delete(self, field: str, value):
         with self._get_connection() as conn:
-            conn.execute("DELETE FROM book WHERE " + field + " = ?",(value,))
+            cursor = conn.execute("SELECT * FROM book WHERE " + field + " = ?", (value,))
+            ans = len(cursor.fetchall()) > 0
+            conn.execute("DELETE FROM book WHERE " + field + " = ?", (value,))
+            return ans
 
     def filter(self, field: str, direction):
         if direction == "up":
@@ -151,22 +158,32 @@ class BookRepository:
             print("=" * 100 + "\n")
             return len(books)
 
-    def export(self, format):
+    def export(self, format_type):
+        # Проверяем существование директорий, создаем их, если не существуют
+        base_path = 'C:/Users/student/PycharmProjects/booksdb/export'
+
         with self._get_connection() as conn:
             headers = ["ID", "Название", "Автор", "Год", "Жанр", "Страниц", "Издательство"]
             cursor = conn.execute('SELECT * FROM book')
             books = cursor.fetchall()
-            for book in books:
-                data = {
-                    headers[0]: book[0],
-                    headers[1]: book[1],
-                    headers[2]: book[2],
-                    headers[3]: book[3],
-                    headers[4]: book[4],
-                    headers[5]: book[5],
-                    headers[6]: book[6]
-                }
-                with open('C:/Users/student/PycharmProjects/booksdb/export/json/book_export.json', 'w', encoding='utf-8') as file:
-                    json.dump(data, file, ensure_ascii=False, indent=4)
+            if format_type == 'csv':
+                with open(f'{base_path}/csv/book_export.csv', 'w', encoding='utf-8', newline='') as file:
+                    writer = csv.writer(file)
+                    writer.writerow(headers)
+                    for book in books:
+                        writer.writerow(book)
+            if format_type == 'json':
+                for book in books:
+                    data = {
+                        headers[0]: book[0],
+                        headers[1]: book[1],
+                        headers[2]: book[2],
+                        headers[3]: book[3],
+                        headers[4]: book[4],
+                        headers[5]: book[5],
+                        headers[6]: book[6]
+                    }
+                    with open(f'{base_path}/json/book_export.json', 'w', encoding='utf-8') as file:
+                        json.dump(data, file, ensure_ascii=False, indent=4)
 
 

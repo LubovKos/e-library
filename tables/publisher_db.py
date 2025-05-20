@@ -1,3 +1,4 @@
+import csv
 import json
 import sqlite3
 from typing import Optional
@@ -79,12 +80,18 @@ class PublisherRepository:
 
     def update(self, field: str, title: str, new_val):
         with self._get_connection() as conn:
+            cursor = conn.execute('SELECT * FROM publisher WHERE name = ?', (title,))
+            ans = len(cursor.fetchall())
             query = 'UPDATE publisher SET ' + field + ' = ? WHERE name = ?'
             conn.execute(query, (new_val, title))
+            return ans
 
     def delete(self, field: str, value):
         with self._get_connection() as conn:
+            cursor = conn.execute('SELECT * FROM publisher WHERE ' + field + " = ?", (value,))
+            ans = len(cursor.fetchall())
             conn.execute("DELETE FROM publisher WHERE " + field + " = ?", (value,))
+            return ans
 
     def filter(self, field: str, direction):
         if direction == "up":
@@ -134,18 +141,28 @@ class PublisherRepository:
             print("=" * 100 + "\n")
             return len(publishers)
 
-    def export(self):
+    def export(self, format_type):
+        # Проверяем существование директорий, создаем их, если не существуют
+        base_path = 'C:/Users/student/PycharmProjects/booksdb/export'
+
         with self._get_connection() as conn:
             headers = ["ID", "Название", "Адрес", "Телефон", "Почта"]
             cursor = conn.execute('SELECT * FROM publisher')
             publishers = cursor.fetchall()
-            for publisher in publishers:
-                data = {
-                    headers[0]: publisher[0],
-                    headers[1]: publisher[1],
-                    headers[2]: publisher[2],
-                    headers[3]: publisher[3],
-                    headers[4]: publisher[4]
-                }
-                with open('C:/Users/student/PycharmProjects/booksdb/export/json/publisher_export.json', 'w', encoding='utf-8') as file:
-                    json.dump(data, file, ensure_ascii=False, indent=4)
+            if format_type == 'csv':
+                with open(f'{base_path}/csv/publisher_export.csv', 'w', encoding='utf-8', newline='') as file:
+                    writer = csv.writer(file)
+                    writer.writerow(headers)
+                    for publisher in publishers:
+                        writer.writerow(publisher)
+            if format_type == 'json':
+                for publisher in publishers:
+                    data = {
+                        headers[0]: publisher[0],
+                        headers[1]: publisher[1],
+                        headers[2]: publisher[2],
+                        headers[3]: publisher[3],
+                        headers[4]: publisher[4]
+                    }
+                    with open(f'{base_path}/json/publisher_export.json', 'w', encoding='utf-8') as file:
+                        json.dump(data, file, ensure_ascii=False, indent=4)

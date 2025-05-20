@@ -6550,3 +6550,326 @@ TypeError: object of type 'NoneType' has no len()
 2025-05-19 16:48:03,579 [INFO] [export_data_menu:643] Exported data for reader
 2025-05-19 16:48:03,579 [INFO] [export_data_menu:645] Choosing extension of file for export
 2025-05-19 16:48:04,839 [INFO] [export_data_menu:661] Exported data in json
+2025-05-20 14:24:12,506 [INFO] [main:666] Program started
+2025-05-20 14:24:12,507 [INFO] [main_menu:218] Starting main menu
+2025-05-20 14:24:15,409 [DEBUG] [main_menu:232] User selected: 2
+2025-05-20 14:24:15,409 [INFO] [display_records_menu:607] Starting display records menu
+2025-05-20 14:24:16,811 [INFO] [display_records_menu:624] Displayed author records
+2025-05-20 14:24:18,754 [DEBUG] [main_menu:232] User selected: 2
+2025-05-20 14:24:18,754 [INFO] [display_records_menu:607] Starting display records menu
+2025-05-20 14:24:19,350 [INFO] [display_records_menu:624] Displayed book records
+2025-05-20 14:24:21,784 [DEBUG] [main_menu:232] User selected: 2
+2025-05-20 14:24:21,784 [INFO] [display_records_menu:607] Starting display records menu
+2025-05-20 14:24:22,741 [INFO] [display_records_menu:624] Displayed reader records
+2025-05-20 14:24:25,098 [DEBUG] [main_menu:232] User selected: 2
+2025-05-20 14:24:25,098 [INFO] [display_records_menu:607] Starting display records menu
+2025-05-20 14:24:25,559 [INFO] [display_records_menu:624] Displayed genre records
+2025-05-20 14:24:27,410 [DEBUG] [main_menu:232] User selected: 2
+2025-05-20 14:24:27,411 [INFO] [display_records_menu:607] Starting display records menu
+2025-05-20 14:24:27,849 [INFO] [display_records_menu:624] Displayed publisher records
+2025-05-20 14:24:31,965 [DEBUG] [main_menu:232] User selected: 9
+2025-05-20 14:24:31,965 [INFO] [export_data_menu:628] Starting exporting data menu
+2025-05-20 14:24:32,972 [INFO] [export_data_menu:643] Exported data for book
+2025-05-20 14:24:32,972 [INFO] [export_data_menu:645] Choosing extension of file for export
+2025-05-20 14:24:35,215 [INFO] [export_data_menu:661] Exported data in csv
+2025-05-20 14:25:01,209 [DEBUG] [main_menu:232] User selected: 0
+2025-05-20 14:25:01,209 [INFO] [main_menu:253] User chose to exit
+2025-05-20 14:29:14,069 [INFO] [main:666] Program started
+2025-05-20 14:29:14,069 [INFO] [main_menu:218] Starting main menu
+2025-05-20 14:29:29,291 [INFO] [main:666] Program started
+2025-05-20 14:29:29,292 [INFO] [main_menu:218] Starting main menu
+2025-05-20 14:29:31,523 [DEBUG] [main_menu:232] User selected: 1
+2025-05-20 14:29:31,524 [INFO] [import_data:312] Starting data import
+2025-05-20 14:31:01,081 [INFO] [main:669] Program started
+2025-05-20 14:31:01,084 [INFO] [main_menu:217] Starting main menu
+2025-05-20 14:35:45,606 [INFO] [main_menu:217] Starting main menu
+2025-05-20 14:36:33,669 [INFO] [main_menu:217] Starting main menu
+2025-05-20 14:41:46,034 [INFO] [main_menu:217] Starting main menu
+2025-05-20 14:42:02,153 [DEBUG] [main_menu:232] User selected: 5
+2025-05-20 14:42:02,153 [INFO] [delete_record_menu:500] Starting delete record menu
+2025-05-20 14:42:10,825 [ERROR] [delete_record:174] Error deleting db: no such column: f
+2025-05-20 14:47:27,333 [INFO] [main_menu:217] Starting main menu
+2025-05-20 14:47:32,258 [DEBUG] [main_menu:232] User selected: 4
+2025-05-20 14:47:32,258 [INFO] [update_record_menu:396] Starting update record menu
+2025-05-20 14:47:36,883 [INFO] [update_record_menu:403] Updating reader
+2025-05-20 14:52:29,275 [INFO] [main_menu:217] Starting main menu
+2025-05-20 14:52:43,577 [DEBUG] [main_menu:232] User selected: 5
+2025-05-20 14:52:43,577 [INFO] [delete_record_menu:500] Starting delete record menu
+2025-05-20 14:54:15,993 [ERROR] [delete_record:174] Error deleting db: near "8394": syntax error
+2025-05-20 14:55:05,325 [DEBUG] [main_menu:232] User selected: 2
+2025-05-20 14:55:05,325 [INFO] [display_records_menu:608] Starting display records menu
+2025-05-20 14:55:18,529 [INFO] [display_records_menu:625] Displayed book records
+2025-05-20 14:55:26,454 [DEBUG] [main_menu:232] User selected: 4
+2025-05-20 14:55:26,455 [INFO] [update_record_menu:396] Starting update record menu
+2025-05-20 14:55:28,453 [INFO] [update_record_menu:403] Updating book
+2025-05-20 14:56:32,244 [DEBUG] [main_menu:232] User selected: 2
+2025-05-20 14:56:32,244 [INFO] [display_records_menu:608] Starting display records menu
+2025-05-20 14:56:33,293 [INFO] [display_records_menu:625] Displayed book records
+2025-05-20 14:56:45,361 [DEBUG] [main_menu:232] User selected: 4
+2025-05-20 14:56:45,361 [INFO] [update_record_menu:396] Starting update record menu
+2025-05-20 14:56:46,905 [INFO] [update_record_menu:403] Updating book
+2025-05-20 14:56:47,202 [INFO] [update_record_menu:412] Error: list index out of range
+2025-05-20 14:56:50,512 [INFO] [update_record_menu:419] Error: cannot access local variable 'field' where it is not associated with a value
+2025-05-20 14:59:15,087 [INFO] [main_menu:217] Starting main menu
+2025-05-20 14:59:18,055 [DEBUG] [main_menu:232] User selected: 5
+2025-05-20 14:59:18,055 [INFO] [delete_record_menu:500] Starting delete record menu
+2025-05-20 14:59:21,576 [ERROR] [delete_record:174] Error deleting db: near "=": syntax error
+2025-05-20 15:05:58,098 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:06:01,074 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:06:01,075 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:06:04,355 [ERROR] [delete_record:173] Error deleting db: near "=": syntax error
+2025-05-20 15:06:22,979 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:06:37,025 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:06:37,026 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:06:42,316 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:08:25,410 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:08:25,411 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:08:34,546 [ERROR] [delete_record:173] Error deleting db: no such column: tt
+2025-05-20 15:10:06,073 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:10:08,852 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:10:08,853 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:12:19,248 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:12:21,075 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:12:21,076 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:12:23,309 [INFO] [delete_record_menu:517] Error: None
+2025-05-20 15:12:34,298 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:12:37,258 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:12:37,258 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:12:55,186 [INFO] [delete_record_menu:517] Error: None
+2025-05-20 15:13:19,745 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:13:27,405 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 15:13:27,405 [INFO] [display_records_menu:613] Starting display records menu
+2025-05-20 15:13:27,726 [INFO] [display_records_menu:630] Displayed book records
+2025-05-20 15:13:34,942 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:13:34,942 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:13:42,165 [INFO] [delete_record_menu:518] Error: None
+2025-05-20 15:13:47,353 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:15:12,754 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:15:12,755 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:15:31,105 [INFO] [delete_record_menu:518] Error: None
+2025-05-20 15:15:36,775 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 15:15:36,776 [INFO] [display_records_menu:613] Starting display records menu
+2025-05-20 15:15:38,070 [INFO] [display_records_menu:630] Displayed book records
+2025-05-20 15:17:02,377 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:17:06,574 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 15:17:06,574 [INFO] [display_records_menu:613] Starting display records menu
+2025-05-20 15:17:07,507 [INFO] [display_records_menu:630] Displayed book records
+2025-05-20 15:17:10,379 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:17:10,379 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:17:33,349 [INFO] [delete_record_menu:518] Error: None
+2025-05-20 15:19:18,618 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:19:22,060 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 15:19:22,061 [INFO] [display_records_menu:613] Starting display records menu
+2025-05-20 15:19:22,315 [INFO] [display_records_menu:630] Displayed book records
+2025-05-20 15:19:29,386 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:19:29,387 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:19:39,939 [INFO] [delete_record_menu:518] Error: None
+2025-05-20 15:47:18,991 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:47:22,151 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 15:47:22,151 [INFO] [display_records_menu:605] Starting display records menu
+2025-05-20 15:47:23,022 [INFO] [display_records_menu:622] Displayed book records
+2025-05-20 15:47:32,284 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:47:32,285 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:47:47,527 [ERROR] [delete_record_menu:543] Error deleting book: None
+2025-05-20 15:48:27,438 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:48:29,125 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:48:29,125 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:48:38,521 [DEBUG] [main_menu:231] User selected: 
+2025-05-20 15:48:38,521 [WARNING] [main_menu:256] Invalid choice: 
+2025-05-20 15:48:38,522 [DEBUG] [main_menu:231] User selected: 1
+2025-05-20 15:48:38,522 [INFO] [import_data:311] Starting data import
+2025-05-20 15:48:44,622 [DEBUG] [import_data:322] User selected entity for import: 0
+2025-05-20 15:48:44,622 [INFO] [import_data:325] Returning to main menu
+2025-05-20 15:48:46,434 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:48:46,435 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:48:50,948 [ERROR] [delete_record_menu:543] Error deleting book: None
+2025-05-20 15:52:34,158 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:52:36,834 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:52:36,834 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:55:43,635 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:55:46,016 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:55:46,017 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:56:18,432 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:56:22,025 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:56:22,025 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:57:43,043 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:58:10,578 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:58:10,579 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:58:25,685 [INFO] [delete_record_menu:542] Error with deleting
+2025-05-20 15:58:35,003 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:58:35,004 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:59:37,237 [INFO] [main_menu:216] Starting main menu
+2025-05-20 15:59:39,741 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 15:59:39,742 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 15:59:40,048 [INFO] [display_records_menu:618] Displayed book records
+2025-05-20 15:59:45,339 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 15:59:45,340 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 15:59:50,826 [INFO] [delete_record_menu:542] Error with deleting
+2025-05-20 16:01:17,706 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:01:20,533 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:01:20,533 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:01:20,851 [INFO] [display_records_menu:618] Displayed book records
+2025-05-20 16:01:31,765 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:01:31,766 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:01:33,029 [INFO] [display_records_menu:618] Displayed reader records
+2025-05-20 16:01:40,583 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:01:40,584 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:01:43,279 [INFO] [display_records_menu:618] Displayed author records
+2025-05-20 16:01:48,189 [DEBUG] [main_menu:231] User selected: 1
+2025-05-20 16:01:48,189 [INFO] [import_data:311] Starting data import
+2025-05-20 16:01:49,553 [DEBUG] [import_data:322] User selected entity for import: 2
+2025-05-20 16:02:03,345 [DEBUG] [import_data:330] User entered path: C:/Users/student/PycharmProjects/booksdb/data/json/authors.json
+2025-05-20 16:02:03,346 [INFO] [__init__:21] Initialization jsonreader
+2025-05-20 16:02:03,346 [INFO] [load_from_json:24] Downloading JSON: C:/Users/student/PycharmProjects/booksdb/data/json/authors.json
+2025-05-20 16:02:03,389 [DEBUG] [load_from_json:43] Process line: 1
+2025-05-20 16:02:03,491 [DEBUG] [load_from_json:43] Process line: 2
+2025-05-20 16:02:03,510 [DEBUG] [load_from_json:43] Process line: 3
+2025-05-20 16:02:03,518 [DEBUG] [load_from_json:43] Process line: 4
+2025-05-20 16:02:03,536 [DEBUG] [load_from_json:43] Process line: 5
+2025-05-20 16:02:03,554 [INFO] [load_from_json:57] Downloaded authors from JSON: 5
+2025-05-20 16:02:03,554 [INFO] [import_data:344] Successfully imported 5 author records
+2025-05-20 16:02:06,686 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:02:06,687 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:02:07,434 [INFO] [display_records_menu:618] Displayed book records
+2025-05-20 16:02:08,491 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:02:08,491 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:02:08,957 [INFO] [display_records_menu:618] Displayed author records
+2025-05-20 16:02:17,236 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:02:17,236 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:02:31,861 [INFO] [delete_record_menu:542] Error with deleting
+2025-05-20 16:04:50,993 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:05:00,615 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:05:00,615 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:05:11,214 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:05:11,214 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:05:11,624 [INFO] [display_records_menu:618] Displayed author records
+2025-05-20 16:05:13,497 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:05:13,497 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:05:29,821 [INFO] [delete_record_menu:542] Error with deleting
+2025-05-20 16:07:37,928 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:07:41,283 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:07:41,284 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:07:41,651 [INFO] [display_records_menu:618] Displayed book records
+2025-05-20 16:07:45,846 [DEBUG] [main_menu:231] User selected: 1
+2025-05-20 16:07:45,847 [INFO] [import_data:311] Starting data import
+2025-05-20 16:07:46,807 [DEBUG] [import_data:322] User selected entity for import: 1
+2025-05-20 16:07:56,840 [DEBUG] [import_data:330] User entered path: C:/Users/student/PycharmProjects/booksdb/data/json/books.json
+2025-05-20 16:07:56,840 [INFO] [__init__:20] Initialization jsonreader
+2025-05-20 16:07:56,840 [INFO] [load_from_json:23] Downloading JSON: C:/Users/student/PycharmProjects/booksdb/data/json/books.json
+2025-05-20 16:07:56,864 [DEBUG] [load_from_json:49] Process line: 1
+2025-05-20 16:07:56,865 [WARNING] [load_from_json:65] Error parsing string: 2. Error: The year of publication cannot be in the future
+2025-05-20 16:07:56,865 [DEBUG] [load_from_json:49] Process line: 2
+2025-05-20 16:07:56,865 [WARNING] [load_from_json:65] Error parsing string: 3. Error: Author field must not be empty
+2025-05-20 16:07:56,865 [DEBUG] [load_from_json:49] Process line: 3
+2025-05-20 16:07:56,907 [DEBUG] [load_from_json:49] Process line: 4
+2025-05-20 16:07:56,933 [DEBUG] [load_from_json:49] Process line: 5
+2025-05-20 16:07:56,951 [INFO] [load_from_json:66] Downloaded books from JSON: 3
+2025-05-20 16:07:56,951 [INFO] [import_data:344] Successfully imported 3 book records
+2025-05-20 16:07:58,640 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:07:58,640 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:07:59,723 [INFO] [display_records_menu:618] Displayed book records
+2025-05-20 16:08:08,893 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:08:08,894 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:08:20,751 [INFO] [delete_record_menu:542] Error with deleting
+2025-05-20 16:08:57,438 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:08:57,439 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:08:57,870 [INFO] [display_records_menu:618] Displayed book records
+2025-05-20 16:09:46,802 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:09:50,098 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:09:50,098 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:09:58,727 [INFO] [delete_record_menu:542] Error with deleting
+2025-05-20 16:10:49,873 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:10:52,928 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:10:52,929 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:11:02,795 [INFO] [delete_record_menu:542] Error with deleting
+2025-05-20 16:11:09,569 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:11:09,569 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:11:10,838 [INFO] [display_records_menu:618] Displayed book records
+2025-05-20 16:11:13,783 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:11:13,783 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:11:24,712 [INFO] [delete_record_menu:542] Error with deleting
+2025-05-20 16:12:21,006 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:12:24,730 [DEBUG] [main_menu:231] User selected: 1
+2025-05-20 16:12:24,730 [INFO] [import_data:311] Starting data import
+2025-05-20 16:12:34,656 [DEBUG] [import_data:322] User selected entity for import: json/books.json
+2025-05-20 16:12:34,656 [WARNING] [import_data:351] Invalid entity choice: json/books.json
+2025-05-20 16:13:10,526 [DEBUG] [import_data:322] User selected entity for import: 1
+2025-05-20 16:13:10,527 [DEBUG] [import_data:330] User entered path: C:/Users/student/PycharmProjects/booksdb/data/jl
+2025-05-20 16:13:10,527 [ERROR] [import_data:337] File not found: C:/Users/student/PycharmProjects/booksdb/data/jl
+2025-05-20 16:13:13,464 [DEBUG] [import_data:322] User selected entity for import: 1
+2025-05-20 16:13:23,314 [DEBUG] [import_data:330] User entered path: C:/Users/student/PycharmProjects/booksdb/data/json.books.json
+2025-05-20 16:13:23,314 [ERROR] [import_data:337] File not found: C:/Users/student/PycharmProjects/booksdb/data/json.books.json
+2025-05-20 16:13:32,365 [DEBUG] [import_data:322] User selected entity for import: 1
+2025-05-20 16:13:40,823 [DEBUG] [import_data:330] User entered path: C:/Users/student/PycharmProjects/booksdb/data/json/books.json
+2025-05-20 16:13:40,823 [INFO] [__init__:20] Initialization jsonreader
+2025-05-20 16:13:40,823 [INFO] [load_from_json:23] Downloading JSON: C:/Users/student/PycharmProjects/booksdb/data/json/books.json
+2025-05-20 16:13:40,824 [DEBUG] [load_from_json:49] Process line: 1
+2025-05-20 16:13:40,824 [WARNING] [load_from_json:65] Error parsing string: 2. Error: The year of publication cannot be in the future
+2025-05-20 16:13:40,825 [DEBUG] [load_from_json:49] Process line: 2
+2025-05-20 16:13:40,825 [WARNING] [load_from_json:65] Error parsing string: 3. Error: Author field must not be empty
+2025-05-20 16:13:40,825 [DEBUG] [load_from_json:49] Process line: 3
+2025-05-20 16:13:40,838 [DEBUG] [load_from_json:49] Process line: 4
+2025-05-20 16:13:40,864 [DEBUG] [load_from_json:49] Process line: 5
+2025-05-20 16:13:40,924 [INFO] [load_from_json:66] Downloaded books from JSON: 3
+2025-05-20 16:13:40,924 [INFO] [import_data:344] Successfully imported 3 book records
+2025-05-20 16:13:44,166 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:13:44,166 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:13:45,337 [INFO] [display_records_menu:618] Displayed book records
+2025-05-20 16:13:47,360 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:13:47,360 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:13:57,563 [INFO] [delete_record_menu:542] Error with deleting
+2025-05-20 16:15:01,732 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:15:04,625 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:15:04,626 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:15:12,008 [INFO] [delete_record_menu:536] Successfully deleted book where pages=432
+2025-05-20 16:16:01,351 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:16:03,796 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:16:03,797 [INFO] [display_records_menu:601] Starting display records menu
+2025-05-20 16:16:05,032 [INFO] [display_records_menu:618] Displayed book records
+2025-05-20 16:16:12,219 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:16:12,219 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:16:25,039 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:16:26,700 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:16:26,700 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:16:28,390 [WARNING] [delete_record_menu:518] Invalid entity choice: pages
+2025-05-20 16:16:30,910 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:16:30,910 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:16:35,730 [INFO] [delete_record_menu:539] No book found with pages=2
+2025-05-20 16:16:40,615 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:16:42,215 [DEBUG] [main_menu:231] User selected: 5
+2025-05-20 16:16:42,215 [INFO] [delete_record_menu:499] Starting delete record menu
+2025-05-20 16:28:25,811 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:28:36,021 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:28:36,022 [INFO] [display_records_menu:626] Starting display records menu
+2025-05-20 16:28:36,634 [INFO] [display_records_menu:643] Displayed book records
+2025-05-20 16:28:45,295 [DEBUG] [main_menu:231] User selected: 4
+2025-05-20 16:28:45,295 [INFO] [update_record_menu:395] Starting update record menu
+2025-05-20 16:28:46,833 [INFO] [update_record_menu:402] Updating book
+2025-05-20 16:29:55,710 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:30:08,708 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:30:12,565 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:30:12,565 [INFO] [display_records_menu:626] Starting display records menu
+2025-05-20 16:30:12,885 [INFO] [display_records_menu:643] Displayed book records
+2025-05-20 16:30:17,297 [DEBUG] [main_menu:231] User selected: 4
+2025-05-20 16:30:17,297 [INFO] [update_record_menu:395] Starting update record menu
+2025-05-20 16:30:18,503 [INFO] [update_record_menu:402] Updating book
+2025-05-20 16:30:21,474 [INFO] [update_record_menu:411] Error: list index out of range
+2025-05-20 16:33:33,371 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:33:36,691 [DEBUG] [main_menu:231] User selected: 4
+2025-05-20 16:33:36,691 [INFO] [update_record_menu:395] Starting update record menu
+2025-05-20 16:33:38,019 [INFO] [update_record_menu:402] Updating book
+2025-05-20 16:33:49,462 [INFO] [main_menu:216] Starting main menu
+2025-05-20 16:33:50,684 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:33:50,684 [INFO] [display_records_menu:626] Starting display records menu
+2025-05-20 16:33:51,232 [INFO] [display_records_menu:643] Displayed book records
+2025-05-20 16:33:55,562 [DEBUG] [main_menu:231] User selected: 4
+2025-05-20 16:33:55,562 [INFO] [update_record_menu:395] Starting update record menu
+2025-05-20 16:33:57,661 [INFO] [update_record_menu:402] Updating book
+2025-05-20 16:34:25,955 [INFO] [update_record_menu:417] Successfully updated row: pages = 2
+2025-05-20 16:34:31,688 [DEBUG] [main_menu:231] User selected: 2
+2025-05-20 16:34:31,688 [INFO] [display_records_menu:626] Starting display records menu
+2025-05-20 16:34:31,976 [INFO] [display_records_menu:643] Displayed book records
+2025-05-20 16:34:35,224 [DEBUG] [main_menu:231] User selected: 4
+2025-05-20 16:34:35,224 [INFO] [update_record_menu:395] Starting update record menu
+2025-05-20 16:34:37,048 [INFO] [update_record_menu:402] Updating book
+2025-05-20 16:34:43,651 [INFO] [update_record_menu:420] No rows found with author = ff and title = ff

@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="Added minor improvements for validation. Adjustments were made to logging.">
+    <list default="true" id="fea82129-94a6-46e0-8f75-d4c312d4d505" name="Changes" comment="export to json and csv files is almost done + some comments in files are corrected">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/library.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/library.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/library.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library.log" beforeDir="false" afterPath="$PROJECT_DIR$/library.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/author.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/author.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/publisher.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/publisher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tables/author_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/author_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tables/book_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/book_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tables/genre_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tables/genre_db.py" afterDir="false" />
@@ -190,7 +187,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747230750039</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="export to json and csv files is almost done + some comments in files are corrected">
+      <option name="closed" value="true" />
+      <created>1747662605784</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1747662605784</updated>
+    </task>
+    <task id="LOCAL-00014" summary="export to json and csv files is almost done + some comments in files are corrected">
+      <option name="closed" value="true" />
+      <created>1747662649259</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1747662649259</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,6 +229,7 @@
     <MESSAGE value="Minor bugs in methods inside databases have been fixed, console interaction with the user has been written. It remains to finish writing the method for adding a new record to the database." />
     <MESSAGE value="The method for adding new data to tables has been added. All tables are now stored in one database. A method has been added for combining tables (books) with others (to obtain full information)." />
     <MESSAGE value="Added minor improvements for validation. Adjustments were made to logging." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added minor improvements for validation. Adjustments were made to logging." />
+    <MESSAGE value="export to json and csv files is almost done + some comments in files are corrected" />
+    <option name="LAST_COMMIT_MESSAGE" value="export to json and csv files is almost done + some comments in files are corrected" />
   </component>
 </project>

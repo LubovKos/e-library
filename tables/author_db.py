@@ -1,3 +1,4 @@
+import csv
 import json
 import sqlite3
 from typing import Optional
@@ -77,12 +78,18 @@ class AuthorRepository:
 
     def update(self, field: str, author: str, new_val):
         with self._get_connection() as conn:
+            cursor = conn.execute("SELECT * FROM author WHERE full_name = ?", (author,))
+            ans = len(cursor.fetchall()) > 0
             query = 'UPDATE author SET ' + field + ' = ? WHERE full_name = ?'
             conn.execute(query, (new_val, author))
+            return ans
 
     def delete(self, field: str, value):
         with self._get_connection() as conn:
+            cursor = conn.execute("SELECT * FROM author WHERE " + field + " = ?",(value,))
+            ans = len(cursor.fetchall()) > 0
             conn.execute("DELETE FROM author WHERE " + field + " = ?",(value,))
+            return ans
 
     def filter(self, field: str, direction):
         if direction == "up":
@@ -130,17 +137,27 @@ class AuthorRepository:
             print("=" * 100 + "\n")
             return len(authors)
 
-    def export(self):
+    def export(self, format_type):
+        # Проверяем существование директорий, создаем их, если не существуют
+        base_path = 'C:/Users/student/PycharmProjects/booksdb/export'
+
         with self._get_connection() as conn:
             headers = ["ФИО", "Дата рождения", "Дата смерти", "Биография"]
             cursor = conn.execute('SELECT * FROM author')
             authors = cursor.fetchall()
-            for author in authors:
-                data = {
-                    headers[0]: author[0],
-                    headers[1]: author[1],
-                    headers[2]: author[2],
-                    headers[3]: author[3]
-                }
-                with open('C:/Users/student/PycharmProjects/booksdb/export/json/author_export.json', 'w', encoding='utf-8') as file:
-                    json.dump(data, file, ensure_ascii=False, indent=4)
+            if format_type == 'csv':
+                with open(f'{base_path}/csv/author_export.csv', 'w', encoding='utf-8', newline='') as file:
+                    writer = csv.writer(file)
+                    writer.writerow(headers)
+                    for author in authors:
+                        writer.writerow(author)
+            if format_type == 'json':
+                for author in authors:
+                    data = {
+                        headers[0]: author[0],
+                        headers[1]: author[1],
+                        headers[2]: author[2],
+                        headers[3]: author[3]
+                    }
+                    with open(f'{base_path}/json/author_export.json', 'w', encoding='utf-8') as file:
+                        json.dump(data, file, ensure_ascii=False, indent=4)
